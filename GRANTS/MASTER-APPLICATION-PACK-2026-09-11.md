@@ -17,7 +17,7 @@
 - Email: fas988840@gmail.com
 - Phone: +966532331116
 - Location: Riyadh, Saudi Arabia
-- GitHub: https://github.com/fas988840-dev/factledger
+- GitHub: https://github.com/fas988840-dev/FactLedger
 - Live API: https://factledger-api.onrender.com
 - Live demo: https://factledger-demo.onrender.com/demo.html
 - X: https://x.com/aamm123220

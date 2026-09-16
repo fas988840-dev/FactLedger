@@ -1,6 +1,6 @@
 # FactLedger — canonical grant applicant profile
 
-_Last updated: 2026-09-06_
+_Last updated: 2026-09-16_
 
 Use this file as the single source of truth for grant, accelerator and investor application preparation. Do not infer or invent legal, billing, KYC, investment, incorporation, or identity details that are not stated here.
 
@@ -15,13 +15,13 @@ Use this file as the single source of truth for grant, accelerator and investor 
 - Microsoft account email: Xx053233@hotmail.com
 - X: https://x.com/aamm123220
 - Telegram: @abdullhaa11
-- GitHub: https://github.com/fas988840-dev/factledger
+- GitHub: https://github.com/fas988840-dev/FactLedger
 - Solana wallet for application contact/payout fields when a Solana wallet is requested: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
 
 ## Project
 
 - Name: FactLedger
-- Repository: https://github.com/fas988840-dev/factledger
+- Repository: https://github.com/fas988840-dev/FactLedger
 - Live API: https://factledger-api.onrender.com
 - License: MIT
 

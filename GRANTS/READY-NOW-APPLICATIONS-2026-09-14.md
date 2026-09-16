@@ -19,7 +19,7 @@ Riyadh, Saudi Arabia
 https://factledger-demo.onrender.com/demo.html
 
 ### GitHub
-https://github.com/fas988840-dev/factledger
+https://github.com/fas988840-dev/FactLedger
 
 ### What are you building?
 
@@ -104,7 +104,7 @@ The funding will be used to publish a real production reliability benchmark, val
 
 ### Proof links
 
-- GitHub: https://github.com/fas988840-dev/factledger
+- GitHub: https://github.com/fas988840-dev/FactLedger
 - Live API: https://factledger-api.onrender.com
 - Demo: https://factledger-demo.onrender.com/demo.html
 

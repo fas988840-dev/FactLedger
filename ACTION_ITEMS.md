@@ -12,8 +12,10 @@ This file replaces the older pre-deployment checklist. It reflects the canonical
 - [x] Active `Protect main` ruleset blocks deletion and force-push updates and
   requires both API and dashboard CI checks.
 - [x] Public API deployment: `https://factledger-api.onrender.com`
-- [x] Render deployed commit `90ea95ceba394b337441e0cb0ec902031e234971` successfully.
-- [x] Production `/api/v1/health` returned HTTP 200 with the price dependency operational.
+- [x] Render deployed commit `75174f2be3ad0e1c512691eba9575740cb939363` successfully.
+- [x] Production `/api/v1/health` returned HTTP 200. The price dependency may
+  report `degraded` while free public providers are unavailable; this is the
+  intended honest fallback and is not evidence that Pyth is active.
 - [x] Production API-key enforcement is active; protected routes reject requests without a valid key.
 - [x] CI and CodeQL configured.
 - [x] Dependabot breaking major updates for ESLint and TypeScript are blocked pending review.
@@ -33,7 +35,9 @@ This file replaces the older pre-deployment checklist. It reflects the canonical
 - [ ] Store Pyth credentials/feed mapping in production secrets and run `scripts/verify-pyth.ts` against the real account.
 - [ ] After Pyth activation, re-deploy and verify `/api/v1/health` with Pyth selected; the current operational price provider is not evidence that Pyth is active.
 - [ ] Verify production `CORS_ORIGIN`, dedicated `SOLANA_RPC_URL`, and Pyth variables in the host secret store. `NODE_ENV=production` is set by the image and API-key enforcement is visibly active, but secret values must remain undisclosed.
-- [ ] Ensure the GitHub live-verification workflow has `FACTLEDGER_API_URL` and any required API key secret.
+- [x] Live verification defaults to the canonical Render URL and no longer
+  requires `FACTLEDGER_API_URL` to be duplicated as a secret.
+- [ ] Store `FACTLEDGER_API_KEY` in GitHub Actions if credentialed protected-route verification is required.
 - [ ] Run the credentialed live-verification workflow. Anonymous production
   checks currently verify health and auth rejection only; protected endpoint
   behavior must be exercised through the stored secret, not by exposing it.
