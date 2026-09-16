@@ -1,13 +1,19 @@
 # FactLedger — Current Action Items
 
-Updated: 2026-09-06
+Updated: 2026-09-16
 
 This file replaces the older pre-deployment checklist. It reflects the canonical repository and current production-readiness work.
 
 ## Completed / verified
 
-- [x] Canonical public repository: `https://github.com/fas988840-dev/factledger`
+- [x] Current public repository: `https://github.com/fas988840-dev/FactLedger-`.
+- [x] Intended canonical slug is documented as `factledger`; the account-level
+  rename remains pending and must not be represented as complete while that URL
+  returns 404.
 - [x] Public API deployment: `https://factledger-api.onrender.com`
+- [x] Render deployed commit `90ea95ceba394b337441e0cb0ec902031e234971` successfully.
+- [x] Production `/api/v1/health` returned HTTP 200 with the price dependency operational.
+- [x] Production API-key enforcement is active; protected routes reject requests without a valid key.
 - [x] CI and CodeQL configured.
 - [x] Dependabot breaking major updates for ESLint and TypeScript are blocked pending review.
 - [x] Merged Pyth REST/MCP integration with explicit feed mapping and UNKNOWN/null fallback.
@@ -16,15 +22,23 @@ This file replaces the older pre-deployment checklist. It reflects the canonical
 - [x] OpenAPI entry point is tracked in `docs/openapi.yaml`.
 - [x] Release gates are tracked in `PRODUCTION_READINESS.md`.
 - [x] Grant/application status is tracked under `GRANTS/`; do not duplicate already submitted applications without a reason.
+- [x] A truthful progress update was sent on 2026-09-16 as a reply to the
+  existing 2026-09-10 Solana Grants confirmation thread.
 
 ## External/account-controlled blockers
 
 - [ ] Obtain a real Pyth API key through the founder's Pyth account.
 - [ ] Verify production mint→USD feed IDs against Pyth's official feed catalog.
 - [ ] Store Pyth credentials/feed mapping in production secrets and run `scripts/verify-pyth.ts` against the real account.
-- [ ] Re-deploy and verify `/api/v1/health` reports the price provider operational rather than degraded.
-- [ ] Verify production `API_KEYS`, `CORS_ORIGIN`, `SOLANA_RPC_URL`, and `NODE_ENV=production` are configured in the host secret store.
+- [ ] After Pyth activation, re-deploy and verify `/api/v1/health` with Pyth selected; the current operational price provider is not evidence that Pyth is active.
+- [ ] Verify production `CORS_ORIGIN`, dedicated `SOLANA_RPC_URL`, and Pyth variables in the host secret store. `NODE_ENV=production` is set by the image and API-key enforcement is visibly active, but secret values must remain undisclosed.
 - [ ] Ensure the GitHub live-verification workflow has `FACTLEDGER_API_URL` and any required API key secret.
+- [ ] Run the credentialed live-verification workflow. Anonymous production
+  checks currently verify health and auth rejection only; protected endpoint
+  behavior must be exercised through the stored secret, not by exposing it.
+- [ ] Rename the GitHub repository slug from `FactLedger-` to `factledger` in
+  repository settings, then verify the canonical link. This requires an
+  authenticated account session.
 - [ ] Link a real Vercel team/project if the dashboard is to be deployed on Vercel. The current connected Vercel integration exposes no team/project.
 - [ ] Recruit and verify first external developers/integrations; do not claim MAU, revenue, customers, TVL, or adoption before evidence exists.
 
