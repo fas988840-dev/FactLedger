@@ -15,16 +15,14 @@
  * objects as the one-shot endpoint, just delivered as they happen instead
  * of only on request.
  *
- * ⚠️ VERIFICATION STATUS: Solana RPC access was blocked by this sandbox's
- * network egress policy when this was written, so this has NOT been
- * exercised against a live subscription - see the verification note on
- * SolanaRpcClient.subscribeToLogs() for what's confirmed vs. assumed
- * about that API. Separately, and independent of this sandbox: many
- * public/free RPC endpoints (including the default
+ * ⚠️ VERIFICATION STATUS: the deterministic subscription and deduplication
+ * behavior is covered by automated tests, but a sustained production
+ * WebSocket run against a dedicated provider is still a release gate.
+ * Many public/free RPC endpoints (including the default
  * api.mainnet-beta.solana.com) restrict or disable WebSocket log
  * subscriptions - a dedicated RPC provider is typically required for this
- * to hold a subscription reliably in production. Test against a real
- * endpoint before relying on it.
+ * to hold a subscription reliably in production. Treat live delivery as
+ * unverified until the production benchmark is recorded.
  */
 
 import { WalletAddress, Alert, validateWalletAddress } from '../types/domain.js';
