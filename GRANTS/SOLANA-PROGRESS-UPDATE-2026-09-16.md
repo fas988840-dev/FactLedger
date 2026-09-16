@@ -6,6 +6,10 @@
 - Confirmed recipient: `grant-apps@solana.org`.
 - Do not submit another application.
 - Sent on 2026-09-16 in the existing thread.
+- Post-send repository update: the repository was renamed to
+  `https://github.com/fas988840-dev/FactLedger` later on 2026-09-16. The body
+  below preserves the exact link that was sent; GitHub redirects that former
+  URL to the canonical repository.
 
 ## Subject
 
