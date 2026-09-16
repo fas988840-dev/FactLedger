@@ -8,7 +8,7 @@ application answers, not representations of current form field names.
 Project: FactLedger  
 Founder: Abdullah Al-Anzi, Saudi Arabia  
 Contact: fas988840@gmail.com  
-Repository: https://github.com/fas988840-dev/--x  
+Repository: https://github.com/fas988840-dev/factledger
 API: https://factledger-api.onrender.com  
 Stage: early MVP, solo founder; no users or revenue reported in current materials.
 

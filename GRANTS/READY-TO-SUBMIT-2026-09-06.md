@@ -7,7 +7,7 @@ Updated: 2026-09-06
 - Production API: https://factledger-api.onrender.com
 - Health: https://factledger-api.onrender.com/api/v1/health
 - Interactive demo: https://factledger-demo.onrender.com/demo.html
-- Source: https://github.com/fas988840-dev/--x
+- Source: https://github.com/fas988840-dev/factledger
 
 ## Finternet Instagrant — request: 4,000 USDC
 

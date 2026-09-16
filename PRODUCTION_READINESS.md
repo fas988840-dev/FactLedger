@@ -1,12 +1,15 @@
 # Production Readiness
 
-Updated: 2026-09-06
+Updated: 2026-09-16
 
 This document is the operational release gate for FactLedger. It distinguishes verified capabilities from external/account-controlled blockers and prevents "production-ready" claims before the evidence exists.
 
 ## Current verified baseline
 
 - GitHub CI: lint, type-check, tests, and build are configured on every push/PR.
+- The root lockfile is committed and CI uses `npm ci` for reproducible installs.
+- CI blocks high/critical dependency advisories; remaining advisories are
+  moderate transitive issues in the current Solana/Vitest dependency trees.
 - CodeQL is configured.
 - Dependabot major upgrades for ESLint/TypeScript are blocked pending manual review.
 - Live API exists at `https://factledger-api.onrender.com` with `/api/v1/health`.
@@ -104,7 +107,13 @@ Do not claim MAU, customers, integrations, revenue, TVL, awards, or community si
 
 Repository demo/documentation exists. The stronger demo is the deployed dashboard performing a real wallet analysis against production with clear evidence links and UNKNOWN/null behavior visible.
 
-### 10. v1.0 release — NOT READY YET
+### 10. Developer preview — CURRENT RELEASE STAGE
+
+The current release is a **developer preview**, not v1.0. This label is the
+truthful public status until the external/account-controlled gates below are
+closed.
+
+### 11. v1.0 release — NOT READY YET
 
 Do not tag v1.0 until all of the following are true:
 

@@ -192,9 +192,9 @@ rather than asserted in a README.
 ## Links
 
 ```
-Repository:  https://github.com/fas988840-dev/--x
+Repository:  https://github.com/fas988840-dev/factledger
 Live API:    https://factledger-api.onrender.com/api/v1/health
-CI:          https://github.com/fas988840-dev/--x/actions
+CI:          https://github.com/fas988840-dev/factledger/actions
 Contact:     fas988840@gmail.com
 X / Twitter: @aamm123220
 License:     MIT

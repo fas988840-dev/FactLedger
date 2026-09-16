@@ -31,7 +31,7 @@ Wallet risk scores increasingly gate real decisions on Solana: protocol access, 
 
 FactLedger is a read-only Solana wallet intelligence API built around one constraint: it never fabricates data. Any value it cannot verify — a price, a fee, a decoded swap amount or a token-risk field — is returned as null, never as a plausible estimate. Every score ships with the named factors that produced it and the specific transactions it read, so a reviewer can pull those transactions from a public RPC and independently recompute the result.
 
-The MVP is live at https://factledger-api.onrender.com and the repository is public under MIT at https://github.com/fas988840-dev/--x. The current codebase includes REST endpoints, MCP tools for AI clients, token-security checks, deterministic wallet risk/intelligence scoring and transaction evidence output. It never requests private keys, never stores seed phrases and never signs transactions.
+The MVP is live at https://factledger-api.onrender.com and the repository is public under MIT at https://github.com/fas988840-dev/factledger. The current codebase includes REST endpoints, MCP tools for AI clients, token-security checks, deterministic wallet risk/intelligence scoring and transaction evidence output. It never requests private keys, never stores seed phrases and never signs transactions.
 ```
 
 ---
@@ -51,7 +51,7 @@ The current proof is engineering execution: a public MIT repository, a live API,
 ## GitHub repository
 
 ```text
-https://github.com/fas988840-dev/--x
+https://github.com/fas988840-dev/factledger
 ```
 
 ---

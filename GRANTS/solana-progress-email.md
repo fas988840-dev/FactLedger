@@ -56,8 +56,8 @@ Following up on my grant application for FactLedger with one concrete update:
 the API is now deployed and publicly reachable.
 
   Live:  https://factledger-api.onrender.com/api/v1/health
-  Code:  https://github.com/fas988840-dev/--x   (public, MIT)
-  CI:    https://github.com/fas988840-dev/--x/actions
+  Code:  https://github.com/fas988840-dev/factledger   (public, MIT)
+  CI:    https://github.com/fas988840-dev/factledger/actions
 
 That covers the first part of Milestone 1 as proposed — a public URL. The
 remaining parts of that milestone, a dedicated RPC provider and error and

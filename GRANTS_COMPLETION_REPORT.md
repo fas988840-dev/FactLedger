@@ -100,12 +100,9 @@ somewhere with npm registry access.
 
 ## Repository
 
-- Owner/name as seen on GitHub: `fas988840-dev/--x`
-- Older documents link to `fas988840-dev/PROJECT-x`. **Verified working**:
-  that URL returns `HTTP 301` redirecting to `/--x`, so those ~108 links
-  resolve correctly and do not need rewriting. (Caveat: GitHub's rename
-  redirect stops working if a new repo named `PROJECT-x` is later created
-  under this account.)
+- Canonical owner/name: `fas988840-dev/factledger`.
+- Historical repository names are not canonical and should not be used in new
+  applications or product links.
 - Repository was archived on Aug 31, 2026 and has since been **unarchived**;
   it accepts writes again.
 

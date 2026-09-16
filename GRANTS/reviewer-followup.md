@@ -23,8 +23,8 @@ the exact transactions behind it, so it can be recomputed from any public RPC.
 
 Everything is checkable right now:
 - Live API health: https://factledger-api.onrender.com/api/v1/health
-- Repo (public, MIT): https://github.com/fas988840-dev/--x
-- CI (tests + build): https://github.com/fas988840-dev/--x/actions
+- Repo (public, MIT): https://github.com/fas988840-dev/factledger
+- CI (tests + build): https://github.com/fas988840-dev/factledger/actions
 
 Honest current state: it's deployed and open-source, with no users yet — that's
 exactly what I'm working on now (public launch + the MCP server for AI agents).

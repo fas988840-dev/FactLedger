@@ -6,7 +6,7 @@ This file replaces the older pre-deployment checklist. It reflects the canonical
 
 ## Completed / verified
 
-- [x] Canonical public repository: `https://github.com/fas988840-dev/--x`
+- [x] Canonical public repository: `https://github.com/fas988840-dev/factledger`
 - [x] Public API deployment: `https://factledger-api.onrender.com`
 - [x] CI and CodeQL configured.
 - [x] Dependabot breaking major updates for ESLint and TypeScript are blocked pending review.

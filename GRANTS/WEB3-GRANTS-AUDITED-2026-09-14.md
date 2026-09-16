@@ -12,7 +12,7 @@ This file replaces unverified grant-guide claims with current, evidence-based po
 - Stage: MVP / early prototype
 - Company status: independent project / no registered company documented
 - Open source: MIT
-- GitHub: https://github.com/fas988840-dev/--x
+- GitHub: https://github.com/fas988840-dev/factledger
 - Live API: https://factledger-api.onrender.com
 - Demo: https://factledger-demo.onrender.com/demo.html
 - Solana wallet: `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`

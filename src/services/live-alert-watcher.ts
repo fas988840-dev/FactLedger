@@ -70,11 +70,16 @@ export class LiveAlertWatcher {
       if (!active) return;
       try {
         const transactions = await this.transactionRetriever.getWalletTransactionsMeta(validated, limit);
+        // stop() may run while the RPC request is in flight. Re-check after
+        // every awaited boundary so a stopped subscription cannot emit a
+        // late alert or mutate its deduplication state.
+        if (!active) return;
         const behavior = this.behaviorAnalyzer.analyzeBehavior(transactions, [], new Set(), new Set());
         const risk = this.riskAssessor.assessRisk(behavior);
         const alerts = this.alertEngine.evaluate(validated, behavior, risk);
 
         for (const alert of alerts) {
+          if (!active) return;
           // Dedupe on the real evidence, not the random UUID `id` field
           // (a fresh id every evaluation would defeat deduping entirely).
           const key = `${alert.type}|${alert.evidence.join('|')}`;

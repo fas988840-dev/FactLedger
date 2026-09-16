@@ -13,7 +13,7 @@ Kraken's public grants page states that it considers open-source developer grant
 **Location:** Riyadh, Saudi Arabia  
 **Stage:** MVP / early prototype  
 **License:** MIT  
-**Repository:** https://github.com/fas988840-dev/--x  
+**Repository:** https://github.com/fas988840-dev/factledger
 **Live API:** https://factledger-api.onrender.com
 
 ### Core description

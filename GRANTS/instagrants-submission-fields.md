@@ -91,9 +91,9 @@ is never empty, so a short findings list cannot be misread as an all-clear.
 ## Proof of work
 
 ```
-Repository:  https://github.com/fas988840-dev/--x     (public, MIT)
+Repository:  https://github.com/fas988840-dev/factledger     (public, MIT)
 Live API:    https://factledger-api.onrender.com/api/v1/health
-CI:          https://github.com/fas988840-dev/--x/actions
+CI:          https://github.com/fas988840-dev/factledger/actions
 
 Deployed and answering. 219 tests pass in the local verification run on 2026-09-05, including a
 determinism check that calls each scoring function twice with fixed input and

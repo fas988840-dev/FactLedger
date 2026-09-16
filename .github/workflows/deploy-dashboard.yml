@@ -71,7 +71,7 @@ jobs:
               repo_candidates = []
               for p in projects:
                   repo = repo_name(p)
-                  if repo in {"--x", "fas988840-dev/--x"} or repo.endswith("/--x"):
+                  if repo in {"factledger", "fas988840-dev/factledger", "--x", "fas988840-dev/--x"} or repo.endswith(("/factledger", "/--x")):
                       repo_candidates.append(p)
               if repo_candidates:
                   candidates = repo_candidates
@@ -95,7 +95,7 @@ jobs:
 
           if [ -z "$MATCH" ]; then
             echo "::error::Could not uniquely identify the FactLedger Vercel project."
-            echo "Link the Vercel project to fas988840-dev/--x or set repository secret VERCEL_PROJECT_NAME to its exact name."
+            echo "Link the Vercel project to fas988840-dev/factledger or set repository secret VERCEL_PROJECT_NAME to its exact name."
             exit 1
           fi
 

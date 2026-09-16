@@ -5,7 +5,7 @@ script for each, with timing.
 
 **Every factual claim in these scripts is verifiable.** The test counts are
 from CI on `main` and a reviewer can open the latest run at
-github.com/fas988840-dev/--x/actions to check them. **If you re-record after
+github.com/fas988840-dev/factledger/actions to check them. **If you re-record after
 further commits, re-read the current count first** — the figure spoken aloud
 has to match the run on screen.
 
@@ -26,7 +26,7 @@ to overstate is the demonstration.
 
 **Have open in tabs, ready to click:**
 1. The GitHub repo
-2. The CI run: `github.com/fas988840-dev/--x/actions` — open the latest green run on `main`
+2. The CI run: `github.com/fas988840-dev/factledger/actions` — open the latest green run on `main`
 3. `src/services/determinism.test.ts`
 4. `src/services/instruction-parser.ts`
 5. A terminal

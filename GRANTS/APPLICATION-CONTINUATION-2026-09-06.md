@@ -11,7 +11,7 @@ This file resolves the current application-status differences and gives the clea
 - Stage: MVP / early prototype.
 - Entity status: not incorporated / no registered company currently documented.
 - Project: FactLedger.
-- Repository: https://github.com/fas988840-dev/--x
+- Repository: https://github.com/fas988840-dev/factledger
 - Live API: https://factledger-api.onrender.com
 - Project email: fas988840@gmail.com
 - Microsoft account email: Xx053233@hotmail.com

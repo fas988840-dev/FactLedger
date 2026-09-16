@@ -5,7 +5,22 @@ import { SolanaRpcClient } from './solana-rpc-client.js';
 const SIGNATURE = '5'.repeat(88);
 const RECIPIENT = '11111111111111111111111111111111';
 
-function tx(destination = RECIPIENT, lamports = 5_000, err: unknown = null) {
+interface MockTransaction {
+  meta: { err: unknown };
+  transaction: {
+    message: {
+      instructions: Array<{
+        program: string;
+        parsed: {
+          type: string;
+          info: { destination: string; lamports: number };
+        };
+      }>;
+    };
+  };
+}
+
+function tx(destination = RECIPIENT, lamports = 5_000, err: unknown = null): MockTransaction {
   return {
     meta: { err },
     transaction: {
@@ -24,7 +39,10 @@ function tx(destination = RECIPIENT, lamports = 5_000, err: unknown = null) {
   };
 }
 
-function fakeRpc(status: 'processed' | 'confirmed' | 'finalized' | null, transaction: unknown) {
+function fakeRpc(
+  status: 'processed' | 'confirmed' | 'finalized' | null,
+  transaction: unknown,
+): SolanaRpcClient {
   return {
     getTransactionConfirmationStatus: vi.fn().mockResolvedValue(status),
     getTransaction: vi.fn().mockResolvedValue(transaction),

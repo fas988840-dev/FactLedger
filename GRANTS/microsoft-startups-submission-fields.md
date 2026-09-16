@@ -8,7 +8,7 @@ Status: prepared, **not submitted**. Current official guidance checked on 6 Sept
 **Founder:** Abdullah Al-Anzi  
 **Location:** Saudi Arabia  
 **Stage:** MVP / early prototype; choose the portal's matching option  
-**Repository:** https://github.com/fas988840-dev/--x  
+**Repository:** https://github.com/fas988840-dev/factledger
 **Product URL:** https://factledger-api.onrender.com  
 **Project email:** fas988840@gmail.com  
 **Microsoft account email:** Xx053233@hotmail.com  

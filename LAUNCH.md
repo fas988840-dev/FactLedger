@@ -39,7 +39,7 @@ Every value is read from chain or returned as "unknown" — never guessed.
 Deterministic risk + intelligence scores, each with a full evidence trail.
 
 Open-source (MIT). Live now 👇
-https://github.com/fas988840-dev/--x
+https://github.com/fas988840-dev/factledger
 
 @solana @SuperteamDAO
 ```
@@ -72,7 +72,7 @@ an MCP server so AI agents can consume it.
 I'd genuinely like feedback — especially on whether the "honest unknowns"
 approach is useful to you, or just extra friction.
 
-Repo: https://github.com/fas988840-dev/--x
+Repo: https://github.com/fas988840-dev/factledger
 Live: https://factledger-api.onrender.com/api/v1/health
 ```
 
@@ -86,7 +86,7 @@ Built a small open-source thing: FactLedger, a read-only Solana wallet
 intelligence API. Its one rule is it never guesses — unknown values come back
 as null, and every DEX instruction is labeled verified/candidate/unknown.
 There's an MCP server for AI agents too. Feedback welcome 🙏
-Repo: https://github.com/fas988840-dev/--x
+Repo: https://github.com/fas988840-dev/factledger
 ```
 
 ---

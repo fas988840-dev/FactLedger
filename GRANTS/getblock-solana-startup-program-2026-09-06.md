@@ -14,7 +14,7 @@ Status: **application package emailed / portal submission not yet verified**
 - Location: Riyadh, Saudi Arabia
 - Email: fas988840@gmail.com
 - Telegram: @abdullhaa11
-- GitHub: https://github.com/fas988840-dev/--x
+- GitHub: https://github.com/fas988840-dev/factledger
 - Live API: https://factledger-api.onrender.com
 - License: MIT
 - Solana wallet: `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`

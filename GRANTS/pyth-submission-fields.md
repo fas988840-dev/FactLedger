@@ -7,7 +7,7 @@ programme or an integration-support inquiry, not a closed-bounty submission.
 ## Project / founder
 
 FactLedger — Abdullah Al-Anzi, solo founder in Saudi Arabia.  
-Repository: https://github.com/fas988840-dev/--x  
+Repository: https://github.com/fas988840-dev/factledger
 Email: fas988840@gmail.com · X: @aamm123220 · Telegram: @abdullhaa11
 
 ## Short description
@@ -74,7 +74,7 @@ Hello Pyth / Douro Labs team,
 
 I am Abdullah Al-Anzi, a solo founder in Saudi Arabia building FactLedger, an
 MIT-licensed, read-only Solana wallet intelligence API and MCP server:
-https://github.com/fas988840-dev/--x.
+https://github.com/fas988840-dev/factledger.
 
 I have implemented a Hermes provider and wired token prices into REST and MCP,
 with explicit mappings, publication-age validation and honest UNKNOWN results

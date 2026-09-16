@@ -61,7 +61,7 @@ Copy each block from `colosseum-submission-fields.md`:
 - Product name → `FactLedger`
 - Short + long descriptions → (ready in that file)
 - Team background → (ready)
-- GitHub → `https://github.com/fas988840-dev/--x`
+- GitHub → `https://github.com/fas988840-dev/factledger`
 - Video → your Unlisted link
 - "Anything else" + "use of funding" + "business model" → (all ready)
 

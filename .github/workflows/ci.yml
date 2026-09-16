@@ -18,17 +18,13 @@ jobs:
         with:
           node-version: '20'
 
-      - run: npm install --no-audit --no-fund
+      - run: npm ci --no-audit --no-fund
 
-      - name: Audit dependencies (full JSON, non-blocking)
-        # Capture exact advisory chains and severities without applying forced
-        # dependency changes. This remains non-blocking so verification still
-        # runs even when npm reports advisories.
-        run: timeout 120s npm audit --json || true
+      - name: Audit dependencies (high and critical)
+        run: timeout 120s npm audit --audit-level=high
 
-      - name: Audit production dependencies (non-blocking)
-        # Separates runtime exposure from dev-tool advisories such as Vitest/Vite.
-        run: timeout 120s npm audit --omit=dev --audit-level=high || true
+      - name: Audit production dependencies (high and critical)
+        run: timeout 120s npm audit --omit=dev --audit-level=high
 
       - name: Lint
         run: npm run lint

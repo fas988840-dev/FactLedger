@@ -1,10 +1,10 @@
-<!-- Live page: https://fas988840-dev.github.io/--x/  ·  API: https://factledger-api.onrender.com -->
+<!-- Live page: https://fas988840-dev.github.io/factledger/  ·  API: https://factledger-api.onrender.com -->
 
 # FactLedger
 
 **Reproducible Solana wallet intelligence.** Read-only. Deterministic. Evidence-cited.
 
-[![CI](https://github.com/fas988840-dev/--x/actions/workflows/ci.yml/badge.svg)](https://github.com/fas988840-dev/--x/actions/workflows/ci.yml)
+[![CI](https://github.com/fas988840-dev/factledger/actions/workflows/ci.yml/badge.svg)](https://github.com/fas988840-dev/factledger/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0B6E4F.svg)](LICENSE)
 [![API status](https://img.shields.io/badge/API-live-0B6E4F.svg)](https://factledger-api.onrender.com/api/v1/health)
 
@@ -93,8 +93,8 @@ Example:
 ```bash
 curl 'https://factledger-api.onrender.com/api/v1/wallet/<address>/analysis'
 
-git clone https://github.com/fas988840-dev/--x.git
-cd --x
+git clone https://github.com/fas988840-dev/factledger.git
+cd factledger
 npm install
 cp .env.example .env.local     # never commit real credentials
 npm run dev                    # or: npm run build && npm run start
@@ -103,7 +103,7 @@ npm run mcp                    # run as an MCP server over stdio
 
 Requires Node.js 18+. See QUICK_START.md for the full setup and CLAUDE.md for architecture and design principles.
 
-Security
+## Security
 
 - No private keys, ever — read-only access, no signing, no secret storage.
 - API-key auth — required before any public deployment (API_KEYS); the server warns on stderr if a production deploy is left open.
@@ -111,13 +111,13 @@ Security
 - Safe CORS defaults — GET/OPTIONS only, explicit origin allowlist.
 - Dependency scanning — Dependabot + npm audit in CI.
 
-See SECURITY.md.
+See [SECURITY.md](SECURITY.md).
 
-Disclaimers
+## Disclaimers
 
 FactLedger provides data analysis only. Scores are derived from observable on-chain behavior, are not financial advice, do not indicate portfolio quality, and do not predict performance. A clean security check is never a claim that a token or wallet is “safe.” Users are solely responsible for their own decisions.
 
-License
+## License
 
 MIT — see LICENSE. © 2026 Abdullah Al-Anzi.
 

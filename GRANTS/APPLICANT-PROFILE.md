@@ -15,13 +15,13 @@ Use this file as the single source of truth for grant, accelerator and investor 
 - Microsoft account email: Xx053233@hotmail.com
 - X: https://x.com/aamm123220
 - Telegram: @abdullhaa11
-- GitHub: https://github.com/fas988840-dev/--x
+- GitHub: https://github.com/fas988840-dev/factledger
 - Solana wallet for application contact/payout fields when a Solana wallet is requested: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
 
 ## Project
 
 - Name: FactLedger
-- Repository: https://github.com/fas988840-dev/--x
+- Repository: https://github.com/fas988840-dev/factledger
 - Live API: https://factledger-api.onrender.com
 - License: MIT
 

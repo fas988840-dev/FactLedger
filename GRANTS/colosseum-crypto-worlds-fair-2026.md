@@ -49,7 +49,7 @@ Abdullah Al-Anzi — solo founder and developer based in Riyadh, Saudi Arabia. F
 
 ## Repository
 
-https://github.com/fas988840-dev/--x
+https://github.com/fas988840-dev/factledger
 
 ## Live API
 

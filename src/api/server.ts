@@ -490,8 +490,8 @@ export class APIServer {
       description:
         'Read-only Solana wallet intelligence. Every value is either verified ' +
         'on-chain or returned as null — never estimated.',
-      repository: 'https://github.com/fas988840-dev/--x',
-      documentation: 'https://github.com/fas988840-dev/--x#api-endpoints',
+      repository: 'https://github.com/fas988840-dev/factledger',
+      documentation: 'https://github.com/fas988840-dev/factledger#api-endpoints',
       health: '/api/v1/health',
       authentication:
         'Routes other than / and /api/v1/health require an X-API-Key header ' +
