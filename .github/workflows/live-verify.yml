@@ -3,9 +3,9 @@ name: Live Verification
 # Runs automatically after a successful deploy to Fly.io/Render,
 # or manually via workflow_dispatch with the deployed URL.
 #
-# Required GitHub Secrets (Settings → Secrets → Actions):
-#   FACTLEDGER_API_URL   — e.g. https://factledger-api.onrender.com
-#   FACTLEDGER_API_KEY   — optional; leave empty if API_KEYS not set on the server
+# Optional GitHub Secrets (Settings → Secrets → Actions):
+#   FACTLEDGER_API_URL   — overrides the canonical Render URL
+#   FACTLEDGER_API_KEY   — enables credentialed protected-route checks
 #   SOLANA_RPC_URL       — optional; defaults to public mainnet-beta endpoint
 #
 # The job does NOT require CHAINGPT_API_KEY — it only checks the /explanation
@@ -36,20 +36,21 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
 
     env:
-      API_URL: ${{ inputs.api_url || secrets.FACTLEDGER_API_URL }}
+      API_URL: ${{ inputs.api_url || secrets.FACTLEDGER_API_URL || 'https://factledger-api.onrender.com' }}
       API_KEY: ${{ secrets.FACTLEDGER_API_KEY }}
       SOLANA_RPC:  ${{ secrets.SOLANA_RPC_URL || 'https://api.mainnet-beta.solana.com' }}
       # Use a well-known read-only address: Solana System Program
       TEST_WALLET: '11111111111111111111111111111112'
 
     steps:
-      - name: Verify API_URL is set
+      - name: Print verification target
         run: |
-          if [ -z "$API_URL" ]; then
-            echo "::error::FACTLEDGER_API_URL secret is not set. Add it under Settings → Secrets → Actions."
-            exit 1
-          fi
           echo "Testing against: $API_URL"
+          if [ -z "$API_KEY" ]; then
+            echo "No FACTLEDGER_API_KEY secret is configured; protected-route checks will verify 401 enforcement instead."
+          else
+            echo "FACTLEDGER_API_KEY is configured; credentialed protected-route checks are enabled."
+          fi
 
       # ── 0. Warm up: wake a cold-started Render free-tier service ────────────
       # A free instance spins down after 15 min idle and takes ~30-60s to wake.
@@ -88,8 +89,31 @@ jobs:
           fi
           echo "✅ /api/v1/health → 200"
 
-      # ── 2. Wallet intelligence ─────────────────────────────────────────────
+      # ── 2. Authentication policy ──────────────────────────────────────────
+      # A run without the private key is still useful: it must prove that a
+      # protected route rejects anonymous requests. When the key exists, the
+      # credentialed checks below exercise the protected API end to end.
+      - name: Authentication policy
+        run: |
+          if [ -n "$API_KEY" ]; then
+            echo "✅ credentialed route checks enabled"
+            exit 0
+          fi
+
+          CODE=$(curl -s --max-time 20 \
+            -o /tmp/auth.json -w "%{http_code}" \
+            "$API_URL/api/v1/wallet/$TEST_WALLET/intelligence" || echo "000")
+          echo "HTTP $CODE"
+          echo "--- body ---"; cat /tmp/auth.json 2>/dev/null; echo
+          if [ "$CODE" != "401" ]; then
+            echo "::error::Expected anonymous protected request to return 401, got $CODE"
+            exit 1
+          fi
+          echo "✅ anonymous protected request → 401"
+
+      # ── 3. Wallet intelligence ─────────────────────────────────────────────
       - name: Wallet intelligence (System Program)
+        if: ${{ env.API_KEY != '' }}
         run: |
           CODE=$(curl -s --max-time 60 \
             -H "${API_KEY:+X-API-Key: $API_KEY}" \
@@ -111,8 +135,9 @@ jobs:
           print('✅ score in range')
           "
 
-      # ── 3. Risk assessment ─────────────────────────────────────────────────
+      # ── 4. Risk assessment ─────────────────────────────────────────────────
       - name: Risk assessment (System Program)
+        if: ${{ env.API_KEY != '' }}
         run: |
           CODE=$(curl -s --max-time 60 \
             -H "${API_KEY:+X-API-Key: $API_KEY}" \
@@ -133,8 +158,9 @@ jobs:
           print('✅ risk level valid')
           "
 
-      # ── 4. Explanation endpoint (deterministic fallback, no ChainGPT key) ─
+      # ── 5. Explanation endpoint (deterministic fallback, no ChainGPT key) ─
       - name: Explanation endpoint (deterministic fallback)
+        if: ${{ env.API_KEY != '' }}
         run: |
           CODE=$(curl -s --max-time 60 \
             -H "${API_KEY:+X-API-Key: $API_KEY}" \
@@ -153,8 +179,9 @@ jobs:
           echo "Summary source: $SOURCE"
           echo "✅ /explanation reachable — summarySource=$SOURCE"
 
-      # ── 5. Validation rejects bad address → 400 ───────────────────────────
+      # ── 6. Validation rejects bad address → 400 ───────────────────────────
       - name: 400 on invalid address
+        if: ${{ env.API_KEY != '' }}
         run: |
           CODE=$(curl -s --max-time 20 \
             -H "${API_KEY:+X-API-Key: $API_KEY}" \
@@ -168,7 +195,7 @@ jobs:
           fi
           echo "✅ invalid address → 400"
 
-      # ── 6. Solana RPC connectivity ─────────────────────────────────────────
+      # ── 7. Solana RPC connectivity ─────────────────────────────────────────
       - name: Solana mainnet-beta RPC reachability
         run: |
           RESPONSE=$(curl -sf --max-time 15 \
@@ -183,7 +210,7 @@ jobs:
           print('✅ Solana RPC reachable — slot=$SLOT')
           "
 
-      # ── 7. Summary ────────────────────────────────────────────────────────
+      # ── 8. Summary ────────────────────────────────────────────────────────
       - name: Print summary
         if: always()
         run: |
@@ -200,3 +227,8 @@ jobs:
               echo "[$f] ❌ (not reached)"
             fi
           done
+          if [ -z "$API_KEY" ]; then
+            echo "[auth] ✅ anonymous request rejected; credentialed checks skipped"
+          else
+            echo "[auth] ✅ credentialed checks enabled"
+          fi
