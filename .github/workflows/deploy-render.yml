@@ -1,6 +1,10 @@
 name: Deploy to Render
 
-# Deploys the API (src/ → Dockerfile → Render.com) on every push to main.
+# Manual fallback for deploying the API (src/ → Dockerfile → Render.com).
+#
+# The Render service already watches `main` and auto-deploys each commit. Running
+# the same deployment again from GitHub Actions created duplicate deploys and,
+# when repository secrets were intentionally absent, false failure alerts.
 #
 # Required GitHub Secrets (Settings → Secrets → Actions):
 #   RENDER_API_KEY    — from render.com/u/settings → API Keys → Create API Key
@@ -9,14 +13,6 @@ name: Deploy to Render
 # Render service environment must also include API_KEYS and CORS_ORIGIN.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'src/**'
-      - 'Dockerfile'
-      - 'render.yaml'
-      - 'package*.json'
-      - 'tsconfig.json'
   workflow_dispatch:
 
 permissions: {}
