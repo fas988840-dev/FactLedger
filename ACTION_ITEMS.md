@@ -6,10 +6,11 @@ This file replaces the older pre-deployment checklist. It reflects the canonical
 
 ## Completed / verified
 
-- [x] Current public repository: `https://github.com/fas988840-dev/FactLedger-`.
-- [x] Intended canonical slug is documented as `factledger`; the account-level
-  rename remains pending and must not be represented as complete while that URL
-  returns 404.
+- [x] Canonical public repository: `https://github.com/fas988840-dev/FactLedger`.
+- [x] Repository rename completed and the canonical link verified through the
+  GitHub repository API on 2026-09-16.
+- [x] Active `Protect main` ruleset blocks deletion and force-push updates and
+  requires both API and dashboard CI checks.
 - [x] Public API deployment: `https://factledger-api.onrender.com`
 - [x] Render deployed commit `90ea95ceba394b337441e0cb0ec902031e234971` successfully.
 - [x] Production `/api/v1/health` returned HTTP 200 with the price dependency operational.
@@ -36,9 +37,9 @@ This file replaces the older pre-deployment checklist. It reflects the canonical
 - [ ] Run the credentialed live-verification workflow. Anonymous production
   checks currently verify health and auth rejection only; protected endpoint
   behavior must be exercised through the stored secret, not by exposing it.
-- [ ] Rename the GitHub repository slug from `FactLedger-` to `factledger` in
-  repository settings, then verify the canonical link. This requires an
-  authenticated account session.
+- [ ] Add the pull-request requirement to `Protect main` and verify that the
+  ruleset API contains a `pull_request` rule. The current active ruleset does
+  not yet report that rule, so it must not be represented as enabled.
 - [ ] Link a real Vercel team/project if the dashboard is to be deployed on Vercel. The current connected Vercel integration exposes no team/project.
 - [ ] Recruit and verify first external developers/integrations; do not claim MAU, revenue, customers, TVL, or adoption before evidence exists.
 
