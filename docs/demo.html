@@ -24,6 +24,13 @@
 
   <div class="grid">
     <section class="card full">
+      <h2>API access</h2>
+      <label for="apiKey">Your FactLedger API key</label>
+      <input id="apiKey" type="password" autocomplete="off" spellcheck="false" placeholder="Enter your own API key for protected requests" />
+      <p class="sub">Health checks do not require a key. Use only a key issued to you for FactLedger, never a wallet private key or seed phrase. The key is sent only to the FactLedger API and is not saved by this page.</p>
+      <button class="secondary" onclick="document.getElementById('apiKey').value=''">Clear key</button>
+    </section>
+    <section class="card full">
       <h2>0 · Production health</h2>
       <div class="row"><button onclick="run('/api/v1/health','healthOut','healthStatus')">Check live API</button></div>
       <div id="healthStatus" class="status">Not checked yet.</div>
@@ -64,17 +71,30 @@
 </div>
 <script>
 const API='https://factledger-api.onrender.com';
+const requests=new Map();
 function pretty(x){return JSON.stringify(x,null,2)}
 async function run(path,outId,statusId){
   const out=document.getElementById(outId), status=document.getElementById(statusId);
+  requests.get(outId)?.abort();
+  const controller=new AbortController();
+  requests.set(outId,controller);
+  const timeout=setTimeout(()=>controller.abort(),30000);
   status.textContent='Loading…'; status.className='status'; out.textContent='Requesting '+API+path+' …';
   try{
-    const r=await fetch(API+path,{headers:{accept:'application/json'}});
+    const headers={accept:'application/json'};
+    const key=document.getElementById('apiKey').value.trim();
+    if(key && path!=='/api/v1/health') headers['X-API-Key']=key;
+    const r=await fetch(API+path,{headers,signal:controller.signal});
     const text=await r.text(); let body; try{body=JSON.parse(text)}catch{body=text}
+    if(requests.get(outId)!==controller)return;
     status.textContent=`HTTP ${r.status} ${r.ok?'OK':'ERROR'}`; status.className='status '+(r.ok?'ok':'bad');
-    out.textContent=typeof body==='string'?body:pretty(body);
+    out.textContent=r.status===401?'API access requires a valid FactLedger API key. Enter your issued key above and retry.':typeof body==='string'?body:pretty(body);
     return body;
-  }catch(e){status.textContent='Request failed'; status.className='status bad'; out.textContent=String(e)}
+  }catch(e){
+    if(requests.get(outId)!==controller)return;
+    status.textContent='Request failed'; status.className='status bad';
+    out.textContent=e.name==='AbortError'?'Request timed out after 30 seconds. Retry once the service is available.':'Could not reach the API. Check connectivity and whether this demo origin is allowed by the API. No analysis result is available.';
+  }finally{clearTimeout(timeout);if(requests.get(outId)===controller)requests.delete(outId)}
 }
 function walletRun(kind){
   const address=document.getElementById('wallet').value.trim();

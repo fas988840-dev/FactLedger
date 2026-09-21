@@ -19,6 +19,8 @@ const GECKOTERMINAL_BASE_URL = 'https://api.geckoterminal.com/api/v2';
 const DEXSCREENER_BASE_URL = 'https://api.dexscreener.com';
 const MAX_STALE_SECONDS = 5 * 60;
 const HEALTH_CACHE_MS = 60_000;
+const REQUEST_TIMEOUT_MS = 5_000;
+const RATE_LIMIT_BACKOFF_MS = 60_000;
 
 interface CoinGeckoTokenPriceResponse {
   [contractAddress: string]: { usd?: number; last_updated_at?: number } | undefined;
@@ -50,6 +52,30 @@ function unavailable(
 
 export class CoinGeckoPriceProvider implements PriceProvider {
   private healthCache: { checkedAt: number; healthy: boolean } | null = null;
+  private healthInFlight: Promise<boolean> | null = null;
+  private retryAt = new Map<string, number>();
+
+  /** Share provider cooldowns between price calls and platform probes. */
+  private async request(url: string): Promise<Response> {
+    const origin = new URL(url).origin;
+    if (Date.now() < (this.retryAt.get(origin) ?? 0)) {
+      throw new Error('Provider rate-limit cooldown active');
+    }
+    const response = await fetch(url, {
+      headers: this.headers(),
+      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+    });
+    if (response.status === 429) {
+      const raw = response.headers?.get('retry-after')?.trim();
+      const seconds = raw && /^\d+$/.test(raw) ? Number(raw) : NaN;
+      const delay = Number.isFinite(seconds)
+        ? seconds * 1000
+        : raw ? Date.parse(raw) - Date.now() : NaN;
+      const wait = Number.isFinite(delay) ? Math.max(RATE_LIMIT_BACKOFF_MS, delay) : RATE_LIMIT_BACKOFF_MS;
+      this.retryAt.set(origin, Math.max(this.retryAt.get(origin) ?? 0, Date.now() + wait));
+    }
+    return response;
+  }
 
   async getPrice(mint: string, timestamp?: number): Promise<PriceResult> {
     const results = await this.getPrices([mint], timestamp);
@@ -110,7 +136,7 @@ export class CoinGeckoPriceProvider implements PriceProvider {
   private async fetchCoinGecko(mints: string[], now: number, ts: number): Promise<PriceResult[]> {
     try {
       const url = `${COINGECKO_BASE_URL}/simple/token_price/solana?contract_addresses=${encodeURIComponent(mints.join(','))}&vs_currencies=usd&include_last_updated_at=true`;
-      const response = await fetch(url, { headers: this.headers() });
+      const response = await this.request(url);
 
       if (!response.ok) {
         logger.warn(`CoinGecko price request failed: HTTP ${response.status}; trying fallback`);
@@ -153,7 +179,7 @@ export class CoinGeckoPriceProvider implements PriceProvider {
     try {
       const addresses = encodeURIComponent(mints.join(','));
       const url = `${GECKOTERMINAL_BASE_URL}/simple/networks/solana/token_price/${addresses}`;
-      const response = await fetch(url, { headers: this.headers() });
+      const response = await this.request(url);
 
       if (!response.ok) {
         logger.warn(`GeckoTerminal price fallback failed: HTTP ${response.status}`);
@@ -199,7 +225,7 @@ export class CoinGeckoPriceProvider implements PriceProvider {
     try {
       const addresses = encodeURIComponent(mints.join(','));
       const url = `${DEXSCREENER_BASE_URL}/tokens/v1/solana/${addresses}`;
-      const response = await fetch(url, { headers: this.headers() });
+      const response = await this.request(url);
 
       if (!response.ok) {
         logger.warn(`DEX Screener price fallback failed: HTTP ${response.status}`);
@@ -253,7 +279,16 @@ export class CoinGeckoPriceProvider implements PriceProvider {
     if (this.healthCache && now - this.healthCache.checkedAt < HEALTH_CACHE_MS) {
       return this.healthCache.healthy;
     }
+    if (this.healthInFlight) return this.healthInFlight;
+    this.healthInFlight = this.probeHealth();
+    try {
+      return await this.healthInFlight;
+    } finally {
+      this.healthInFlight = null;
+    }
+  }
 
+  private async probeHealth(): Promise<boolean> {
     let healthy = await this.checkUrl(`${COINGECKO_BASE_URL}/ping`, 'CoinGecko');
     if (!healthy) {
       healthy = await this.checkUrl(`${GECKOTERMINAL_BASE_URL}/networks`, 'GeckoTerminal');
@@ -265,7 +300,7 @@ export class CoinGeckoPriceProvider implements PriceProvider {
       );
     }
 
-    this.healthCache = { checkedAt: now, healthy };
+    this.healthCache = { checkedAt: Date.now(), healthy };
     return healthy;
   }
 
@@ -278,7 +313,7 @@ export class CoinGeckoPriceProvider implements PriceProvider {
 
   private async checkUrl(url: string, provider: string): Promise<boolean> {
     try {
-      const response = await fetch(url, { headers: this.headers() });
+      const response = await this.request(url);
       if (!response.ok) {
         logger.warn(`${provider} health check failed: HTTP ${response.status}`);
       }
