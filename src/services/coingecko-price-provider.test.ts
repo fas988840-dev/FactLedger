@@ -5,9 +5,59 @@ const MINT = 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v';
 
 afterEach(() => {
   vi.unstubAllGlobals();
+  vi.useRealTimers();
 });
 
 describe('CoinGeckoPriceProvider', () => {
+  it.each(['date', 'invalid', 'missing'])('handles %s Retry-After without immediate retry', async (kind) => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date('2026-09-21T12:00:00Z'));
+    const headers = new Headers();
+    if (kind !== 'missing') headers.set('Retry-After', kind === 'date'
+      ? new Date(Date.now() + 120_000).toUTCString() : 'bad-value');
+    const fetchMock = vi.fn().mockResolvedValue({ ok: false, status: 429, headers });
+    vi.stubGlobal('fetch', fetchMock);
+    const provider = new CoinGeckoPriceProvider();
+    await provider.getPrice(MINT);
+    vi.advanceTimersByTime(kind === 'date' ? 119_000 : 59_000);
+    expect((await provider.getPrice(MINT)).priceUSD).toBeNull();
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+    vi.advanceTimersByTime(1_000);
+    await provider.getPrice(MINT);
+    expect(fetchMock).toHaveBeenCalledTimes(6);
+    expect(fetchMock.mock.calls[0][1].signal).toBeInstanceOf(AbortSignal);
+  });
+
+  it('shares an in-flight health probe across concurrent callers', async () => {
+    let finish!: (value: { ok: boolean }) => void;
+    const fetchMock = vi.fn(() => new Promise((resolve) => { finish = resolve; }));
+    vi.stubGlobal('fetch', fetchMock);
+    const provider = new CoinGeckoPriceProvider();
+    const checks = [provider.isHealthy(), provider.isHealthy(), provider.isHealthy()];
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    finish({ ok: true });
+    expect(await Promise.all(checks)).toEqual([true, true, true]);
+  });
+
+  it('honors Retry-After across health and price requests, then retries', async () => {
+    vi.useFakeTimers();
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: false, status: 429, headers: new Headers({ 'Retry-After': '120' }),
+    });
+    vi.stubGlobal('fetch', fetchMock);
+    const provider = new CoinGeckoPriceProvider();
+    expect(await provider.isHealthy()).toBe(false);
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+    expect((await provider.getPrice(MINT)).priceUSD).toBeNull();
+    vi.advanceTimersByTime(61_000);
+    expect(await provider.isHealthy()).toBe(false);
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+    vi.advanceTimersByTime(60_000);
+    fetchMock.mockResolvedValue({ ok: true, json: async () => ({ [MINT]: { usd: 1 } }) });
+    expect((await provider.getPrice(MINT)).priceUSD).toBe(1);
+    expect(fetchMock).toHaveBeenCalledTimes(4);
+  });
+
   it('returns a real price when CoinGecko responds with one', async () => {
     const fetchMock = vi.fn().mockResolvedValue({
       ok: true,

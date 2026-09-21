@@ -13,7 +13,7 @@
 
 const DEFAULT_API_BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://factledger-api-8hth.onrender.com'
+    ? 'https://factledger-api.onrender.com'
     : 'http://localhost:3000';
 
 const API_BASE_URL = (process.env.FACTLEDGER_API_URL || DEFAULT_API_BASE_URL).replace(/\/$/, '');
