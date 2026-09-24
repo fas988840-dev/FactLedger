@@ -1,0 +1,11 @@
+# Moyasar / FactLedger sandbox integration (DRAFT — not live)
+
+The new `src/billing/moyasar-test-verification.ts` is an isolated, test-only payment lookup/validation helper. It is **not deployed**, is **not called by the current server**, creates no charge or invoice, and cannot activate an account. Never use a production key for sandbox verification.
+
+1. In Moyasar dashboard select **test mode**. Keep `pk_test_...` and `sk_test_...` distinct from `pk_live_...` and `sk_live_...`. Never paste any secret into chat, GitHub, logs or browser code. If test secret is available, enter it only into the private Render environment as `MOYASAR_TEST_SECRET_KEY` after the server integration is implemented and reviewed; do not replace `API_KEYS`.
+2. A future authenticated backend checkout endpoint must create an immutable order in durable storage first (customer ID, plan, SAR minor-unit amount, currency, expiry), then use Moyasar-hosted checkout or payment form. Keep test and live orders separate; do not use an arbitrary amount from the browser. Current proposed USD plan prices require an explicitly agreed SAR price / FX policy before creating any real invoice.
+3. On payment callback/webhook **do not trust the redirect or webhook alone**. Load the order server-side, retrieve the payment from `GET https://api.moyasar.com/v1/payments/{id}` with the correct environment's secret key, then confirm status `paid`, exact amount/currency, provider payment ID, the order ID stored in payment metadata, and refund state.
+4. Before issuing a customer key, implement a persistent order/subscription/transaction ledger, unique constraints on provider payment IDs, atomic idempotent transitions, webhook shared-secret validation, refund/void handling, per-customer expiring API keys and usage quotas. In Moyasar dashboard webhooks need an HTTPS server endpoint and a shared secret; **do not register a webhook URL until that handler actually exists**.
+5. Tests: `npm test -- src/billing/moyasar-test-verification.test.ts`. No sandbox API call or real payment has been performed as part of this draft.
+
+References: https://docs.moyasar.com/api/authentication ; https://docs.moyasar.com/guides/card-payments/basic-integration ; https://docs.moyasar.com/guides/dashboard/setting-up-webhooks
