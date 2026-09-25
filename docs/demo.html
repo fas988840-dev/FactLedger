@@ -78,7 +78,8 @@ async function run(path,outId,statusId){
   requests.get(outId)?.abort();
   const controller=new AbortController();
   requests.set(outId,controller);
-  const timeout=setTimeout(()=>controller.abort(),30000);
+  // Allow a sleeping Render instance to wake and protected RPC requests to finish.
+  const timeout=setTimeout(()=>controller.abort(),120000);
   status.textContent='Loading…'; status.className='status'; out.textContent='Requesting '+API+path+' …';
   try{
     const headers={accept:'application/json'};
@@ -93,7 +94,7 @@ async function run(path,outId,statusId){
   }catch(e){
     if(requests.get(outId)!==controller)return;
     status.textContent='Request failed'; status.className='status bad';
-    out.textContent=e.name==='AbortError'?'Request timed out after 30 seconds. Retry once the service is available.':'Could not reach the API. Check connectivity and whether this demo origin is allowed by the API. No analysis result is available.';
+    out.textContent=e.name==='AbortError'?'Request timed out after 120 seconds. Check service health and retry.':'Could not reach the API. Check connectivity and whether this demo origin is allowed by the API. No analysis result is available.';
   }finally{clearTimeout(timeout);if(requests.get(outId)===controller)requests.delete(outId)}
 }
 function walletRun(kind){
