@@ -1,10 +1,10 @@
-<!-- Live page: https://fas988840-dev.github.io/factledger/  ·  API: https://factledger-api.onrender.com -->
+<!-- Canonical repo: https://github.com/fas988840-dev/FactLedger  ·  API: https://factledger-api.onrender.com -->
 
 # FactLedger
 
 **Reproducible Solana wallet intelligence.** Read-only. Deterministic. Evidence-cited.
 
-[![CI](https://github.com/fas988840-dev/factledger/actions/workflows/ci.yml/badge.svg)](https://github.com/fas988840-dev/factledger/actions/workflows/ci.yml)
+[![CI](https://github.com/fas988840-dev/FactLedger/actions/workflows/ci.yml/badge.svg)](https://github.com/fas988840-dev/FactLedger/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-0B6E4F.svg)](LICENSE)
 [![API status](https://img.shields.io/badge/API-live-0B6E4F.svg)](https://factledger-api.onrender.com/api/v1/health)
 
@@ -69,7 +69,7 @@ Publishing this openly is the point: a project that claims reproducibility must 
 
 ## API
 
-Production REST API with request validation, rate limiting, and optional API-key auth. The same read-only pipeline is also exposed as an **MCP server**, so Claude Desktop, Claude Code, and other MCP hosts can call it directly as tools.
+Live developer-preview REST API with request validation, rate limiting, and API-key support. The same read-only pipeline is also exposed as an **MCP server**, so Claude Desktop, Claude Code, and other MCP hosts can call it directly as tools.
 
 **Wallet**
 
@@ -93,15 +93,17 @@ Example:
 ```bash
 curl 'https://factledger-api.onrender.com/api/v1/wallet/<address>/analysis'
 
-git clone https://github.com/fas988840-dev/factledger.git
-cd factledger
+git clone https://github.com/fas988840-dev/FactLedger.git
+cd FactLedger
 npm install
 cp .env.example .env.local     # never commit real credentials
 npm run dev                    # or: npm run build && npm run start
 npm run mcp                    # run as an MCP server over stdio
 ```
 
-Requires Node.js 18+. See QUICK_START.md for the full setup and CLAUDE.md for architecture and design principles.
+Requires Node.js 18+ for the API. The dashboard requires Node.js 20.9+. See QUICK_START.md for the full setup and CLAUDE.md for architecture and design principles.
+
+> Release stage: **developer preview**. See [PRODUCTION_READINESS.md](PRODUCTION_READINESS.md) for the current v1.0 gates.
 
 ## Security
 
