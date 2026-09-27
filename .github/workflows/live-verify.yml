@@ -40,7 +40,7 @@ jobs:
       API_KEY: ${{ secrets.FACTLEDGER_API_KEY }}
       SOLANA_RPC:  ${{ secrets.SOLANA_RPC_URL || 'https://api.mainnet-beta.solana.com' }}
       # Use a well-known read-only address: Solana System Program
-      TEST_WALLET: '11111111111111111111111111111112'
+      TEST_WALLET: '11111111111111111111111111111111'
 
     steps:
       - name: Print verification target
@@ -77,6 +77,7 @@ jobs:
 
       # ── 1. Health check ────────────────────────────────────────────────────
       - name: Health check
+        id: health
         run: |
           CODE=$(curl -s --max-time 20 \
             -o /tmp/health.json -w "%{http_code}" \
@@ -94,12 +95,8 @@ jobs:
       # protected route rejects anonymous requests. When the key exists, the
       # credentialed checks below exercise the protected API end to end.
       - name: Authentication policy
+        id: auth
         run: |
-          if [ -n "$API_KEY" ]; then
-            echo "✅ credentialed route checks enabled"
-            exit 0
-          fi
-
           CODE=$(curl -s --max-time 20 \
             -o /tmp/auth.json -w "%{http_code}" \
             "$API_URL/api/v1/wallet/$TEST_WALLET/intelligence" || echo "000")
@@ -113,6 +110,7 @@ jobs:
 
       # ── 3. Wallet intelligence ─────────────────────────────────────────────
       - name: Wallet intelligence (System Program)
+        id: intel
         if: ${{ env.API_KEY != '' }}
         run: |
           CODE=$(curl -s --max-time 60 \
@@ -137,6 +135,7 @@ jobs:
 
       # ── 4. Risk assessment ─────────────────────────────────────────────────
       - name: Risk assessment (System Program)
+        id: risk
         if: ${{ env.API_KEY != '' }}
         run: |
           CODE=$(curl -s --max-time 60 \
@@ -160,6 +159,7 @@ jobs:
 
       # ── 5. Explanation endpoint (deterministic fallback, no ChainGPT key) ─
       - name: Explanation endpoint (deterministic fallback)
+        id: explanation
         if: ${{ env.API_KEY != '' }}
         run: |
           CODE=$(curl -s --max-time 60 \
@@ -181,6 +181,7 @@ jobs:
 
       # ── 6. Validation rejects bad address → 400 ───────────────────────────
       - name: 400 on invalid address
+        id: validation
         if: ${{ env.API_KEY != '' }}
         run: |
           CODE=$(curl -s --max-time 20 \
@@ -197,6 +198,7 @@ jobs:
 
       # ── 7. Solana RPC connectivity ─────────────────────────────────────────
       - name: Solana mainnet-beta RPC reachability
+        id: rpc
         run: |
           RESPONSE=$(curl -sf --max-time 15 \
             -X POST "$SOLANA_RPC" \
@@ -213,22 +215,29 @@ jobs:
       # ── 8. Summary ────────────────────────────────────────────────────────
       - name: Print summary
         if: always()
+        env:
+          HEALTH_OUTCOME: ${{ steps.health.outcome }}
+          AUTH_OUTCOME: ${{ steps.auth.outcome }}
+          INTEL_OUTCOME: ${{ steps.intel.outcome }}
+          RISK_OUTCOME: ${{ steps.risk.outcome }}
+          EXPLANATION_OUTCOME: ${{ steps.explanation.outcome }}
+          VALIDATION_OUTCOME: ${{ steps.validation.outcome }}
+          RPC_OUTCOME: ${{ steps.rpc.outcome }}
         run: |
-          echo ""
-          echo "═══════════════════════════════════════"
-          echo "  Live Verification Summary"
-          echo "  API: $API_URL"
-          echo "  Wallet: $TEST_WALLET"
-          echo "═══════════════════════════════════════"
-          for f in health intel risk explanation bad; do
-            if [ -f /tmp/$f.json ]; then
-              echo "[$f] ✅"
-            else
-              echo "[$f] ❌ (not reached)"
+          {
+            echo "## Live verification outcomes"
+            echo "| Check | Outcome |"
+            echo "| --- | --- |"
+            echo "| Health | $HEALTH_OUTCOME |"
+            echo "| Anonymous authentication | $AUTH_OUTCOME |"
+            echo "| Wallet intelligence | $INTEL_OUTCOME |"
+            echo "| Risk | $RISK_OUTCOME |"
+            echo "| Explanation | $EXPLANATION_OUTCOME |"
+            echo "| Invalid-address validation | $VALIDATION_OUTCOME |"
+            echo "| Solana RPC | $RPC_OUTCOME |"
+            echo ""
+            if [ -z "$API_KEY" ]; then
+              echo "Credentialed checks were skipped: this run cannot establish an end-to-end release pass."
             fi
-          done
-          if [ -z "$API_KEY" ]; then
-            echo "[auth] ✅ anonymous request rejected; credentialed checks skipped"
-          else
-            echo "[auth] ✅ credentialed checks enabled"
-          fi
+            echo "Dashboard end-to-end verification and external-user proof remain separate release gates."
+          } | tee -a "$GITHUB_STEP_SUMMARY"

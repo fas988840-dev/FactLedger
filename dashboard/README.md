@@ -79,13 +79,15 @@ nothing short of that setting moves the Next.js resolution into this
 folder.
 
 Production defaults to the verified Render service at
-`https://factledger-api-8hth.onrender.com`. Set `FACTLEDGER_API_URL` to
+`https://factledger-api.onrender.com`. Set `FACTLEDGER_API_URL` to
 override that base URL (no trailing path), and set `FACTLEDGER_API_KEY`
-if the API is later started with `API_KEYS` enabled.
+server-side when the API has `API_KEYS` enabled. Never prefix the key with
+`NEXT_PUBLIC_` or put it in browser code.
 
-A successful Vercel production build has been observed. The current
-Vercel project still enforces Vercel Authentication, so public access
-must not be claimed until that project setting is intentionally changed.
+Historical builds do not establish current deployment access. The connected
+Vercel integration currently exposes no team/project. Dashboard deployment,
+server-side key configuration, and live end-to-end wallet analysis remain
+unverified release gates. FactLedger remains a developer preview.
 
 ## Pages
 
