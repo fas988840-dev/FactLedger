@@ -115,6 +115,13 @@ Requires Node.js 18+ for the API. The dashboard requires Node.js 20.9+. See QUIC
 
 See [SECURITY.md](SECURITY.md).
 
+## Support
+
+FactLedger is built and maintained by one developer with no company, no token, and no paid tier that changes an answer. Funding goes to RPC capacity and monitoring, evidence fixtures, and tests.
+
+- **GitHub Sponsors** — profile under review; the Sponsor button enables it once approved.
+- **Options and rules** — see [FUNDING/DONATE.md](FUNDING/DONATE.md). The only canonical receiving address is recorded in [FUNDING/RECEIVING_WALLET.md](FUNDING/RECEIVING_WALLET.md); FactLedger will never ask for private keys or seed phrases, and never for a transfer to any other address.
+
 ## Disclaimers
 
 FactLedger provides data analysis only. Scores are derived from observable on-chain behavior, are not financial advice, do not indicate portfolio quality, and do not predict performance. A clean security check is never a claim that a token or wallet is “safe.” Users are solely responsible for their own decisions.
