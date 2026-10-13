@@ -18,6 +18,12 @@ jobs:
         with:
           node-version: '20'
 
+      # Pin the package manager to the version that generated package-lock.json.
+      # npm 10 fails `npm ci` against this lock ("Missing: utf-8-validate@5.0.10
+      # from lock file") and its resolver crashes on the vitest 4 upgrade path.
+      - name: Pin npm version
+        run: npm install -g npm@11 --no-audit --no-fund
+
       - run: npm ci --no-audit --no-fund
 
       - name: Audit dependencies (high and critical)
