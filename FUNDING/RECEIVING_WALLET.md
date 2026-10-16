@@ -4,7 +4,7 @@ Public Solana wallet designated by the project owner for receiving eligible gran
 
 **Network:** Solana
 
-**Public address:** `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+**Public address:** 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 
 ## Controls
 
