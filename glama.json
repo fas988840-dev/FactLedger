@@ -1,0 +1,26 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "name": "factledger",
+  "title": "FactLedger — Deterministic Solana Wallet Intelligence MCP Server",
+  "description": "Read-only, deterministic Solana wallet intelligence, risk scoring, token authority checks, and transaction-cited evidence over MCP. Never fabricates data: unverified facts return explicit null/UNKNOWN.",
+  "repository": "https://github.com/fas988840-dev/FactLedger",
+  "homepage": "https://factledger-demo.onrender.com/demo.html",
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Abdullah Al-Anzi",
+      "email": "fas988840@gmail.com",
+      "github": "fas988840-dev"
+    }
+  ],
+  "tools": [
+    "wallet_intelligence",
+    "transaction_lookup",
+    "wallet_risk",
+    "wallet_research_report",
+    "wallet_alerts",
+    "wallet_explanation",
+    "market_events",
+    "token_price"
+  ]
+}

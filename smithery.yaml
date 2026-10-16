@@ -1,0 +1,23 @@
+# Smithery.ai MCP Registry Configuration for FactLedger
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      solanaRpcUrl:
+        type: string
+        description: Solana Mainnet RPC endpoint (defaults to https://api.mainnet-beta.solana.com)
+        default: https://api.mainnet-beta.solana.com
+      chaingptApiKey:
+        type: string
+        description: Optional ChainGPT API key for natural-language explanations over deterministic facts
+  commandFunction:
+    |-
+    (config) => ({
+      command: 'npx',
+      args: ['tsx', 'src/mcp/index.ts'],
+      env: {
+        SOLANA_RPC_URL: config.solanaRpcUrl || 'https://api.mainnet-beta.solana.com',
+        ...(config.chaingptApiKey ? { CHAINGPT_API_KEY: config.chaingptApiKey } : {})
+      }
+    })
