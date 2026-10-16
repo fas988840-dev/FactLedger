@@ -1,0 +1,202 @@
+{
+  "checkedAt": "2026-10-16T23:38:19.930Z",
+  "checkedAtRiyadh": "2026-10-17 02:38:25 Asia/Riyadh",
+  "wallets": {
+    "canonical": {
+      "address": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG",
+      "lamports": 0,
+      "sol": 0,
+      "usdc": 0,
+      "recentSignatures": []
+    },
+    "legacy": {
+      "address": "EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM",
+      "lamports": 890880,
+      "sol": 0.00089088,
+      "usdc": 0,
+      "recentSignatures": [
+        {
+          "signature": "4yv2XWcps8STLSXFBp9VEovCFRajGdaGiywsUt4Z9oM8joeDQCytFpQNeGWBmJ41KzrfsuZYDv6BEtuw2DqUEGfK",
+          "slot": 448990309,
+          "blockTime": "2026-09-21T07:39:12.000Z",
+          "err": null
+        },
+        {
+          "signature": "2G4HhZGx5EPTvT14k5pZaK1bRirKTrDHCUdRiBth5smfnf2G7cmM1XW8NRyUZSbM4Pp5woQvpZ1DDCFJdeghx54M",
+          "slot": 448990084,
+          "blockTime": "2026-09-21T07:38:13.000Z",
+          "err": null
+        },
+        {
+          "signature": "dYcizpiSqx1sjCqJxV6dAv9m1YUUZ1j1o9k9186fvYrwXVHW58un2NVhFmD13QD1a9FbCLvZRjwLTmUGwUJ59V6",
+          "slot": 448119352,
+          "blockTime": "2026-09-18T15:07:44.000Z",
+          "err": null
+        },
+        {
+          "signature": "Pbd9b3r5pZLRkguwyU7VzWPxvCL9XYmu2kufn6XfGPFLa8VCHoACT5b975KYxEBFyPwJh5E6h3EAqvqPPD26Yya",
+          "slot": 448057575,
+          "blockTime": "2026-09-18T10:32:53.000Z",
+          "err": null
+        },
+        {
+          "signature": "2RVVLPB43c454PSD68nhjDFsuKppST2o2foDpL8yQ6WbvQbHXZhar9nMxzFfajM88asnAAFFdjtM5ErA2nQdww89",
+          "slot": 448057392,
+          "blockTime": "2026-09-18T10:32:04.000Z",
+          "err": null
+        }
+      ]
+    }
+  },
+  "services": {
+    "api": {
+      "url": "https://factledger-api.onrender.com/api/v1/health",
+      "httpStatus": 200,
+      "ok": true,
+      "priceProvider": "ok",
+      "body": {
+        "status": "ok",
+        "service": "FactLedger",
+        "version": "0.1.0",
+        "dependencies": {
+          "priceProvider": "ok"
+        }
+      }
+    },
+    "demo": {
+      "url": "https://factledger-demo.onrender.com/demo.html",
+      "httpStatus": 200,
+      "ok": true
+    }
+  },
+  "github": {
+    "repoUrl": "https://github.com/fas988840-dev/FactLedger",
+    "repoSponsorsEnabled": true,
+    "sponsorsProfileApproved": false,
+    "sponsorsProfileHttpStatus": 302,
+    "remoteWalletUpdatedOnMain": false,
+    "remoteWalletAddressOnMain": "EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM",
+    "pr105": {
+      "number": 105,
+      "state": "open",
+      "merged": false,
+      "mergeableState": "clean"
+    },
+    "pr106": {
+      "number": 106,
+      "state": "open",
+      "merged": false,
+      "mergeableState": "clean"
+    },
+    "openIssues": [
+      {
+        "number": 74,
+        "title": "v1.0 production release gate: Pyth, live verification, dashboard, and first-user proof",
+        "url": "https://github.com/fas988840-dev/FactLedger/issues/74"
+      },
+      {
+        "number": 59,
+        "title": "Owner actions: unblock production deployment and binding submissions",
+        "url": "https://github.com/fas988840-dev/FactLedger/issues/59"
+      }
+    ]
+  },
+  "emailGrants": [
+    {
+      "id": "superteam",
+      "name": "Superteam Microgrant (MENA / Global)",
+      "amount": "4,000 USDC",
+      "recipient": "hello@superteam.fun, support@superteam.fun",
+      "messageId": "1a146ff855227340",
+      "threadId": "1a146ff855227340",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم الإرسال والتسليم بنجاح — بانتظار رد لجنة المنح",
+      "walletUsed": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG"
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken Open-Source Developer Grant",
+      "amount": "$10,000 USD",
+      "recipient": "grants@kraken.com",
+      "messageId": "1a134b43d9062606",
+      "threadId": "1a073ac5e31a169c",
+      "updatedAt": "2026-10-13",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم تحديث الروابط والمحفظة الجديدة — بانتظار المراجعة",
+      "walletUsed": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG"
+    },
+    {
+      "id": "safepal",
+      "name": "SafePal × Solana Builder Growth Grant",
+      "amount": "Builder Grant + Growth Support",
+      "recipient": "eco@safepal.com",
+      "messageId": "1a146f56dcebd225",
+      "threadId": "1a0742806e78667a",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم تصحيح رابط GitHub وإرسال المحفظة الجديدة — بانتظار المراجعة",
+      "walletUsed": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG"
+    },
+    {
+      "id": "getblock",
+      "name": "GetBlock Solana Startup Program",
+      "amount": "$10,000 RPC Credits (90 Days)",
+      "recipient": "marketing@getblock.io",
+      "messageId": "1a146f5858712b3d",
+      "threadId": "1a074284d0dddea5",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم تصحيح رابط GitHub وإرسال المحفظة الجديدة — بانتظار المراجعة",
+      "walletUsed": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG"
+    },
+    {
+      "id": "chaingpt",
+      "name": "ChainGPT Web3 AI Grant (Builder Tier)",
+      "amount": "$10,000 API Credits & Grant",
+      "recipient": "labs@chaingpt.org",
+      "messageId": "1a14701e7741027a",
+      "threadId": "1a08a87b96492b8b",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم إرسال الروابط الحية وطلب Builder Tier والمحفظة الجديدة",
+      "walletUsed": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG"
+    },
+    {
+      "id": "colosseum",
+      "name": "Colosseum Eternal Sprint & Hackathons",
+      "amount": "$250,000 Pre-seed / Non-dilutive Prizes",
+      "recipient": "support@colosseum.com",
+      "messageId": "1a14701cbab68962",
+      "threadId": "1a073852700ec0f7",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم تصحيح رابط المستودع وإرسال العرض التفاعلي والمحفظة الجديدة",
+      "walletUsed": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG"
+    },
+    {
+      "id": "tap_payments",
+      "name": "Tap Payments (بوابة الدفع والاشتراكات)",
+      "amount": "تفعيل تحصيل البطاقات البنكية",
+      "recipient": "w.atyeh@tap.company, onboarding@tap.company",
+      "messageId": "1a1470238561d737",
+      "threadId": "1a0f62dbf142cf62",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_kyc_docs",
+      "statusAr": "تم إرسال بيانات النشاط والروابط الحية — بانتظار رد وليد عطية/إرفاق وثيقة العمل الحر والآيبان",
+      "walletUsed": "IBAN / SAR"
+    },
+    {
+      "id": "acquire",
+      "name": "Acquire.com Startup Listing",
+      "amount": "إدراج المشروع للاستحواذ/الشراكة",
+      "recipient": "support@acquire.com (Andrew Titus)",
+      "messageId": "1a14701f9a7352eb",
+      "threadId": "1a132547af2d4f4b",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم الرد بتفاصيل مشكلة رفع الصور والروابط الحية للمشروع",
+      "walletUsed": "N/A"
+    }
+  ]
+}

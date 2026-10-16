@@ -14,7 +14,8 @@
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
     "type-check": "tsc --noEmit",
-    "verify:solana": "node scripts/verify-solana-rpc-ws.mjs"
+    "verify:solana": "node scripts/verify-solana-rpc-ws.mjs",
+    "monitor:daily": "node scripts/daily-funding-email-monitor.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
