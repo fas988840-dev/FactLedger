@@ -28,7 +28,7 @@
 3. Fill out form fields (use answers from `grant-answers.html`):
    - **Project Name:** FactLedger - Solana Wallet Intelligence Platform
    - **Email:** fas988840@gmail.com
-   - **GitHub:** https://github.com/fas988840-dev/PROJECT-x
+   - **GitHub:** https://github.com/fas988840-dev/FactLedger
    - **Problem Statement:** [Copy from grant-answers.html]
    - **Solution & Innovation:** [Copy from grant-answers.html]
    - **Proof of Work:** Link to CI run + repo
@@ -57,7 +57,7 @@
    - **Category:** Solana DeFi Infrastructure
    - **Description:** [From grant-answers.html]
    - **Technical Architecture:** [From Colosseum grant file]
-   - **Solana Wallet:** `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+   - **Solana Wallet:** `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`
 4. Submit
 
 ---
@@ -92,13 +92,13 @@
 - **Email:** fas988840@gmail.com
 - **GitHub:** https://github.com/fas988840-dev
 - **X/Twitter:** @aamm123220
-- **Solana Wallet:** `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+- **Solana Wallet:** `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`
 
 ### Project Info
 - **Name:** FactLedger
-- **Repository:** https://github.com/fas988840-dev/PROJECT-x
+- **Repository:** https://github.com/fas988840-dev/FactLedger
 - **Live Demo:** https://factledger-api.onrender.com
-- **CI Badge:** https://github.com/fas988840-dev/PROJECT-x/actions/workflows/ci.yml
+- **CI Badge:** https://github.com/fas988840-dev/FactLedger/actions/workflows/ci.yml
 - **Last Verified Run:** Commit `21e8fea` (133 tests passing)
 
 ### Quick Descriptions
@@ -134,9 +134,9 @@
 - [ ] CI badge shows **green** (all tests passing)
 - [ ] Live demo URL is **accessible** (not a 404)
 - [ ] All links in proposal are **working**
-- [ ] Wallet address is correct: `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+- [ ] Wallet address is correct: `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`
 - [ ] Email address is correct: `fas988840@gmail.com`
-- [ ] GitHub repository link is correct: https://github.com/fas988840-dev/PROJECT-x
+- [ ] GitHub repository link is correct: https://github.com/fas988840-dev/FactLedger
 
 ---
 
@@ -152,7 +152,7 @@ A: Use your personal account: `@aamm123220`
 A: You are a solo developer. Use your name: "Abdullah Al-Anzi (solo developer)"
 
 **Q: What if the repository is still private?**  
-A: Make it public first! Go to https://github.com/fas988840-dev/PROJECT-x/settings → Danger Zone → Change repository visibility → Make public
+A: Make it public first! Go to https://github.com/fas988840-dev/FactLedger/settings → Danger Zone → Change repository visibility → Make public
 
 **Q: Where do I deploy the API?**  
 A: See `DEPLOYMENT.md` for Fly.io, Railway, or Render (5-minute setup)
@@ -175,5 +175,5 @@ A: Run `npm test` locally to debug. Fix any issues and push. CI will run automat
 ## Support
 
 - **Questions?** Email fas988840@gmail.com
-- **Issues?** Open https://github.com/fas988840-dev/PROJECT-x/issues
-- **Docs?** Read https://github.com/fas988840-dev/PROJECT-x/blob/main/README.md
+- **Issues?** Open https://github.com/fas988840-dev/FactLedger/issues
+- **Docs?** Read https://github.com/fas988840-dev/FactLedger/blob/main/README.md

@@ -12,7 +12,7 @@ Your repository must be **public** for grant reviewers to see it. Here's how:
 
 1. **Go to Repository Settings:**
    ```
-   https://github.com/fas988840-dev/PROJECT-x/settings
+   https://github.com/fas988840-dev/FactLedger/settings
    ```
 
 2. **Scroll to the bottom** - Look for the red **"Danger Zone"** section
@@ -35,10 +35,10 @@ After making it public, verify with:
 
 ```bash
 # Should return 200 (not 404)
-curl -s -w "%{http_code}\n" -o /dev/null https://github.com/fas988840-dev/PROJECT-x
+curl -s -w "%{http_code}\n" -o /dev/null https://github.com/fas988840-dev/FactLedger
 
 # Should show "visibility": "public"
-curl -s https://api.github.com/repos/fas988840-dev/PROJECT-x | grep visibility
+curl -s https://api.github.com/repos/fas988840-dev/FactLedger | grep visibility
 ```
 
 ---
@@ -88,7 +88,7 @@ Your CI workflow is configured in `.github/workflows/ci.yml`:
 
 **Current status:** Check the badge in README.md or:
 ```
-https://github.com/fas988840-dev/PROJECT-x/actions
+https://github.com/fas988840-dev/FactLedger/actions
 ```
 
 ---
@@ -97,7 +97,7 @@ https://github.com/fas988840-dev/PROJECT-x/actions
 
 To add collaborators for the project (optional):
 
-1. Go to: `https://github.com/fas988840-dev/PROJECT-x/settings/access`
+1. Go to: `https://github.com/fas988840-dev/FactLedger/settings/access`
 2. Click "Add people"
 3. Search for GitHub username
 4. Set role: (Reader/Triage/Write/Maintain/Admin)
@@ -108,7 +108,7 @@ To add collaborators for the project (optional):
 
 To enable discussions (for community feedback):
 
-1. Go to: `https://github.com/fas988840-dev/PROJECT-x/settings`
+1. Go to: `https://github.com/fas988840-dev/FactLedger/settings`
 2. Find "Features" section
 3. Check "Discussions"
 4. Click "Set up discussions"
@@ -119,11 +119,11 @@ To enable discussions (for community feedback):
 
 To publish your docs to GitHub Pages:
 
-1. Go to: `https://github.com/fas988840-dev/PROJECT-x/settings/pages`
+1. Go to: `https://github.com/fas988840-dev/FactLedger/settings/pages`
 2. Select **"Deploy from a branch"**
 3. Branch: **main** → **/docs** folder
 4. Click **Save**
-5. Your docs will be live at: `https://fas988840-dev.github.io/PROJECT-x/`
+5. Your docs will be live at: `https://fas988840-dev.github.io/FactLedger/`
 
 ---
 
@@ -131,7 +131,7 @@ To publish your docs to GitHub Pages:
 
 To add webhooks for external services:
 
-1. Go to: `https://github.com/fas988840-dev/PROJECT-x/settings/hooks`
+1. Go to: `https://github.com/fas988840-dev/FactLedger/settings/hooks`
 2. Click **"Add webhook"**
 3. Payload URL: (e.g., Discord, Slack, CI service)
 4. Events: Select what triggers the webhook
@@ -143,7 +143,7 @@ To add webhooks for external services:
 
 For any sensitive data (API keys, tokens):
 
-1. Go to: `https://github.com/fas988840-dev/PROJECT-x/settings/secrets/actions`
+1. Go to: `https://github.com/fas988840-dev/FactLedger/settings/secrets/actions`
 2. Click **"New repository secret"**
 3. Name and value
 4. Use in workflows: `${{ secrets.SECRET_NAME }}`
@@ -158,7 +158,7 @@ For any sensitive data (API keys, tokens):
 
 Automatically check for dependency vulnerabilities:
 
-1. Go to: `https://github.com/fas988840-dev/PROJECT-x/settings/security_and_analysis`
+1. Go to: `https://github.com/fas988840-dev/FactLedger/settings/security_and_analysis`
 2. Enable:
    - ✅ Dependabot alerts
    - ✅ Dependabot security updates
@@ -168,7 +168,7 @@ Automatically check for dependency vulnerabilities:
 
 To protect your main branch:
 
-1. Go to: `https://github.com/fas988840-dev/PROJECT-x/settings/branches`
+1. Go to: `https://github.com/fas988840-dev/FactLedger/settings/branches`
 2. Click "Add rule"
 3. Branch name pattern: `main`
 4. Require:
@@ -183,7 +183,7 @@ To protect your main branch:
 If you want a custom domain for live pages:
 
 1. Buy a domain (GoDaddy, Namecheap, etc.)
-2. Go to: `https://github.com/fas988840-dev/PROJECT-x/settings/pages`
+2. Go to: `https://github.com/fas988840-dev/FactLedger/settings/pages`
 3. Under "Custom domain", enter your domain
 4. Add DNS records (GitHub will show the records)
 5. Wait for verification (usually 24 hours)
@@ -194,11 +194,11 @@ If you want a custom domain for live pages:
 
 ### "Repository not found" (404)
 - ✅ Make sure repository is **public**
-- ✅ Check URL is correct: `fas988840-dev/PROJECT-x`
+- ✅ Check URL is correct: `fas988840-dev/FactLedger`
 
 ### CI badge shows red
 - Run tests locally: `npm test`
-- Check GitHub Actions: https://github.com/fas988840-dev/PROJECT-x/actions
+- Check GitHub Actions: https://github.com/fas988840-dev/FactLedger/actions
 - Fix failing tests and push
 
 ### Collaborators can't access repo
@@ -241,4 +241,4 @@ git remote -v
 ---
 
 **Key Action Item:** Make the repository public at:
-https://github.com/fas988840-dev/PROJECT-x/settings
+https://github.com/fas988840-dev/FactLedger/settings

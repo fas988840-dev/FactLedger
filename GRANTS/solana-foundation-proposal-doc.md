@@ -3,7 +3,7 @@
 
 **Applicant:** Abdullah Al-Anzi (solo developer)
 **Contact:** fas988840@gmail.com
-**Repository:** https://github.com/fas988840-dev/PROJECT-x
+**Repository:** https://github.com/fas988840-dev/FactLedger
 **Live page:** https://factledger-api.onrender.com
 **Amount requested:** $25,000 USD
 
@@ -97,7 +97,7 @@ The pipeline described above is implemented and running in CI, not planned.
 **Verification, as of 31 August 2026:** CI passes end to end on GitHub's own
 runners — dependency audit, ESLint, `tsc --noEmit`, 133 tests (including the
 determinism check), and a production build.
-Run: https://github.com/fas988840-dev/PROJECT-x/actions/runs/33347156720
+Run: https://github.com/fas988840-dev/FactLedger/actions/runs/33347156720
 
 ## 5. Honest limitations
 
@@ -154,7 +154,7 @@ guesses. It is open source, so any team can audit the method or build on it.
 
 ## 8. Links
 
-- Repository: https://github.com/fas988840-dev/PROJECT-x
+- Repository: https://github.com/fas988840-dev/FactLedger
 - Live project page: https://factledger-api.onrender.com
-- Passing CI run: https://github.com/fas988840-dev/PROJECT-x/actions/runs/33347156720
+- Passing CI run: https://github.com/fas988840-dev/FactLedger/actions/runs/33347156720
 - Contact: fas988840@gmail.com

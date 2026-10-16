@@ -22,7 +22,7 @@
 - Live demo: https://factledger-demo.onrender.com/demo.html
 - X: https://x.com/aamm123220
 - Telegram: @abdullhaa11
-- Solana wallet: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
+- Solana wallet: 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 - License: MIT
 - Stage: MVP / early prototype / live experimental deployment
 

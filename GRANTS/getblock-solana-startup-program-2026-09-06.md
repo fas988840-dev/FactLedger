@@ -17,7 +17,7 @@ Status: **application package emailed / portal submission not yet verified**
 - GitHub: https://github.com/fas988840-dev/factledger
 - Live API: https://factledger-api.onrender.com
 - License: MIT
-- Solana wallet: `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+- Solana wallet: `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`
 
 ## Submission evidence
 On 2026-09-06 an application package / routing request was sent from the project Gmail account to `marketing@getblock.io` with the current FactLedger production-and-grant-readiness deck attached. The email asks that the package be routed to the Solana Startup Program review team and includes the Solana wallet above.

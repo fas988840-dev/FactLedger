@@ -3,17 +3,17 @@
 **Project:** FactLedger - Deterministic Solana Wallet Intelligence  
 **Applicant:** fas988840@gmail.com  
 **Application Date:** August 31, 2026  
-**GitHub:** https://github.com/fas988840-dev/PROJECT-x  
-**Solana Wallet (grant disbursement):** `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`  
+**GitHub:** https://github.com/fas988840-dev/FactLedger  
+**Solana Wallet (grant disbursement):** `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`  
 **Project Type:** Infrastructure & Developer Tools
 
 > ✅ **Verified as of August 31, 2026:** CI is fully green on GitHub's own
 > runners — `npm audit`, `lint`, `type-check`, `test` (133 tests, including
 > the automated determinism check), and `build` all pass end-to-end.
-> Run: https://github.com/fas988840-dev/PROJECT-x/actions/runs/33347156720
+> Run: https://github.com/fas988840-dev/FactLedger/actions/runs/33347156720
 > (commit `21e8fea`). This is a dated, verifiable snapshot, not a claim
 > that goes stale — check the live CI badge in
-> [README.md](https://github.com/fas988840-dev/PROJECT-x/blob/main/README.md)
+> [README.md](https://github.com/fas988840-dev/FactLedger/blob/main/README.md)
 > for the current state at any later date.
 > 
 > 🔗 **Live demo:** https://factledger-api.onrender.com
@@ -228,7 +228,7 @@ dependency and one misspelled ESLint rule name surfaced right behind it —
 see the commit history on the `claude/claude-md-docs-zdlvr9` branch for
 the exact fixes). The authoritative, live source of truth is the CI badge
 at the top of
-[README.md](https://github.com/fas988840-dev/PROJECT-x/blob/main/README.md),
+[README.md](https://github.com/fas988840-dev/FactLedger/blob/main/README.md),
 rendered by GitHub from the workflow's actual current run — or clone the
 repo and run `npm test` / `npm test -- --coverage` yourself.
 
@@ -283,7 +283,7 @@ Determinism: src/services/determinism.test.ts calls RiskAssessor/
 
 ```bash
 # Clone repo
-git clone https://github.com/fas988840-dev/PROJECT-x.git
+git clone https://github.com/fas988840-dev/FactLedger.git
 cd PROJECT-x
 
 # Install & run tests
@@ -489,7 +489,7 @@ GET /api/v1/agents/:intent
 ## Next Steps
 
 ### For Evaluators
-1. Review code: `git clone https://github.com/fas988840-dev/PROJECT-x.git`
+1. Review code: `git clone https://github.com/fas988840-dev/FactLedger.git`
 2. Run tests: `npm install && npm test` (2 minutes)
 3. Deploy locally: `npm run dev` (5 minutes)
 4. Test endpoints: `curl http://localhost:3000/api/v1/health`
@@ -505,8 +505,8 @@ GET /api/v1/agents/:intent
 ## Contact & Links
 
 **Email:** fas988840@gmail.com  
-**GitHub:** https://github.com/fas988840-dev/PROJECT-x  
-**Solana Wallet (grant disbursement):** `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`  
+**GitHub:** https://github.com/fas988840-dev/FactLedger  
+**Solana Wallet (grant disbursement):** `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`  
 **Live Demo** (live public API — try /api/v1/health): https://factledger-api.onrender.com  
 **Live API** (backend): not yet deployed — this grant's Week 1 deliverable  
 

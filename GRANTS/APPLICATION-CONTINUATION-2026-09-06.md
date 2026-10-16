@@ -18,7 +18,7 @@ This file resolves the current application-status differences and gives the clea
 - Phone: 0532331116
 - X: https://x.com/aamm123220
 - Telegram: @abdullhaa11
-- Solana wallet: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
+- Solana wallet: 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 
 ## Verified differences fixed
 

@@ -4,15 +4,15 @@
 **Date Submitted:** August 31, 2026  
 **Organization:** Independent Developer  
 **Contact:** fas988840@gmail.com  
-**Solana Wallet (grant disbursement):** `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+**Solana Wallet (grant disbursement):** `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`
 
 > ✅ **Verified as of August 31, 2026:** CI is fully green on GitHub's own
 > runners — `npm audit`, `lint`, `type-check`, `test` (133 tests, including
 > the automated determinism check), and `build` all pass end-to-end.
-> Run: https://github.com/fas988840-dev/PROJECT-x/actions/runs/33347156720
+> Run: https://github.com/fas988840-dev/FactLedger/actions/runs/33347156720
 > (commit `21e8fea`). This is a dated, verifiable snapshot, not a claim
 > that goes stale — check the live CI badge in
-> [README.md](https://github.com/fas988840-dev/PROJECT-x/blob/main/README.md)
+> [README.md](https://github.com/fas988840-dev/FactLedger/blob/main/README.md)
 > for the current state at any later date.
 > 
 > 🔗 **Live demo:** https://factledger-api.onrender.com
@@ -226,7 +226,7 @@ This project validates a replicable architecture for **trustworthy AI explanatio
 - ✅ Code complete, with colocated test coverage per service
 - CI/CD: `.github/workflows/ci.yml` runs npm audit, lint, type-check, test,
   and build on every push — see the live badge at the top of
-  [README.md](https://github.com/fas988840-dev/PROJECT-x/blob/main/README.md)
+  [README.md](https://github.com/fas988840-dev/FactLedger/blob/main/README.md)
   for current status rather than a claim frozen into this document
 - ✅ Dockerfile ready for deployment
 - ⏳ Not yet deployed to production (needs platform account)
@@ -299,10 +299,10 @@ This fund enables:
 
 ## Contact & Demo
 
-**Repository**: https://github.com/fas988840-dev/PROJECT-x  
+**Repository**: https://github.com/fas988840-dev/FactLedger  
 **Live Demo** (live public API — try /api/v1/health): https://factledger-api.onrender.com  
 **Live API** (backend): not yet deployed — Dockerfile is ready; deploying to Railway/Render/Fly.io is the immediate next step this grant funds (see "Funding Request" above)  
-**Solana Wallet**: `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`  
+**Solana Wallet**: `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`  
 **Email**: fas988840@gmail.com
 
 ---

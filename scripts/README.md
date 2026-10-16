@@ -47,7 +47,7 @@ bash scripts/make-public.sh
 
 **If it fails:**
 - Install GitHub CLI: https://cli.github.com
-- Or make it public manually at: https://github.com/fas988840-dev/PROJECT-x/settings
+- Or make it public manually at: https://github.com/fas988840-dev/FactLedger/settings
 
 ---
 
@@ -131,7 +131,7 @@ flyctl auth login
 ```
 
 ### "Repository link returns 404"
-- Go to: https://github.com/fas988840-dev/PROJECT-x/settings
+- Go to: https://github.com/fas988840-dev/FactLedger/settings
 - Make repository PUBLIC (Danger Zone section)
 
 ### "Can't run bash script"
@@ -150,7 +150,7 @@ bash scripts/complete-setup.sh
 If scripts don't work for you:
 
 ### Make Repository Public (Manual)
-1. Go to: https://github.com/fas988840-dev/PROJECT-x/settings
+1. Go to: https://github.com/fas988840-dev/FactLedger/settings
 2. Scroll to "Danger Zone" (red section)
 3. Click "Change repository visibility"
 4. Select "Make public"

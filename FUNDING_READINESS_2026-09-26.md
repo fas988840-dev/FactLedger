@@ -9,7 +9,7 @@ This is the canonical execution plan for FactLedger. It is intentionally evidenc
 - Historical references to `fas988840-dev/PROJECT-x` are legacy only and must not be used in new applications.
 
 ## Priority 0 — submission integrity
-- [ ] Replace legacy PROJECT-x links in current grant/funding application material.
+- [x] Replace legacy PROJECT-x links in current grant/funding application material.
 - [ ] Keep historical submitted snapshots intact when changing them would falsify what was originally submitted; mark them as historical instead.
 - [ ] Use one current product description, one canonical demo URL, and one canonical repository URL.
 - [ ] Never claim customers, revenue, partnerships, awards, or production payment processing without evidence.

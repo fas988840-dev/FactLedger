@@ -15,7 +15,7 @@ This file replaces unverified grant-guide claims with current, evidence-based po
 - GitHub: https://github.com/fas988840-dev/FactLedger
 - Live API: https://factledger-api.onrender.com
 - Demo: https://factledger-demo.onrender.com/demo.html
-- Solana wallet: `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+- Solana wallet: `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`
 
 ## Priority order for FactLedger
 

@@ -10,13 +10,13 @@
 
 Before submitting any grant, ensure:
 
-1. ✅ Repository is **public** - https://github.com/fas988840-dev/PROJECT-x
+1. ✅ Repository is **public** - https://github.com/fas988840-dev/FactLedger
 2. ✅ CI badge shows **green** - All 133 tests passing
 3. ✅ Have your data ready:
    - Email: `fas988840@gmail.com`
    - GitHub: `fas988840-dev`
    - X/Twitter: `@aamm123220`
-   - Solana Wallet: `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+   - Solana Wallet: `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`
    - Name: `Abdullah Al-Anzi`
 
 ---
@@ -46,7 +46,7 @@ Telegram (if required): [Your Telegram handle, if any]
 Project Name: FactLedger - Solana Wallet Intelligence Platform
 Category: Infrastructure / Development Tools
 Project Stage: Active Development / Production Ready
-GitHub Repository: https://github.com/fas988840-dev/PROJECT-x
+GitHub Repository: https://github.com/fas988840-dev/FactLedger
 Website/Demo: https://factledger-api.onrender.com
 ```
 
@@ -111,7 +111,7 @@ Full Description: [Copy from grant-answers.html - Colosseum section]
 ```
 Technology Stack: Node.js, TypeScript, @solana/web3.js
 Architecture: [Copy from docs/proposal.html - Technical section]
-GitHub: https://github.com/fas988840-dev/PROJECT-x
+GitHub: https://github.com/fas988840-dev/FactLedger
 Current Status: Production Ready (133 tests passing)
 Deployment Status: Ready (Docker image built)
 ```
@@ -127,7 +127,7 @@ Use Breakdown Milestones from GRANTS/colosseum-eternal-grant.md:
 
 **Step 6: Additional information**
 ```
-Solana Wallet (for disbursement): EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
+Solana Wallet (for disbursement): 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 Team Members: Abdullah Al-Anzi (solo developer)
 Previous Grants: Solana Foundation Grant (submitted Aug 31, 2026)
 ```
@@ -168,14 +168,14 @@ X Handle: @aamm123220
 Email: fas988840@gmail.com
 Discord (optional): [if you have one]
 Country: [Your country]
-Wallet Address: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
+Wallet Address: 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 ```
 
 **Step 4: Project details**
 ```
 Project Name: FactLedger - Wallet Intelligence
 Description: [Copy from grant-answers.html - Superteam section]
-Repository: https://github.com/fas988840-dev/PROJECT-x
+Repository: https://github.com/fas988840-dev/FactLedger
 Live Demo: https://factledger-api.onrender.com
 Category: Developer Tools
 Status: Production Ready
@@ -185,7 +185,7 @@ Status: Production Ready
 ```
 GitHub Commits: 30+ on this feature branch
 Tests: 133 tests passing
-CI Runs: https://github.com/fas988840-dev/PROJECT-x/actions
+CI Runs: https://github.com/fas988840-dev/FactLedger/actions
 Last Verified: August 31, 2026 (commit 21e8fea)
 ```
 
@@ -271,8 +271,8 @@ Before each submission, verify:
 - [ ] Repository shows as **public** (not 404)
 - [ ] CI badge shows **green** (all tests pass)
 - [ ] Email is **correct**: `fas988840@gmail.com`
-- [ ] Wallet is **correct**: `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
-- [ ] GitHub URL is **correct**: `https://github.com/fas988840-dev/PROJECT-x`
+- [ ] Wallet is **correct**: `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`
+- [ ] GitHub URL is **correct**: `https://github.com/fas988840-dev/FactLedger`
 - [ ] X/Twitter handle is **correct**: `@aamm123220`
 - [ ] All long-form answers **copied exactly** from grant-answers.html
 - [ ] Budget breakdown **matches** the proposal
@@ -287,16 +287,16 @@ Before each submission, verify:
 - Or use "Sign in" instead of "Sign up"
 
 ### "Wallet not recognized"
-- Make sure to use: `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+- Make sure to use: `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`
 - Try pasting exactly, character for character
 - Check Solana address format (Base58)
 
 ### "Repository link returns 404"
-- Go to settings: https://github.com/fas988840-dev/PROJECT-x/settings
+- Go to settings: https://github.com/fas988840-dev/FactLedger/settings
 - Make sure repo is **public** (Danger Zone → Change visibility)
 
 ### "CI tests not showing"
-- Go to: https://github.com/fas988840-dev/PROJECT-x/actions
+- Go to: https://github.com/fas988840-dev/FactLedger/actions
 - Trigger a new run by pushing a commit
 - Wait 2-5 minutes for tests to complete
 

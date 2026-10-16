@@ -3,17 +3,17 @@
 **Project Name:** FactLedger - Solana Wallet Intelligence Platform  
 **Submission Date:** August 31, 2026  
 **Developer:** fas988840@gmail.com  
-**GitHub:** https://github.com/fas988840-dev/PROJECT-x  
-**Solana Wallet (grant disbursement):** `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`  
+**GitHub:** https://github.com/fas988840-dev/FactLedger  
+**Solana Wallet (grant disbursement):** `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`  
 **Category:** Solana DeFi Infrastructure
 
 > ✅ **Verified as of August 31, 2026:** CI is fully green on GitHub's own
 > runners — `npm audit`, `lint`, `type-check`, `test` (133 tests, including
 > the automated determinism check), and `build` all pass end-to-end.
-> Run: https://github.com/fas988840-dev/PROJECT-x/actions/runs/33347156720
+> Run: https://github.com/fas988840-dev/FactLedger/actions/runs/33347156720
 > (commit `21e8fea`). This is a dated, verifiable snapshot, not a claim
 > that goes stale — check the live CI badge in
-> [README.md](https://github.com/fas988840-dev/PROJECT-x/blob/main/README.md)
+> [README.md](https://github.com/fas988840-dev/FactLedger/blob/main/README.md)
 > for the current state at any later date.
 > 
 > 🔗 **Live demo:** https://factledger-api.onrender.com
@@ -204,7 +204,7 @@ the live CI badge in README.md for current pass/fail status
 | Docker Deployment | ✅ Code complete | n/a | Ready to deploy |
 
 Current pass/fail status for every row: see the live CI badge in
-[README.md](https://github.com/fas988840-dev/PROJECT-x/blob/main/README.md)
+[README.md](https://github.com/fas988840-dev/FactLedger/blob/main/README.md)
 — intentionally not hardcoded here (see "Code Quality Metrics" below for why).
 
 *WebSocket subscriptions: Requires dedicated RPC provider in production (many public endpoints restrict this)
@@ -357,13 +357,13 @@ CI/CD: .github/workflows/ci.yml runs npm audit, lint, type-check, test, build
 
 ⚠️ Exact test count / coverage / pass-fail status: intentionally not hardcoded
 here — see the live CI badge at the top of
-[README.md](https://github.com/fas988840-dev/PROJECT-x/blob/main/README.md),
+[README.md](https://github.com/fas988840-dev/FactLedger/blob/main/README.md),
 which GitHub renders from the workflow's real, current run, or clone the repo
 and run `npm test` yourself.
 
 ## GitHub Repository
 
-- **URL:** https://github.com/fas988840-dev/PROJECT-x
+- **URL:** https://github.com/fas988840-dev/FactLedger
 - **License:** MIT (open source)
 - **Contributing:** Open to community PRs
 - **Documentation:** Comprehensive README + CLAUDE.md for developers
@@ -371,7 +371,7 @@ and run `npm test` yourself.
 ## Next Steps
 
 ### For Evaluators
-1. Clone repo: `git clone https://github.com/fas988840-dev/PROJECT-x.git`
+1. Clone repo: `git clone https://github.com/fas988840-dev/FactLedger.git`
 2. Install: `npm install`
 3. Run tests: `npm test`
 4. Check coverage: `npm run test:coverage`
@@ -392,10 +392,10 @@ and run `npm test` yourself.
 ## Contact & Support
 
 **Email:** fas988840@gmail.com  
-**GitHub:** https://github.com/fas988840-dev/PROJECT-x  
-**Solana Wallet (grant disbursement):** `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`  
+**GitHub:** https://github.com/fas988840-dev/FactLedger  
+**Solana Wallet (grant disbursement):** `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`  
 **Live Demo:** https://factledger-api.onrender.com  
-**Documentation:** https://github.com/fas988840-dev/PROJECT-x/blob/main/README.md  
+**Documentation:** https://github.com/fas988840-dev/FactLedger/blob/main/README.md  
 
 ---
 

@@ -237,7 +237,7 @@ Milestone 3 explicitly funds establishing a sustainability model. Options includ
 
 - **Full technical proposal**: `GRANTS/solana-foundation-proposal-doc.md`
 - **Architecture details**: `CLAUDE.md` in the repo
-- **Live CI runs**: https://github.com/fas988840-dev/PROJECT-x/actions
+- **Live CI runs**: https://github.com/fas988840-dev/FactLedger/actions
 - **Contact**: fas988840@gmail.com
 
 ---

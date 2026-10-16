@@ -24,7 +24,7 @@ https://github.com/fas988840-dev
 @aamm123220
 
 [5] محفظة Solana:
-EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
+5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 
 [6] البلد:
 Saudi Arabia
@@ -43,7 +43,7 @@ Deterministic Solana wallet analysis platform with verified DEX detection and ho
 FactLedger is a read-only Solana wallet intelligence API. It turns raw on-chain transaction history into behavioral metrics, intelligence scores, and risk assessments — with every number independently verifiable from the blockchain. It never fabricates data and always states confidence honestly (confirmed/candidate/unknown).
 
 [10] رابط المستودع:
-https://github.com/fas988840-dev/PROJECT-x
+https://github.com/fas988840-dev/FactLedger
 
 [11] رابط العرض الحي:
 ⚠️ تحقق قبل ما ترسله. هذا رابط artifact على claude.ai، والـ artifacts
@@ -57,7 +57,7 @@ Page")، أو انشر الـ API فعلياً واستخدم رابطه. لين
 اللي نتأكد إنه عام هو رابط المستودع نفسه.
 
 [12] رابط CI (الاختبارات):
-https://github.com/fas988840-dev/PROJECT-x/actions/runs/33347156720
+https://github.com/fas988840-dev/FactLedger/actions/runs/33347156720
 
 [13] الفئة/التصنيف:
 Developer Tools / Solana DeFi Infrastructure
@@ -138,7 +138,7 @@ It is open source, so any team can audit the method or build on it. This makes i
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 GitHub Repository:
-https://github.com/fas988840-dev/PROJECT-x
+https://github.com/fas988840-dev/FactLedger
 
 Current Status:
 - 133 tests passing (all green)
@@ -151,7 +151,7 @@ Current Status:
 - Next.js dashboard implemented
 
 Latest CI Run (Aug 31, 2026):
-https://github.com/fas988840-dev/PROJECT-x/actions/runs/33347156720
+https://github.com/fas988840-dev/FactLedger/actions/runs/33347156720
 Commit: 21e8fea
 
 Verified Components:

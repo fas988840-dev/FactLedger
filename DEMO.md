@@ -195,6 +195,6 @@ to preserve on-chain precision. See `CLAUDE.md` for the full design invariants.
 ## 8. Links
 
 - API health: `https://factledger-api.onrender.com/api/v1/health`
-- Repo: `https://github.com/fas988840-dev/PROJECT-x`
+- Repo: `https://github.com/fas988840-dev/FactLedger`
 - Design invariants: [`CLAUDE.md`](CLAUDE.md)
 - Deployment: [`DEPLOYMENT.md`](DEPLOYMENT.md)

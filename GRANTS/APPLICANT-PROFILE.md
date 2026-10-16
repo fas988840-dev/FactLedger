@@ -16,7 +16,7 @@ Use this file as the single source of truth for grant, accelerator and investor 
 - X: https://x.com/aamm123220
 - Telegram: @abdullhaa11
 - GitHub: https://github.com/fas988840-dev/FactLedger
-- Solana wallet for application contact/payout fields when a Solana wallet is requested: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
+- Solana wallet for application contact/payout fields when a Solana wallet is requested: 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 
 ## Project
 

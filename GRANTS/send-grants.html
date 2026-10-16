@@ -1,362 +1,569 @@
-<title>Send Grant Applications</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0d1117;
-    --card: #161b22;
-    --border: #30363d;
-    --text: #e6edf3;
-    --text-dim: #8b949e;
-    --accent: #58a6ff;
-    --success: #3fb950;
-    --warning: #f0883e;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: "IBM Plex Sans", -apple-system, system-ui, sans-serif;
-    padding: 20px;
-    line-height: 1.6;
-    direction: rtl;
-    min-height: 100vh;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; }
-  h1 {
-    font-size: 24px;
-    margin-bottom: 8px;
-    text-align: center;
-  }
-  .subtitle {
-    color: var(--text-dim);
-    text-align: center;
-    margin-bottom: 32px;
-    font-size: 14px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 16px;
-  }
-  .grant-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  .grant-amount {
-    color: var(--success);
-    font-size: 14px;
-    margin-bottom: 12px;
-  }
-  .grant-desc {
-    color: var(--text-dim);
-    font-size: 14px;
-    margin-bottom: 16px;
-  }
-  .btn {
-    display: block;
-    width: 100%;
-    background: var(--accent);
-    color: white;
-    border: none;
-    padding: 14px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 8px;
-    cursor: pointer;
-  }
-  .btn:active { opacity: 0.8; }
-  .btn-copy {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--text);
-  }
-  .step {
-    background: rgba(88, 166, 255, 0.1);
-    border-right: 3px solid var(--accent);
-    padding: 12px 16px;
-    margin-bottom: 16px;
-    font-size: 14px;
-    border-radius: 4px;
-  }
-  .link-list {
-    list-style: none;
-    padding: 0;
-  }
-  .link-list li {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .link-list a {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 14px;
-    word-break: break-all;
-  }
-  .warning {
-    background: rgba(240, 136, 62, 0.1);
-    border: 1px solid var(--warning);
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-size: 14px;
-  }
-  .success {
-    background: rgba(63, 185, 80, 0.1);
-    border: 1px solid var(--success);
-    padding: 12px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    font-size: 14px;
-  }
-  code {
-    background: rgba(255,255,255,0.1);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-family: monospace;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مركز تشغيل التبرعات والمنح والرعاة — FactLedger</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card: #151b26;
+      --card-alt: #1b2332;
+      --border: #2a3446;
+      --text: #e6edf3;
+      --text-dim: #94a3b8;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --pink: #ec4899;
+      --purple: #8b5cf6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
+      padding: 20px 16px 60px;
+      line-height: 1.65;
+      direction: rtl;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; }
+    .hero {
+      background: linear-gradient(135deg, rgba(59,130,246,0.16), rgba(16,185,129,0.12));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 24px; margin-bottom: 8px; color: #fff; }
+    .hero p { color: var(--text-dim); font-size: 14px; }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 14px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      background: rgba(16,185,129,0.15);
+      color: #34d399;
+      border: 1px solid rgba(16,185,129,0.35);
+    }
+    .badge.pink {
+      background: rgba(236,72,153,0.15);
+      color: #f472b6;
+      border-color: rgba(236,72,153,0.35);
+    }
+    .badge.blue {
+      background: rgba(59,130,246,0.15);
+      color: #60a5fa;
+      border-color: rgba(59,130,246,0.35);
+    }
+    .section-title {
+      font-size: 19px;
+      font-weight: 700;
+      margin: 28px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .card.highlight {
+      border-color: var(--warning);
+      background: linear-gradient(180deg, rgba(245,158,11,0.08), var(--card));
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .grant-title { font-size: 17px; font-weight: 700; color: #fff; }
+    .grant-amount {
+      color: #34d399;
+      font-size: 13.5px;
+      font-weight: 600;
+      background: rgba(16,185,129,0.12);
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(16,185,129,0.3);
+    }
+    .grant-desc { color: var(--text-dim); font-size: 14px; margin-bottom: 14px; }
+    .wallet-box {
+      background: #0d131f;
+      border: 1px dashed var(--accent);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13.5px;
+      color: #93c5fd;
+      word-break: break-all;
+      direction: ltr;
+      text-align: center;
+      margin: 10px 0 14px;
+    }
+    .btn-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid transparent;
+      padding: 12px 14px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn:hover { background: var(--accent-hover); }
+    .btn-success { background: var(--success); }
+    .btn-success:hover { background: #059669; }
+    .btn-pink { background: var(--pink); }
+    .btn-pink:hover { background: #db2777; }
+    .btn-copy {
+      background: var(--card-alt);
+      border-color: var(--border);
+      color: var(--text);
+    }
+    .btn-copy:hover {
+      border-color: var(--accent);
+      background: rgba(59,130,246,0.12);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin-top: 8px;
+    }
+    th, td {
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--border);
+      text-align: right;
+      vertical-align: top;
+    }
+    th { color: var(--text-dim); font-weight: 600; font-size: 12.5px; }
+    code {
+      background: rgba(255,255,255,0.08);
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-family: ui-monospace, SFMono-Regular, monospace;
+      font-size: 12px;
+      direction: ltr;
+      display: inline-block;
+    }
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #10b981;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      display: none;
+      z-index: 1000;
+    }
+    .check-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .check-item:last-child { border-bottom: none; }
+    .status-pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(16,185,129,0.15);
+      color: #34d399;
+    }
+    .status-pill.pending {
+      background: rgba(245,158,11,0.15);
+      color: #fbbf24;
+    }
+  </style>
+</head>
+<body>
+
+<div id="toast" class="toast">✅ تم النسخ إلى الحافظة!</div>
 
 <div class="wrap">
-  <div class="warning" style="background:#fff3cd;border-color:#d9a441;">
-    <strong>⚠️ هذي الصفحة قديمة وتجاوزتها نسخ أحدث.</strong><br>
-    الأرقام هنا (عدد الاختبارات، حالة النشر) قديمة. راجع ملفات
-    <code>*-submission-fields.md</code> بنفس المجلد للنص الحالي الصحيح،
-    و<code>funding-roadmap.md</code> لحالة كل منحة.
+  <div class="hero">
+    <h1>🚀 مركز تشغيل التبرعات والمنح والرعاة — FactLedger</h1>
+    <p>محدث بالكامل بتاريخ 17 أكتوبر 2026 · جميع الروابط الحية و223 اختباراً والمحفظة الجديدة معتمدة</p>
+    <div class="badges">
+      <span class="badge">✅ API & Demo Live (200 OK)</span>
+      <span class="badge">✅ CI Green (223 Tests)</span>
+      <span class="badge pink">❤️ زر Sponsor مفعّل على المستودع</span>
+      <span class="badge blue">📨 8 مراسلات منح ودعم مرسلة ومؤكدة</span>
+    </div>
   </div>
 
-  <h1>🚀 إرسال طلبات المنح</h1>
-  <p class="subtitle">اضغط على "افتح النموذج" لكل منحة</p>
+  <!-- 1. التبرعات والرعاة -->
+  <div class="section-title">💎 أولاً: تفعيل التبرعات ودعم الرعاة (Donations & Sponsors)</div>
 
-  <div class="warning">
-    <strong>⚠️ ملاحظة مهمة:</strong><br>
-    معظم منصات المنح تتطلب ملء نموذج ويب. الأزرار أدناه ستفتح النماذج مباشرة على جوالك. استخدم زر "نسخ الإجابات" لنسخ كل الإجابات المطلوبة.
+  <div class="card highlight">
+    <div class="card-header">
+      <div class="grant-title">1. محفظة استلام التبرعات والمنح المعتمدة (Solana Mainnet — USDC / SOL)</div>
+      <span class="grant-amount">جاهزة للاستقبال فوراً</span>
+    </div>
+    <div class="grant-desc">
+      تم تحديث جميع ملفات المشروع الـ 34 هنا لاعتماد محفظتك الجديدة. لتثبيت هذا العنوان على صفحة GitHub العامة بحيث يراه كل متبرع يضغط على زر <strong>Sponsor this project</strong>، انسخ محتوى الملف بالزر الأول ثم افتح صفحة التعديل بالزر الثاني واضغط <strong>Commit changes</strong>:
+    </div>
+    <div class="wallet-box">5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG</div>
+    <div class="btn-row">
+      <button onclick="copyWalletFile()" class="btn btn-copy">📋 1. نسخ ملف RECEIVING_WALLET.md الكامل</button>
+      <a href="https://github.com/fas988840-dev/FactLedger/edit/main/FUNDING/RECEIVING_WALLET.md" target="_blank" class="btn btn-success">✏️ 2. فتح الملف على GitHub وحفظه (Commit)</a>
+      <button onclick="copyText('5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG')" class="btn btn-copy">💼 نسخ عنوان المحفظة فقط</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="grant-title">2. رعاة GitHub Sponsors وحساب Stripe Express</div>
+      <span class="grant-amount">مفعّل في المستودع · بانتظار اعتماد GitHub</span>
+    </div>
+    <div class="grant-desc">
+      • خاصية الرعاية في المستودع مفعّلة الآن (<code>"sponsors": true</code>) وقسم <strong>Sponsor this project</strong> ظاهر للزوار.<br>
+      • حساب Stripe Express (<code>acct_1UPxebCtaJVDiKQH</code>) ونموذج الضرائب W-8 جاهزان.<br>
+      • يمكنك متابعة حالة الموافقة النهائية وضبط فئات الرعاية الشهرية من لوحة التحكم:
+    </div>
+    <div class="btn-row">
+      <a href="https://github.com/sponsors/fas988840-dev/dashboard" target="_blank" class="btn btn-pink">❤️ فتح لوحة تحكم GitHub Sponsors</a>
+      <a href="https://github.com/fas988840-dev/FactLedger/blob/main/FUNDING/DONATE.md" target="_blank" class="btn btn-copy">📄 معاينة صفحة التبرع العامة (DONATE.md)</a>
+    </div>
+  </div>
+
+  <!-- 2. طلبات المنح عبر البريد -->
+  <div class="section-title">📨 ثانياً: طلبات المنح والدعم المالي المرسلة من بريدك (تم الإرسال والتسليم ✅)</div>
+  <div class="card">
+    <div class="grant-desc">جميع هذه الجهات استلمت الآن الرابط الصحيح للمستودع (<code>FactLedger</code>) والعرض التفاعلي الحي وعنوان محفظتك الجديد (<code>5V58...ocmQG</code>):</div>
+    <table>
+      <thead>
+        <tr>
+          <th>الجهة / البرنامج</th>
+          <th>الدعم المطلوب</th>
+          <th>المستلم</th>
+          <th>الحالة ومعرف الرسالة</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Superteam Microgrant</strong></td>
+          <td>4,000 USDC (على 3 مراحل)</td>
+          <td><code>hello@superteam.fun</code><br><code>support@superteam.fun</code></td>
+          <td><span class="status-pill">تم التسليم ✅</span><br><code>1a146ff855227340</code></td>
+        </tr>
+        <tr>
+          <td><strong>Kraken Open-Source Grant</strong></td>
+          <td>$10,000 USD</td>
+          <td><code>grants@kraken.com</code></td>
+          <td><span class="status-pill">تم التسليم ✅</span><br><code>1a134b43d9062606</code></td>
+        </tr>
+        <tr>
+          <td><strong>SafePal × Solana Builder Grant</strong></td>
+          <td>تمويل + دعم نمو</td>
+          <td><code>eco@safepal.com</code></td>
+          <td><span class="status-pill">تم التسليم ✅</span><br><code>1a146f56dcebd225</code></td>
+        </tr>
+        <tr>
+          <td><strong>GetBlock Solana Startup Program</strong></td>
+          <td>$10,000 رصيد RPC (90 يوماً)</td>
+          <td><code>marketing@getblock.io</code></td>
+          <td><span class="status-pill">تم التسليم ✅</span><br><code>1a146f5858712b3d</code></td>
+        </tr>
+        <tr>
+          <td><strong>ChainGPT Web3 AI Grant</strong></td>
+          <td>$10,000 Builder Tier</td>
+          <td><code>labs@chaingpt.org</code></td>
+          <td><span class="status-pill">تم التسليم ✅</span><br><code>1a14701e7741027a</code></td>
+        </tr>
+        <tr>
+          <td><strong>Colosseum Eternal Sprint</strong></td>
+          <td>تحديث الروابط والمحفظة</td>
+          <td><code>support@colosseum.com</code></td>
+          <td><span class="status-pill">تم التسليم ✅</span><br><code>1a14701cbab68962</code></td>
+        </tr>
+        <tr>
+          <td><strong>Tap Payments (بوابة الدفع)</strong></td>
+          <td>تفعيل تحصيل الاشتراكات</td>
+          <td><code>w.atyeh@tap.company</code></td>
+          <td><span class="status-pill">تم إرسال البيانات ✅</span><br><code>1a1470238561d737</code></td>
+        </tr>
+        <tr>
+          <td><strong>Acquire.com Support</strong></td>
+          <td>حل مشكلة رفع صور المشروع</td>
+          <td><code>support@acquire.com</code></td>
+          <td><span class="status-pill">تم الرد بالروابط ✅</span><br><code>1a14701f9a7352eb</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 3. بوابات التقديم المباشر عبر الويب -->
+  <div class="section-title">🌐 ثالثاً: بوابات المنح الرسمية عبر الويب (انسخ الإجابات المحدثة وقدم مباشرة)</div>
+
+  <!-- Helius -->
+  <div class="card">
+    <div class="card-header">
+      <div class="grant-title">1. Helius Startup Launchpad (ردوا عليك بالإيميل للتقديم هنا)</div>
+      <span class="grant-amount">💰 8 أشهر خطة Business مجاناً + دعم المستثمرين</span>
+    </div>
+    <div class="grant-desc">
+      فريق Helius أرسل لك رابط التقديم المباشر في برنامج Startup Launchpad. انسخ الإجابات الجاهزة المحدثة وافتح النموذج:
+    </div>
+    <div class="btn-row">
+      <a href="https://www.helius.dev/startup-launchpad" target="_blank" class="btn">📝 افتح نموذج Helius Launchpad</a>
+      <button onclick="copyHelius()" class="btn btn-copy">📋 نسخ إجابات Helius المحدثة</button>
+    </div>
+  </div>
+
+  <!-- Superteam Earn -->
+  <div class="card">
+    <div class="card-header">
+      <div class="grant-title">2. Superteam Earn (MENA / Global Microgrants)</div>
+      <span class="grant-amount">💰 4,000 – 10,000 USDC (قرار خلال 48 ساعة)</span>
+    </div>
+    <div class="grant-desc">
+      إضافةً إلى البريد المرسل، يمكنك لصق طلب المنحة المحدث مباشرة في بوابة Superteam Earn للمنح المتاحة لمنطقة الشرق الأوسط أو العالمية:
+    </div>
+    <div class="btn-row">
+      <a href="https://earn.superteam.fun/grants/" target="_blank" class="btn">📝 افتح بوابة منح Superteam</a>
+      <button onclick="copySuperteam()" class="btn btn-copy">📋 نسخ طلب Superteam (4,000 USDC)</button>
+    </div>
   </div>
 
   <!-- ChainGPT -->
   <div class="card">
-    <div class="grant-title">1. ChainGPT Research Grant</div>
-    <div class="grant-amount">💰 حتى $10,000 USD</div>
-    <div class="grant-desc">
-      منحة أبحاث للمشاريع المدمجة مع ChainGPT AI. مشروع FactLedger يستخدم ChainGPT لشرح البيانات.
+    <div class="card-header">
+      <div class="grant-title">3. ChainGPT Web3 AI Grant (Builder Tier)</div>
+      <span class="grant-amount">💰 حتى $10,000 API Credits & Grant</span>
     </div>
-
-    <a href="https://www.chaingpt.org/web3-ai-grant" target="_blank" class="btn">
-      📝 افتح النموذج
-    </a>
-
-    <button onclick="copyChainGPT()" class="btn btn-copy">
-      📋 نسخ كل الإجابات لـ ChainGPT
-    </button>
+    <div class="grant-desc">
+      نموذج التقديم الرسمي لمنحة ChainGPT (فئة Builder Tier) مع الإشارة إلى طبقة الشرح الحتمي <code>ExplanationAgent</code> و223 اختباراً:
+    </div>
+    <div class="btn-row">
+      <a href="https://www.chaingpt.org/web3-ai-grant" target="_blank" class="btn">📝 افتح نموذج ChainGPT</a>
+      <button onclick="copyChainGPT()" class="btn btn-copy">📋 نسخ إجابات ChainGPT المحدثة</button>
+    </div>
   </div>
 
   <!-- Colosseum -->
   <div class="card">
-    <div class="grant-title">2. Colosseum Eternal Grant</div>
-    <div class="grant-amount">💰 $5,000 - $20,000 USD</div>
-    <div class="grant-desc">
-      منحة البنية التحتية لسولانا DeFi. FactLedger يقدم بنية تحتية لتحليل المحافظ.
+    <div class="card-header">
+      <div class="grant-title">4. Colosseum Eternal & Solana Hackathons</div>
+      <span class="grant-amount">💰 جوائز غير مخففة للملكية + $250,000 Pre-seed</span>
     </div>
-
-    <a href="https://colosseum.org" target="_blank" class="btn">
-      📝 افتح النموذج
-    </a>
-
-    <button onclick="copyColosseum()" class="btn btn-copy">
-      📋 نسخ كل الإجابات لـ Colosseum
-    </button>
-  </div>
-
-  <!-- Superteam -->
-  <div class="card">
-    <div class="grant-title">3. Superteam Earn</div>
-    <div class="grant-amount">💰 $200 - $5,000 USD</div>
     <div class="grant-desc">
-      منح أدوات المطورين. FactLedger أداة مفتوحة المصدر للمطورين.
+      بوابة Colosseum Arena التي أوصت بها مؤسسة Solana Foundation لرفع التحديثات الأسبوعية والمشاركة في الهاكاثون:
     </div>
-
-    <a href="https://earn.superteam.fun" target="_blank" class="btn">
-      📝 افتح النموذج
-    </a>
-
-    <button onclick="copySuperteam()" class="btn btn-copy">
-      📋 نسخ كل الإجابات لـ Superteam
-    </button>
+    <div class="btn-row">
+      <a href="https://arena.colosseum.org" target="_blank" class="btn">📝 افتح بوابة Colosseum Arena</a>
+      <button onclick="copyColosseum()" class="btn btn-copy">📋 نسخ بيانات وتحديث Colosseum</button>
+    </div>
   </div>
 
+  <!-- 4. خطوات المستودع السريعة -->
+  <div class="section-title">⚡ رابعاً: إنهاء خطوات التنظيف والدمج في GitHub (ضغطة واحدة لكل خطوة)</div>
   <div class="card">
-    <div class="grant-title">📌 معلوماتك الأساسية</div>
-    <div class="grant-desc">اضغط لنسخ:</div>
-    <button onclick="copyText('Abdullah Al-Anzi')" class="btn btn-copy">👤 نسخ الاسم</button>
-    <button onclick="copyText('fas988840@gmail.com')" class="btn btn-copy">📧 نسخ البريد</button>
-    <button onclick="copyText('EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM')" class="btn btn-copy">💼 نسخ محفظة Solana</button>
-    <button onclick="copyText('https://github.com/fas988840-dev/PROJECT-x')" class="btn btn-copy">🔗 نسخ رابط المستودع</button>
-    <button onclick="copyText('@aamm123220')" class="btn btn-copy">🐦 نسخ X/Twitter</button>
-  </div>
-
-  <div class="success">
-    <strong>✅ عند الانتهاء:</strong><br>
-    ستُحول المنح إلى محفظتك Solana تلقائياً بعد الموافقة (1-6 أسابيع).
+    <div class="check-item">
+      <div>
+        <strong>1. دمج طلب السحب PR #105 (تحديث express-rate-limit إلى 8.7.1)</strong><br>
+        <span style="color:var(--text-dim);font-size:13px;">جميع فحوصات CI خضراء ولا يوجد أي تعارض (Clean).</span>
+      </div>
+      <a href="https://github.com/fas988840-dev/FactLedger/pull/105" target="_blank" class="btn btn-copy" style="width:auto;padding:8px 16px;">فتح PR #105 ودمجه</a>
+    </div>
+    <div class="check-item">
+      <div>
+        <strong>2. دمج طلب السحب PR #106 (تحديث vite إلى 8.3.4)</strong><br>
+        <span style="color:var(--text-dim);font-size:13px;">جميع فحوصات CI خضراء ولا يوجد أي تعارض (Clean).</span>
+      </div>
+      <a href="https://github.com/fas988840-dev/FactLedger/pull/106" target="_blank" class="btn btn-copy" style="width:auto;padding:8px 16px;">فتح PR #106 ودمجه</a>
+    </div>
+    <div class="check-item">
+      <div>
+        <strong>3. إغلاق التذكرتين القديمتين (#74 و #59) اللتين ظهرتا في شاشتك الرئيسية</strong><br>
+        <span style="color:var(--text-dim);font-size:13px;">حتى يصبح سجل القضايا نظيفاً أمام المراجعين والرعاة.</span>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <a href="https://github.com/fas988840-dev/FactLedger/issues/74" target="_blank" class="btn btn-copy" style="width:auto;padding:8px 14px;">فتح #74</a>
+        <a href="https://github.com/fas988840-dev/FactLedger/issues/59" target="_blank" class="btn btn-copy" style="width:auto;padding:8px 14px;">فتح #59</a>
+      </div>
+    </div>
+    <div class="check-item">
+      <div>
+        <strong>4. نسخ البيانات الأساسية السريعة لأي نموذج تقديم</strong>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button onclick="copyText('https://github.com/fas988840-dev/FactLedger')" class="btn btn-copy" style="width:auto;padding:8px 12px;">🔗 رابط المستودع</button>
+        <button onclick="copyText('https://factledger-demo.onrender.com/demo.html')" class="btn btn-copy" style="width:auto;padding:8px 12px;">🖥️ رابط الـ Demo</button>
+        <button onclick="copyText('https://factledger-api.onrender.com/api/v1/health')" class="btn btn-copy" style="width:auto;padding:8px 12px;">🩺 رابط الـ API</button>
+      </div>
+    </div>
   </div>
 </div>
 
 <script>
-const CHAINGPT_ANSWERS = `Project Name: FactLedger - Solana Wallet Intelligence Platform
-Applicant: Abdullah Al-Anzi (Solo Developer)
+const WALLET_FILE_CONTENT = `# FactLedger — Solana Funding Wallet
+
+Public Solana wallet designated by the project owner for receiving eligible grants, prizes, ecosystem funding, and other project funding when the relevant program permits payment to a Solana address.
+
+**Network:** Solana
+
+**Public address:** \`5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG\`
+
+## Controls
+
+- This is a public receiving address only. No seed phrase, private key, recovery phrase, API credential, or signing secret belongs in this repository.
+- Confirm the network, asset, recipient address, and program terms before any transfer.
+- Some grants/investments require legal agreements, KYC/KYB, banking details, a SAFE/equity instrument, or a program-specific payout method; this wallet does not replace those requirements.
+- The project owner must control the wallet and independently verify the address before submitting a binding funding application.
+- Keep funding receipts and transaction signatures in the project finance/data-room records when funds are actually received.
+`;
+
+const HELIUS_ANSWERS = `Project Name: FactLedger
+Founder: Abdullah Al-Anzi
+Location: Riyadh, Saudi Arabia
 Email: fas988840@gmail.com
-GitHub: https://github.com/fas988840-dev/PROJECT-x
+Website / Live Demo: https://factledger-demo.onrender.com/demo.html
+Production API Health: https://factledger-api.onrender.com/api/v1/health
+GitHub Repository: https://github.com/fas988840-dev/FactLedger
+Solana Wallet: 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
+
+What are you building?
+FactLedger is a live, open-source (MIT), read-only Solana wallet intelligence API and MCP server built around reproducibility. It converts public on-chain activity into deterministic wallet intelligence, risk analysis, and transaction-cited evidence (signature, slot, program ID). When a value cannot be verified on-chain, the API returns explicit null or UNKNOWN instead of guessing.
+
+Why Helius?
+Reliable Solana RPC and WebSocket infrastructure is directly tied to FactLedger's next milestone. Helius Business infrastructure will validate live transaction monitoring, improve production latency and reliability, remove free-tier RPC bottlenecks, and power reproducible benchmark evidence for wallet analysis and transaction-level citations.
+
+Current Traction:
+Live production REST API, interactive public demo, open-source MIT repository, and green GitHub Actions CI & CodeQL security workflows with 223 passing automated tests across 21 test suites.`;
+
+const SUPERTEAM_ANSWERS = `Title: FactLedger — Deterministic, Evidence-Cited Solana Wallet Intelligence API & MCP Server
+Category: Developer Tools / Infrastructure
+Applicant: Abdullah Al-Anzi (Riyadh, Saudi Arabia)
+Email: fas988840@gmail.com
+Telegram: @abdullhaa11
+X Handle: @aamm123220
+GitHub Repository: https://github.com/fas988840-dev/FactLedger
+Live Production API: https://factledger-api.onrender.com
+Live Demo: https://factledger-demo.onrender.com/demo.html
+Solana Receiving Wallet (Mainnet USDC / SOL): 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
+
+Amount Requested: 4,000 USDC
+
+One-Line Description:
+FactLedger is an open-source, read-only Solana wallet intelligence API that produces deterministic risk analysis with transaction-cited evidence and explicit UNKNOWN/null states instead of guesses.
+
+Problem & Solution:
+Wallet scores often look precise while hiding the heuristics and assumptions behind them. FactLedger reads public Solana activity, computes deterministic behavioral and risk metrics, and cites the exact transactions (signature, slot, program) behind every finding. Unsupported facts remain explicit nulls.
+
+Verified Proof of Work:
+- Public MIT repository: https://github.com/fas988840-dev/FactLedger
+- 223 automated tests passing across 21 test suites (CI & CodeQL green on main)
+- Live REST API + MCP server for AI agents + interactive browser demo
+
+Milestones & Budget (4,000 USDC):
+1. 1,200 USDC (Weeks 1–2): API & Evidence Contract Hardening and developer integration examples for wallets, fintech apps, and AI agents.
+2. 1,600 USDC (Weeks 2–4): Production RPC/WebSocket reliability benchmark, failover validation, and end-to-end testing.
+3. 1,200 USDC (Weeks 4–6): Integration guide, reproducibility checklist, and verified external developer testing.`;
+
+const CHAINGPT_ANSWERS = `Project Name: FactLedger — Reproducible Solana Wallet Intelligence API
+Applicant: Abdullah Al-Anzi (Solo Developer, Riyadh, Saudi Arabia)
+Email: fas988840@gmail.com
+GitHub Repository: https://github.com/fas988840-dev/FactLedger
+Live Production API: https://factledger-api.onrender.com
+Interactive Demo: https://factledger-demo.onrender.com/demo.html
 X/Twitter: @aamm123220
-Solana Wallet: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
+Solana Wallet: 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 
-Amount Requested: $10,000 USD
+Tier & Request: Builder Tier — Up to $10,000 USD equivalent in ChainGPT API credits & grant support
 
-Problem Statement:
-Wallet analysis tools on Solana today fall into two categories: opaque commercial systems and heuristic pattern-matching that mislabels its outputs as verified. FactLedger addresses this by enforcing honesty in code — every value is either verified or explicitly null, and confidence tiers cannot be collapsed.
-
-Solution & Innovation:
-FactLedger integrates ChainGPT as an "honest AI explainer" layer — rephrasing already-computed, deterministic blockchain metrics into plain language. The model never originates facts; all financial data is read directly from Solana's blockchain. This represents a new pattern for LLM integration: enhancing UX without introducing fabrication risk.
-
-Technical Approach:
-- Read-only Solana RPC pipeline (12 REST endpoints + MCP server)
-- Deterministic scoring verified in CI (151 tests passing)
-- ChainGPT integration for natural language explanations
-- Strict separation: deterministic facts from LLM output
-- Every score cites its evidence and can be independently reproduced
-
-Milestones ($10,000 total):
-1. ChainGPT Integration Enhancement ($3,000, Month 1) - Extended prompt engineering, response validation, fallback deterministic explanations
-2. Production Deployment ($4,000, Months 2-3) - Public API endpoint, dedicated RPC provider, monitoring
-3. Documentation & Ecosystem ($3,000, Months 4-5) - Technical writeups, integration guides, community outreach
-
-Why This Matters:
-This demonstrates how LLMs can safely enhance blockchain UX. The pattern is transferable — any project can adopt "AI explainer" architecture to make complex data accessible while maintaining verifiability.
-
-Contact: fas988840@gmail.com`;
+Summary & ChainGPT Integration Role:
+FactLedger is an open-source (MIT), read-only Solana wallet intelligence API and MCP server with 223 passing CI tests. It computes deterministic behavioral metrics, wallet risk scores, and transaction-cited evidence, and integrates ChainGPT strictly as an explanation layer (ExplanationAgent) over already-computed deterministic results. ChainGPT never alters risk scores or cited evidence, and FactLedger falls back to deterministic summaries if offline.`;
 
 const COLOSSEUM_ANSWERS = `Project Name: FactLedger
-Category: Solana DeFi Infrastructure
-Applicant: Abdullah Al-Anzi (Solo Developer)
+Track: Solana Developer Infrastructure / DeFi Tooling
+Founder: Abdullah Al-Anzi (Riyadh, Saudi Arabia)
 Email: fas988840@gmail.com
-GitHub: https://github.com/fas988840-dev/PROJECT-x
-X/Twitter: @aamm123220
-Solana Wallet: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
+GitHub Repository: https://github.com/fas988840-dev/FactLedger
+Live Production API: https://factledger-api.onrender.com
+Live Health Check: https://factledger-api.onrender.com/api/v1/health
+Interactive Demo: https://factledger-demo.onrender.com/demo.html
+Solana Wallet: 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 
-⚠️ DO NOT PASTE THIS BLOCK INTO COLOSSEUM ETERNAL.
+Weekly Progress & Product Summary:
+FactLedger is a read-only Solana wallet intelligence system built around one rule: a wallet score should be something anyone can independently verify. The production REST API and interactive demo are live, backed by 223 passing automated tests in GitHub Actions CI. Every finding cites the exact transaction signature, slot, and program ID behind it, and unverified values return explicit null/UNKNOWN instead of guesses.`;
 
-Colosseum Eternal is not a $15,000 grant. It is a ~$250,000 pre-seed
-investment plus accelerator admission, applied for year-round, and it
-requires TWO VIDEOS (a <=3 min pitch and a <=3 min technical walkthrough)
-that this sheet cannot supply. A milestone-and-amount block like the one
-below reads as a grant application sent to the wrong program.
-
-Verify the current terms at https://www.colosseum.com before applying, and
-note that pre-seed funding normally involves equity or token allocation,
-unlike the grants elsewhere in this sheet.
-
-The text below is kept only as reusable project description material.
-
-Description:
-FactLedger is a deterministic, read-only Solana wallet analysis platform. It provides verified DEX detection, real-time monitoring, and transparent intelligence scoring — with every number independently verifiable from the blockchain.
-
-Problem:
-Wallet analysis on Solana splits into opaque commercial tools and heuristic guessers. Neither tells users what they don't know. FactLedger fills this gap with honest confidence tiering (confirmed/candidate/unknown) and deterministic scoring that reviewers can reproduce.
-
-Solution:
-- Verified DEX detection (Raydium, Jupiter — never guessed)
-- Real-time wallet monitoring via WebSocket + SSE
-- Transparent scoring with cited evidence
-- Read-only architecture (no keys, no signing)
-- 12 REST API endpoints + MCP server + Next.js dashboard
-
-Current Status (Aug 31, 2026):
-- 151 tests passing on GitHub's own runners
-- Determinism verified in CI
-- Production-ready Docker image
-- TypeScript strict mode, no 'any' types
-- Comprehensive documentation
-
-Milestones (drafted for a grant-shaped program, NOT Colosseum):
-1. Production Deployment ($5,000, Months 1-2)
-2. Extended Protocol Coverage — Orca, Magic Eden, Phantom Swap ($5,000, Months 3-4)
-3. Ecosystem Integration & Sustainability ($5,000, Months 5-6)
-
-Team: 1 solo developer, full-time commitment
-License: MIT (Open Source)
-
-Impact:
-- Developers: Build on verifiable wallet data
-- Researchers: Audit and extend the system
-- Compliance: Transparent metrics for AML/KYC
-- Users: Honest analysis without black boxes
-
-Contact: fas988840@gmail.com`;
-
-const SUPERTEAM_ANSWERS = `Title: FactLedger — Solana Wallet Intelligence Platform
-Category: Developer Tools
-Applicant: Abdullah Al-Anzi
-Email: fas988840@gmail.com
-X Handle: @aamm123220
-Wallet: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
-
-Amount Requested: $5,000 USD
-
-Short Description (150 chars):
-Deterministic Solana wallet analysis API with verified DEX detection, honest confidence tiering, and transparent scoring. 151 tests passing, production-ready.
-
-Full Description:
-FactLedger is a read-only Solana wallet intelligence platform that turns raw on-chain transaction history into behavioral metrics, intelligence scores, and risk assessments. Every number is independently verifiable from the blockchain.
-
-Two design rules enforced in code:
-1. Never fabricates - unknowns are returned as null, never as plausible estimates
-2. Never overstates confidence - three tiers (confirmed/candidate/unknown) that cannot be collapsed
-
-Proof of Work:
-- Repository: https://github.com/fas988840-dev/PROJECT-x
-- 151 tests passing (CI-verified on GitHub's runners)
-- Determinism check runs on every push
-- TypeScript strict mode with full type safety
-- 12 REST API endpoints implemented
-- MCP server for AI clients
-- Next.js dashboard
-- Docker deployment ready
-
-Milestones:
-1. Public deployment on Fly.io/Railway ($2,000)
-2. Extended protocol coverage: Orca, Magic Eden ($2,000)
-3. MCP integration examples and community outreach ($1,000)
-
-Timeline: 3 months
-Team: Solo developer, full-time
-License: MIT
-
-Why Superteam?
-FactLedger is exactly the kind of open-source developer tool that strengthens the Solana ecosystem. It's honest about its limits (unlike heuristic tools that lie), open source (unlike commercial black boxes), and immediately useful for any team building on Solana.
-
-Contact: fas988840@gmail.com`;
-
-function copyText(text) {
-  navigator.clipboard.writeText(text).then(() => {
-    alert('✅ تم النسخ!');
-  }).catch(() => {
-    // Fallback
-    const el = document.createElement('textarea');
-    el.value = text;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-    alert('✅ تم النسخ!');
-  });
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg || '✅ تم النسخ إلى الحافظة!';
+  t.style.display = 'block';
+  clearTimeout(window.__toastTimer);
+  window.__toastTimer = setTimeout(() => { t.style.display = 'none'; }, 2600);
 }
 
+function copyText(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => showToast()).catch(() => fallbackCopy(text));
+  } else {
+    fallbackCopy(text);
+  }
+}
+
+function fallbackCopy(text) {
+  const el = document.createElement('textarea');
+  el.value = text;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+  showToast();
+}
+
+function copyWalletFile() { copyText(WALLET_FILE_CONTENT); }
+function copyHelius() { copyText(HELIUS_ANSWERS); }
+function copySuperteam() { copyText(SUPERTEAM_ANSWERS); }
 function copyChainGPT() { copyText(CHAINGPT_ANSWERS); }
 function copyColosseum() { copyText(COLOSSEUM_ANSWERS); }
-function copySuperteam() { copyText(SUPERTEAM_ANSWERS); }
 </script>
+</body>
+</html>

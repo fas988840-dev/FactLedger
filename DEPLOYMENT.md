@@ -19,7 +19,7 @@ automatically. No `fly.toml`, no `railway.json`, no CLI installs needed.
 
 1. Go to [render.com](https://render.com) → sign in / create account.
 2. Click **New +** → **Web Service**.
-3. Connect your GitHub account → select `fas988840-dev/PROJECT-x`.
+3. Connect your GitHub account → select `fas988840-dev/FactLedger`.
 4. Render detects `render.yaml` automatically and pre-fills most settings.
 5. Under **Environment** add any secrets not in `render.yaml`:
    - `API_KEYS` (optional — comma-separated; if unset, API is open)
@@ -56,7 +56,7 @@ The `dashboard/` Next.js app deploys to Vercel via `deploy-dashboard.yml`.
 ### Setup (browser only)
 
 1. Go to [vercel.com](https://vercel.com) → sign in / create account.
-2. Click **Add New… → Project** → import `fas988840-dev/PROJECT-x`.
+2. Click **Add New… → Project** → import `fas988840-dev/FactLedger`.
 3. Set **Root Directory** to `dashboard` (Vercel auto-detects Next.js).
 4. Under **Environment Variables** add:
    - `FACTLEDGER_API_URL` = `https://factledger-api.onrender.com` (or your Render URL)
@@ -194,5 +194,5 @@ paid instance to keep the service always-on.
 
 ## Support
 
-- **Issues**: https://github.com/fas988840-dev/PROJECT-x/issues
+- **Issues**: https://github.com/fas988840-dev/FactLedger/issues
 - **Docs**: [README.md](README.md)

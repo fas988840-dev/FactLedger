@@ -83,7 +83,7 @@
 
 ### Step 1: Make Repository Public (1 minute)
 
-**URL:** https://github.com/fas988840-dev/PROJECT-x/settings
+**URL:** https://github.com/fas988840-dev/FactLedger/settings
 
 1. Scroll to red **"Danger Zone"** section
 2. Click **"Change repository visibility"**
@@ -110,7 +110,7 @@ flyctl deploy
 ```
 Go to: https://railway.app
 Click "New Project" → Deploy from GitHub
-Select fas988840-dev/PROJECT-x
+Select fas988840-dev/FactLedger
 Add env vars (see DEPLOYMENT.md)
 Deploy
 ```
@@ -205,7 +205,7 @@ Submit
 ## 🔗 Quick Links
 
 **Immediate Actions:**
-- Make repo public: https://github.com/fas988840-dev/PROJECT-x/settings
+- Make repo public: https://github.com/fas988840-dev/FactLedger/settings
 - Grant #1 (ChainGPT): https://www.chaingpt.org/web3-ai-grant
 - Grant #2 (Colosseum): https://colosseum.org
 - Grant #3 (Superteam): https://earn.superteam.fun
@@ -219,7 +219,7 @@ Submit
 - Email: fas988840@gmail.com
 - GitHub: https://github.com/fas988840-dev
 - X/Twitter: @aamm123220
-- Solana Wallet: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
+- Solana Wallet: 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 
 **Local Files:**
 - Copy answers from: `GRANTS/grant-answers.html`
@@ -334,7 +334,7 @@ If you need help at any step:
 5. **Overall status?** → Read `ACTION_ITEMS.md`
 
 **Email:** fas988840@gmail.com  
-**GitHub:** https://github.com/fas988840-dev/PROJECT-x
+**GitHub:** https://github.com/fas988840-dev/FactLedger
 
 ---
 

@@ -41,7 +41,7 @@ echo -e "${BLUE}═══ STEP 1: Verify Repository is Public ═══${NC}"
 echo ""
 print_step "Checking repository visibility..."
 
-VISIBILITY=$(curl -s https://api.github.com/repos/fas988840-dev/PROJECT-x | grep -o '"visibility":"[^"]*' | cut -d'"' -f4)
+VISIBILITY=$(curl -s https://api.github.com/repos/fas988840-dev/FactLedger | grep -o '"visibility":"[^"]*' | cut -d'"' -f4)
 
 if [ "$VISIBILITY" = "public" ]; then
     print_success "Repository is PUBLIC ✓"
@@ -49,7 +49,7 @@ else
     print_error "Repository is PRIVATE"
     echo ""
     echo "Make it public at:"
-    echo "  https://github.com/fas988840-dev/PROJECT-x/settings"
+    echo "  https://github.com/fas988840-dev/FactLedger/settings"
     echo ""
     echo "Steps:"
     echo "  1. Scroll to 'Danger Zone' (red section)"
@@ -92,7 +92,7 @@ case $DEPLOY_CHOICE in
         echo ""
         echo "Go to: https://railway.app"
         echo "1. Click 'New Project' → 'Deploy from GitHub'"
-        echo "2. Select: fas988840-dev/PROJECT-x"
+        echo "2. Select: fas988840-dev/FactLedger"
         echo "3. Add environment variables (see DEPLOYMENT.md)"
         echo "4. Deploy"
         echo ""
@@ -104,7 +104,7 @@ case $DEPLOY_CHOICE in
         echo ""
         echo "Go to: https://render.com"
         echo "1. Click 'New Web Service'"
-        echo "2. Connect GitHub repo: fas988840-dev/PROJECT-x"
+        echo "2. Connect GitHub repo: fas988840-dev/FactLedger"
         echo "3. Add environment variables (see DEPLOYMENT.md)"
         echo "4. Deploy"
         echo ""

@@ -19,7 +19,7 @@
 
 Go to your browser and:
 ```
-https://github.com/fas988840-dev/PROJECT-x/settings
+https://github.com/fas988840-dev/FactLedger/settings
 ```
 
 Find the red **"Danger Zone"** section at the bottom:
@@ -110,7 +110,7 @@ TOTAL:              56 minutes
 ## 🔗 Quick Links
 
 **Make Repo Public:**
-https://github.com/fas988840-dev/PROJECT-x/settings
+https://github.com/fas988840-dev/FactLedger/settings
 
 **Grant Platforms:**
 - ChainGPT: https://www.chaingpt.org/web3-ai-grant
@@ -122,7 +122,7 @@ https://github.com/fas988840-dev/PROJECT-x/settings
 Email: fas988840@gmail.com
 GitHub: https://github.com/fas988840-dev
 X/Twitter: @aamm123220
-Wallet: EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM
+Wallet: 5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG
 ```
 
 ---

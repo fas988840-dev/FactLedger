@@ -148,4 +148,4 @@ it with one of:
 ---
 
 **Contact**: fas988840@gmail.com · Solana wallet:
-`EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+`5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`

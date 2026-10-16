@@ -32,7 +32,7 @@ Key highlights of the project:
 - Honest confidence tiering (confirmed/candidate/unknown)
 - Fully open-source (MIT license)
 
-Repository: https://github.com/fas988840-dev/PROJECT-x
+Repository: https://github.com/fas988840-dev/FactLedger
 Live demo: https://factledger-api.onrender.com
 
 I'm happy to answer any questions or provide additional information 
@@ -150,7 +150,7 @@ Built with:
 ✓ MCP server
 ✓ Docker ready
 
-Open source (MIT): https://github.com/fas988840-dev/PROJECT-x
+Open source (MIT): https://github.com/fas988840-dev/FactLedger
 
 Feedback welcome! 🚀
 ```
@@ -186,7 +186,7 @@ This grant will fund:
 2. Extended protocol coverage (Orca, Magic Eden)
 3. Ecosystem integration and sustainability
 
-Repository: https://github.com/fas988840-dev/PROJECT-x
+Repository: https://github.com/fas988840-dev/FactLedger
 
 Grateful for the support. Onward!
 
@@ -231,8 +231,8 @@ Expected completion: [Date]
 - [Priority 3]
 
 Links:
-- Latest commits: https://github.com/fas988840-dev/PROJECT-x/commits/main
-- Recent CI runs: https://github.com/fas988840-dev/PROJECT-x/actions
+- Latest commits: https://github.com/fas988840-dev/FactLedger/commits/main
+- Recent CI runs: https://github.com/fas988840-dev/FactLedger/actions
 - Live demo: [If deployed]
 
 Thank you for your continued support.
@@ -279,7 +279,7 @@ Two design rules enforced in CODE:
 
 Clone and run:
 ```bash
-git clone https://github.com/fas988840-dev/PROJECT-x
+git clone https://github.com/fas988840-dev/FactLedger
 cd PROJECT-x
 npm install
 npm test  # See all 133 tests pass
@@ -317,7 +317,7 @@ knows vs. doesn't know (no fabricated data, ever).
 ✅ MIT license
 ✅ Ready to deploy (Docker)
 
-Repository: https://github.com/fas988840-dev/PROJECT-x
+Repository: https://github.com/fas988840-dev/FactLedger
 
 Would love your feedback! Especially:
 - Which DEXs should I add next?

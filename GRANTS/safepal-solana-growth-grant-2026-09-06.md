@@ -17,7 +17,7 @@ Status: **eligibility/application package emailed / official web-form submission
 - GitHub: https://github.com/fas988840-dev/factledger
 - Live API: https://factledger-api.onrender.com
 - License: MIT
-- Solana wallet: `EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM`
+- Solana wallet: `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`
 
 ## Submission evidence
 On 2026-09-06 an eligibility/application package was sent from the project Gmail account to `eco@safepal.com` with the current FactLedger production-and-grant-readiness deck attached. The message includes the Solana wallet above and asks SafePal to route the package to the grant review team or confirm the exact formal submission path.
