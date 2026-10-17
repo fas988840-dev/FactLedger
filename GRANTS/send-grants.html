@@ -684,9 +684,105 @@ function showToast(msg) {
   setTimeout(() => { t.style.display = 'none'; }, 3500);
 }
 
-function copyText(txt, msg) {
-  navigator.clipboard.writeText(txt).then(() => showToast(msg));
+function fallbackCopyText(text, label) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.setAttribute('readonly', '');
+  ta.style.position = 'fixed';
+  ta.style.top = '10px';
+  ta.style.left = '10px';
+  ta.style.width = '1px';
+  ta.style.height = '1px';
+  ta.style.opacity = '0.01';
+  document.body.appendChild(ta);
+  ta.focus();
+  ta.select();
+  ta.setSelectionRange(0, text.length);
+  let ok = false;
+  try {
+    ok = document.execCommand('copy');
+  } catch (e) {
+    ok = false;
+  }
+  document.body.removeChild(ta);
+  if (ok) {
+    showToast(label || 'تم النسخ إلى الحافظة بنجاح!');
+    openCopyModal(text, label || 'تم النسخ! يمكنك أيضاً نسخه أو مراجعته من هنا:');
+  } else {
+    openCopyModal(text, label || 'انسخ النص التالي:');
+  }
 }
+
+function copyText(txt, msg) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(txt).then(() => {
+      showToast(msg || 'تم النسخ إلى الحافظة بنجاح!');
+      openCopyModal(txt, msg || 'تم النسخ بنجاح!');
+    }).catch(() => {
+      fallbackCopyText(txt, msg);
+    });
+  } else {
+    fallbackCopyText(txt, msg);
+  }
+}
+
+function openCopyModal(text, title, url) {
+  let modal = document.getElementById('sandboxHelperModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'sandboxHelperModal';
+    modal.style.cssText = 'position:fixed;inset:0;background:rgba(2,6,23,0.88);z-index:99999;display:flex;align-items:center;justify-content:center;padding:16px;';
+    modal.innerHTML = `
+      <div style="background:#0f172a;border:2px solid #38bdf8;border-radius:16px;max-width:680px;width:100%;padding:20px;color:#f8fafc;direction:rtl;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <h3 id="modalTitle" style="margin:0;color:#38bdf8;font-size:15px;"></h3>
+          <button onclick="document.getElementById('sandboxHelperModal').style.display='none'" style="background:#ef4444;color:#fff;border:none;border-radius:8px;padding:6px 12px;cursor:pointer;font-weight:700;">إغلاق ✕</button>
+        </div>
+        <div id="modalUrlBox" style="display:none;margin-bottom:10px;background:#1e293b;padding:10px;border-radius:8px;border:1px solid #475569;">
+          <div style="font-size:12px;color:#94a3b8;margin-bottom:4px;">الرابط المباشر (تم نسخه تلقائياً — الصقه في متصفح Safari):</div>
+          <input id="modalUrlInput" readonly style="width:100%;background:#020617;color:#34d399;border:1px solid #334155;padding:8px;border-radius:6px;direction:ltr;font-family:monospace;font-size:12px;" onclick="this.select();document.execCommand('copy');showToast('تم نسخ الرابط!')" />
+        </div>
+        <textarea id="modalTextArea" readonly style="width:100%;height:200px;background:#020617;color:#e2e8f0;border:1px solid #334155;border-radius:8px;padding:10px;direction:ltr;font-family:monospace;font-size:12px;" onclick="this.select();document.execCommand('copy');showToast('تم تحديد ونسخ النص!')"></textarea>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
+          <button onclick="const ta=document.getElementById('modalTextArea');ta.select();ta.setSelectionRange(0,999999);document.execCommand('copy');showToast('تم النسخ بنجاح!')" style="background:#10b981;color:#022c22;border:none;border-radius:8px;padding:10px 16px;font-weight:800;cursor:pointer;">📋 تحديد ونسخ الكل الآن</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
+  document.getElementById('modalTitle').textContent = title || 'نسخ النص / الرابط';
+  const urlBox = document.getElementById('modalUrlBox');
+  const urlInput = document.getElementById('modalUrlInput');
+  if (url) {
+    urlBox.style.display = 'block';
+    urlInput.value = url;
+  } else {
+    urlBox.style.display = 'none';
+  }
+  const ta = document.getElementById('modalTextArea');
+  ta.value = text || url || '';
+  modal.style.display = 'flex';
+  setTimeout(() => { ta.focus(); ta.select(); }, 50);
+}
+
+document.addEventListener('click', function(e) {
+  const a = e.target.closest('a[target="_blank"]');
+  if (!a) return;
+  const href = a.getAttribute('href');
+  if (!href || href.startsWith('solana:')) return;
+  try {
+    const w = window.open(href, '_blank', 'noopener');
+    if (!w) {
+      e.preventDefault();
+      fallbackCopyText(href, 'تم نسخ الرابط! الصقه في المتصفح لفتحه');
+      openCopyModal(href, 'تم نسخ الرابط تلقائياً (الصقه في متصفح Safari):', href);
+    }
+  } catch (err) {
+    e.preventDefault();
+    fallbackCopyText(href, 'تم نسخ الرابط! الصقه في المتصفح لفتحه');
+    openCopyModal(href, 'تم نسخ الرابط تلقائياً (الصقه في متصفح Safari):', href);
+  }
+});
 
 function copyPricingOffer() {
   const txt = `🚀 FactLedger — Deterministic Solana Wallet Intelligence, 8-Tool MCP Server & 100 Institutional Audit Reports (Rated 5.0 ★★★★★)
