@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-17T01:11:18.143Z",
-  "checkedAtRiyadh": "2026-10-17 04:11:31 Asia/Riyadh",
+  "checkedAt": "2026-10-17T02:04:14.450Z",
+  "checkedAtRiyadh": "2026-10-17 05:04:30 Asia/Riyadh",
   "wallets": {
     "canonical": {
       "address": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG",
@@ -233,6 +233,66 @@
       "status": "delivered_pnl_and_screenshot_attached",
       "statusAr": "تم الرد على هارولد إيكوي وإرفاق جدول الأرباح والخسائر والتقييم المالي (FactLedger_PnL_and_Valuation_2026.xlsx) وتحديد سعر البيع الكاش ($35k–$75k)",
       "walletUsed": "Escrow.com / Wire / USDC"
+    },
+    {
+      "id": "microns",
+      "name": "Microns.io SaaS Acquisition Marketplace",
+      "amount": "$49,000 Cash Asking ($35k–$75k Range)",
+      "recipient": "info@microns.io",
+      "messageId": "1a14799325a0eab5",
+      "threadId": "1a14799325a0eab5",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم إرسال طلب إدراج المشروع للبيع الكاش السريع ($49,000) مع الروابط الحية و224 اختباراً",
+      "walletUsed": "Escrow / USDC"
+    },
+    {
+      "id": "hypernative",
+      "name": "Hypernative (B2B Licensing / $35k–$75k Cash Buyout)",
+      "amount": "$499–$1,500/mo OR $35k–$75k Cash Buyout",
+      "recipient": "info@hypernative.io",
+      "messageId": "1a147994c2e6cb3f",
+      "threadId": "1a095b7be0bbc661",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم إرسال العرض المحدّث بالروابط الحية: ترخيص API شهري ($499–$1,500) أو استحواذ كاش ($35k–$75k)",
+      "walletUsed": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG"
+    },
+    {
+      "id": "amberdata",
+      "name": "Amberdata (B2B Licensing / $35k–$75k Cash Buyout)",
+      "amount": "$499–$1,500/mo OR $35k–$75k Cash Buyout",
+      "recipient": "info@amberdata.io",
+      "messageId": "1a147996ba4b30c1",
+      "threadId": "1a095b7c220db0d7",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم إرسال العرض المحدّث بالروابط الحية: ترخيص API شهري ($499–$1,500) أو استحواذ كاش ($35k–$75k)",
+      "walletUsed": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG"
+    },
+    {
+      "id": "trmlabs",
+      "name": "TRM Labs (B2B Licensing / $35k–$75k Cash Buyout)",
+      "amount": "$499–$1,500/mo OR $35k–$75k Cash Buyout",
+      "recipient": "contact@trmlabs.com",
+      "messageId": "1a147999ef92fe48",
+      "threadId": "1a0d70afcb3ff404",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم إرسال العرض المحدّث بالروابط الحية: ترخيص API شهري ($499–$1,500) أو استحواذ كاش ($35k–$75k)",
+      "walletUsed": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG"
+    },
+    {
+      "id": "merklescience",
+      "name": "Merkle Science (B2B Licensing / $35k–$75k Cash Buyout)",
+      "amount": "$499–$1,500/mo OR $35k–$75k Cash Buyout",
+      "recipient": "info@merklescience.com",
+      "messageId": "1a14799b6c32006c",
+      "threadId": "1a095b7b44f8d084",
+      "updatedAt": "2026-10-17",
+      "status": "delivered_awaiting_reply",
+      "statusAr": "تم إرسال العرض المحدّث بالروابط الحية: ترخيص API شهري ($499–$1,500) أو استحواذ كاش ($35k–$75k)",
+      "walletUsed": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG"
     }
   ]
 }
