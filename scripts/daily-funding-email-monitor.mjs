@@ -148,15 +148,15 @@ export const EMAIL_GRANT_THREADS = [
   },
   {
     id: 'acquire',
-    name: 'Acquire.com Startup Listing',
-    amount: 'إدراج المشروع للاستحواذ/الشراكة',
-    recipient: 'support@acquire.com (Andrew Titus)',
-    messageId: '1a1472f540345d5b',
+    name: 'Acquire.com Startup Listing ($35k–$75k Cash Valuation)',
+    amount: '$35,000–$75,000 Cash Buyout Listing',
+    recipient: 'support@acquire.com (Harold Ecoy & Andrew Titus)',
+    messageId: '1a14769a4518776d',
     threadId: '1a132547af2d4f4b',
     updatedAt: '2026-10-17',
-    status: 'delivered_screenshot_attached',
-    statusAr: 'رد أندرو تيتوس الساعة 02:49 ص وتم إرسال صورة العرض عالية الدقة (PNG) مرفقة له مباشرة ليرفعها من جهته',
-    walletUsed: 'N/A',
+    status: 'delivered_pnl_and_screenshot_attached',
+    statusAr: 'تم الرد على هارولد إيكوي وإرفاق جدول الأرباح والخسائر والتقييم المالي (FactLedger_PnL_and_Valuation_2026.xlsx) وتحديد سعر البيع الكاش ($35k–$75k)',
+    walletUsed: 'Escrow.com / Wire / USDC',
   },
 ];
 
