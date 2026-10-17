@@ -31,6 +31,9 @@ jobs:
       - name: Run 100-Agent MCP Verification & Demo Telemetry Suite
         run: node scripts/mcp-100-agents-runner.mjs
 
+      - name: Generate 100 Institutional Audit Reports & $10k/mo Revenue Plan
+        run: node scripts/generate-100-reports-and-revenue-plan.mjs
+
       - name: Publish Job Summary
         run: |
           node -e '

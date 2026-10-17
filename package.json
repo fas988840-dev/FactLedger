@@ -16,7 +16,9 @@
     "type-check": "tsc --noEmit",
     "verify:solana": "node scripts/verify-solana-rpc-ws.mjs",
     "monitor:daily": "node scripts/daily-funding-email-monitor.mjs",
-    "mcp:100-agents": "node scripts/mcp-100-agents-runner.mjs"
+    "mcp:100-agents": "node scripts/mcp-100-agents-runner.mjs",
+    "reports:100": "node scripts/generate-100-reports-and-revenue-plan.mjs",
+    "monitor:server": "node scripts/funding-live-dashboard-server.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",

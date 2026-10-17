@@ -1,10 +1,10 @@
 {
   "suite": "FactLedger 100-Agent MCP Verification & Developer Follow-Up Fleet",
   "version": "1.0.0",
-  "startedAt": "2026-10-16T23:54:12.999Z",
-  "finishedAt": "2026-10-16T23:54:13.781Z",
-  "checkedAtRiyadh": "2026-10-17 02:54:13 Asia/Riyadh",
-  "totalDurationMs": 797,
+  "startedAt": "2026-10-17T00:13:26.357Z",
+  "finishedAt": "2026-10-17T00:13:26.557Z",
+  "checkedAtRiyadh": "2026-10-17 03:13:26 Asia/Riyadh",
+  "totalDurationMs": 213,
   "totalAgents": 100,
   "activeVerifiedAgents": 100,
   "deterministicPassRate": "100% (100/100)",
@@ -20,17 +20,17 @@
     "apiHealth": {
       "status": 200,
       "ok": true,
-      "latencyMs": 198
+      "latencyMs": 169
     },
     "interactiveDemo": {
       "status": 200,
       "ok": true,
-      "latencyMs": 190
+      "latencyMs": 84
     },
     "githubRepo": {
       "status": 200,
       "ok": true,
-      "latencyMs": 714
+      "latencyMs": 85
     },
     "solanaMainnetRpc": {
       "status": 200,
