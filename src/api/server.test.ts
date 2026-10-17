@@ -588,12 +588,18 @@ describe('API Server', () => {
   });
 
   describe('CORS', () => {
-    it('should include CORS headers', async () => {
+    it('should include CORS headers for localhost and live Render demo origin', async () => {
       const response = await request(app)
         .get('/api/v1/health')
         .set('Origin', 'http://localhost:3000');
 
-      expect(response.headers['access-control-allow-origin']).toBeDefined();
+      expect(response.headers['access-control-allow-origin']).toBe('http://localhost:3000');
+
+      const demoResponse = await request(app)
+        .get('/api/v1/health')
+        .set('Origin', 'https://factledger-demo.onrender.com');
+
+      expect(demoResponse.headers['access-control-allow-origin']).toBe('https://factledger-demo.onrender.com');
     });
   });
 

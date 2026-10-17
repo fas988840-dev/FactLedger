@@ -185,10 +185,12 @@ export class APIServer {
     // does NOT stop curl/server-to-server/scraper access (those requests
     // carry no Origin header at all). apiKeyAuth below is what actually
     // gates access to the data.
-    const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:3000')
+    const defaultOrigins = ['http://localhost:3000', 'https://factledger-demo.onrender.com'];
+    const configuredOrigins = (process.env.CORS_ORIGIN || '')
       .split(',')
       .map((o) => o.trim())
       .filter(Boolean);
+    const allowedOrigins = Array.from(new Set([...defaultOrigins, ...configuredOrigins]));
 
     this.app.use(
       cors({
