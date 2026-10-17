@@ -250,7 +250,7 @@ export class APIServer {
    * No-ops (open access) when API_KEYS is not configured.
    */
   private apiKeyAuth = (req: Request, res: Response, next: NextFunction): void => {
-    if (req.path === '/' || req.path === '/api/v1/health') {
+    if (req.path === '/' || req.path === '/api/v1/health' || req.path === '/.well-known/glama.json') {
       next();
       return;
     }
@@ -318,9 +318,15 @@ export class APIServer {
    * Setup routes
    */
   private setupRoutes(): void {
-    // Health check
+    // Health check & MCP directory verification
     this.app.get('/', this.handleIndex.bind(this));
     this.app.get('/api/v1/health', this.asyncHandler(this.handleHealth.bind(this)));
+    this.app.get('/.well-known/glama.json', (_req: Request, res: Response) => {
+      res.json({
+        $schema: 'https://glama.ai/mcp/schemas/connector.json',
+        maintainers: [{ email: 'fas988840@gmail.com' }],
+      });
+    });
 
     // Wallet endpoints - RPC-heavy ones carry an extra, stricter rate limit
     this.app.get('/api/v1/wallet/:address/transactions', this.heavyLimiter, this.asyncHandler(this.handleWalletTransactions.bind(this)));
