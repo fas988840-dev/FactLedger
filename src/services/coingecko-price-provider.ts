@@ -19,6 +19,10 @@ const GECKOTERMINAL_BASE_URL = 'https://api.geckoterminal.com/api/v2';
 const DEXSCREENER_BASE_URL = 'https://api.dexscreener.com';
 const MAX_STALE_SECONDS = 5 * 60;
 const HEALTH_CACHE_MS = 60_000;
+/** Failed probes are re-checked sooner: one transient flap (rate limit, cold
+ * start, brief network drop) must not report "degraded" for a full minute
+ * after the providers have already recovered. */
+const HEALTH_FAIL_CACHE_MS = 15_000;
 const REQUEST_TIMEOUT_MS = 5_000;
 const RATE_LIMIT_BACKOFF_MS = 60_000;
 
@@ -276,8 +280,9 @@ export class CoinGeckoPriceProvider implements PriceProvider {
 
   async isHealthy(): Promise<boolean> {
     const now = Date.now();
-    if (this.healthCache && now - this.healthCache.checkedAt < HEALTH_CACHE_MS) {
-      return this.healthCache.healthy;
+    if (this.healthCache) {
+      const ttl = this.healthCache.healthy ? HEALTH_CACHE_MS : HEALTH_FAIL_CACHE_MS;
+      if (now - this.healthCache.checkedAt < ttl) return this.healthCache.healthy;
     }
     if (this.healthInFlight) return this.healthInFlight;
     this.healthInFlight = this.probeHealth();

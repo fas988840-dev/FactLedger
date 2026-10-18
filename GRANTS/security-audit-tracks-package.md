@@ -6,7 +6,7 @@ Prepared 2026-10-18. Canonical links for every answer below:
 - API health: https://factledger-api.onrender.com/api/v1/health
 - MCP: approved on Glama as `factledger-mcp` (2026-10-18); `glama.json` + `smithery.yaml` in repo
 - Contact: Abdullah Al-Anzi, Riyadh — fas988840@gmail.com
-- Codebase: TypeScript, ~8,939 LOC in `src/` (21 test suites, 224 passing tests via `npm test`)
+- Codebase: TypeScript, 5,352 production LOC in `src/` (8,939 incl. tests; 21 test suites, 224 passing tests via `npm test`)
 
 ## Track A — Adevar Labs "$20,000 in Pre-Audit Credits" (Superteam Earn)
 - Listing: https://superteam.fun/earn/listing/pre-audit-credits-adevarlabs
