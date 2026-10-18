@@ -1,0 +1,23 @@
+Channel: https://support.github.com/contact (sign in as fas988840-dev)
+Category: GitHub Sponsors → Profile review / approval status
+
+Subject: Sponsors profile pending review since 13 Oct 2026 — @fas988840-dev
+
+Hello GitHub Sponsors Team,
+
+My Sponsors profile (@fas988840-dev, project FactLedger —
+https://github.com/fas988840-dev/FactLedger) was submitted on 13 Oct 2026.
+W-8 tax form and Stripe onboarding are complete, and my dashboard says the
+profile will go live once approved by an employee. The public page
+https://github.com/sponsors/fas988840-dev still redirects (302) today,
+18 Oct 2026.
+
+Please confirm: (1) my submission is complete with nothing missing on my
+side, and (2) the current review status / expected timeline.
+
+On my side everything is verified: .github/FUNDING.yml live on main, tiers
+configured ($5/month, $10 one-time), active MIT open-source project, 224
+passing tests, approved on Glama MCP Directory 18 Oct 2026.
+
+Thank you,
+Abdullah Al-Anzi (@fas988840-dev) — fas988840@gmail.com
