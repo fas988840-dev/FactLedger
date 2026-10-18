@@ -107,3 +107,14 @@ https://github.com/fas988840-dev/FactLedger
 * **المحفظة الرسمية المعتمدة (`5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`):** `0 SOL` | `0 USDC` (نشطة وجاهزة لاستقبال المنح والتبرعات).
 * **خادم الـ API الحي (`https://factledger-api.onrender.com/api/v1/health`):** `HTTP 200 OK` (`priceProvider: ok`).
 * **صفحة الديمو الحية (`https://factledger-demo.onrender.com/demo.html`):** `HTTP 200 OK`.
+
+---
+
+## ✅ تحديث الإنجاز — 18 أكتوبر 2026 (04:01–04:07 ص الرياض)
+* **GitHub Push مكتمل:** تم دفع جميع التحديثات (15+ commit) إلى `main` بنجاح — آخر commit: `a334136` (بعد إصلاح خصوصية الإيميل عبر `fas988840-dev@users.noreply.github.com`).
+* **المحفظة على GitHub الآن رسمية:** `FUNDING/RECEIVING_WALLET.md` على `main` يعرض `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG` ✅
+* **Render CORS مُصلح نهائياً:** `GET /api/v1/health` مع `Origin: https://factledger-demo.onrender.com` يعيد الآن `access-control-allow-origin: https://factledger-demo.onrender.com` (حتى مع `/` زائدة) — الديمو الحي يعمل بدون خطأ ✅
+* **إصدارات رسمية:** `v0.1.0` + `v0.1.1` منشورة على GitHub Releases لرفع تقييم Glama ✅
+* **Glama:** `factledger-mcp` قيد المراجعة (`pending review`) + `/.well-known/glama.json` يعمل حياً ✅
+* **ملف واحد مؤجل:** `.github/workflows/daily-funding-monitor.yml` محفوظ نسخته في `daily-funding-monitor.yml.restore.txt` — يحتاج توكن بصلاحية `workflow` لنشره.
+* **أمان:** يُنصح بحذف توكن `FactLedger-AutoPush` من GitHub بعد انتهاء الاستخدام.
