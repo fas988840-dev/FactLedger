@@ -188,14 +188,15 @@ export class APIServer {
     const defaultOrigins = ['http://localhost:3000', 'https://factledger-demo.onrender.com'];
     const configuredOrigins = (process.env.CORS_ORIGIN || '')
       .split(',')
-      .map((o) => o.trim())
+      .map((o) => o.trim().replace(/\/+$/, ''))
       .filter(Boolean);
     const allowedOrigins = Array.from(new Set([...defaultOrigins, ...configuredOrigins]));
 
     this.app.use(
       cors({
         origin: (origin, callback) => {
-          if (!origin || allowedOrigins.includes(origin)) {
+          const normalizedOrigin = origin ? origin.trim().replace(/\/+$/, '') : '';
+          if (!origin || allowedOrigins.includes(normalizedOrigin)) {
             callback(null, true);
           } else {
             callback(null, false);
