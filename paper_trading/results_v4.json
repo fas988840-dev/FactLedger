@@ -1,0 +1,693 @@
+{
+  "generated_at": "2026-10-18T07:17:22.923018+00:00",
+  "data": "Kraken SOL/USD 1h OHLCV, 721 bars",
+  "paper_only": true,
+  "pipeline": "TOKYO>DENVER>BERLIN>STOCKHOLM+MAKER>PROFESOR>HELSINKI>=91>PROSECUTOR>VAULT/GUARDIAN>ENTRY_READY(paper)>GUARDIAN/TTP>LISBON-expectancy",
+  "palermo_real_execution": "LOCKED",
+  "books": {
+    "SPOT": {
+      "capital_usd": 100,
+      "agents_tested": 64,
+      "champion": {
+        "agent": "SPOT-002",
+        "lb": 10,
+        "volx": 1.2,
+        "liqx": 1.0,
+        "trailR": 1.5,
+        "trail%": 2,
+        "ttp_bars": 12,
+        "lev": 1,
+        "final": 100.75,
+        "ret%": 0.75,
+        "trades": 3,
+        "win%": 33.3,
+        "maxdd%": -0.5,
+        "expectancy_usd": 0.253,
+        "avg_win": 0.81,
+        "avg_loss": 0.03,
+        "log": [
+          {
+            "side": "long",
+            "entry": 112.35,
+            "exit": 116.88,
+            "pnl": 0.81,
+            "R": 1.52,
+            "MFE": 2.36,
+            "MAE": -0.47,
+            "reason": "trailing-lock"
+          },
+          {
+            "side": "long",
+            "entry": 116.7,
+            "exit": 116.44,
+            "pnl": -0.04,
+            "R": -0.1,
+            "MFE": 0.29,
+            "MAE": -0.12,
+            "reason": "time-to-prove"
+          },
+          {
+            "side": "long",
+            "entry": 120.43,
+            "exit": 120.38,
+            "pnl": -0.01,
+            "R": -0.05,
+            "MFE": 1.26,
+            "MAE": -0.05,
+            "reason": "time-to-prove"
+          }
+        ]
+      },
+      "top5_by_expectancy": [
+        {
+          "agent": "SPOT-002",
+          "lb": 10,
+          "volx": 1.2,
+          "liqx": 1.0,
+          "trailR": 1.5,
+          "trail%": 2,
+          "ttp_bars": 12,
+          "lev": 1,
+          "final": 100.75,
+          "ret%": 0.75,
+          "trades": 3,
+          "win%": 33.3,
+          "maxdd%": -0.5,
+          "expectancy_usd": 0.253,
+          "avg_win": 0.81,
+          "avg_loss": 0.03,
+          "log": [
+            {
+              "side": "long",
+              "entry": 112.35,
+              "exit": 116.88,
+              "pnl": 0.81,
+              "R": 1.52,
+              "MFE": 2.36,
+              "MAE": -0.47,
+              "reason": "trailing-lock"
+            },
+            {
+              "side": "long",
+              "entry": 116.7,
+              "exit": 116.44,
+              "pnl": -0.04,
+              "R": -0.1,
+              "MFE": 0.29,
+              "MAE": -0.12,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "long",
+              "entry": 120.43,
+              "exit": 120.38,
+              "pnl": -0.01,
+              "R": -0.05,
+              "MFE": 1.26,
+              "MAE": -0.05,
+              "reason": "time-to-prove"
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-006",
+          "lb": 10,
+          "volx": 1.2,
+          "liqx": 1.0,
+          "trailR": 2.0,
+          "trail%": 2,
+          "ttp_bars": 12,
+          "lev": 1,
+          "final": 100.75,
+          "ret%": 0.75,
+          "trades": 3,
+          "win%": 33.3,
+          "maxdd%": -0.5,
+          "expectancy_usd": 0.253,
+          "avg_win": 0.81,
+          "avg_loss": 0.03,
+          "log": [
+            {
+              "side": "long",
+              "entry": 112.35,
+              "exit": 116.88,
+              "pnl": 0.81,
+              "R": 1.52,
+              "MFE": 2.36,
+              "MAE": -0.47,
+              "reason": "stop"
+            },
+            {
+              "side": "long",
+              "entry": 116.7,
+              "exit": 116.44,
+              "pnl": -0.04,
+              "R": -0.1,
+              "MFE": 0.29,
+              "MAE": -0.12,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "long",
+              "entry": 120.43,
+              "exit": 120.38,
+              "pnl": -0.01,
+              "R": -0.05,
+              "MFE": 1.26,
+              "MAE": -0.05,
+              "reason": "time-to-prove"
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-010",
+          "lb": 10,
+          "volx": 1.2,
+          "liqx": 1.3,
+          "trailR": 1.5,
+          "trail%": 2,
+          "ttp_bars": 12,
+          "lev": 1,
+          "final": 100.75,
+          "ret%": 0.75,
+          "trades": 3,
+          "win%": 33.3,
+          "maxdd%": -0.5,
+          "expectancy_usd": 0.253,
+          "avg_win": 0.81,
+          "avg_loss": 0.03,
+          "log": [
+            {
+              "side": "long",
+              "entry": 112.35,
+              "exit": 116.88,
+              "pnl": 0.81,
+              "R": 1.52,
+              "MFE": 2.36,
+              "MAE": -0.47,
+              "reason": "trailing-lock"
+            },
+            {
+              "side": "long",
+              "entry": 116.7,
+              "exit": 116.44,
+              "pnl": -0.04,
+              "R": -0.1,
+              "MFE": 0.29,
+              "MAE": -0.12,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "long",
+              "entry": 120.43,
+              "exit": 120.38,
+              "pnl": -0.01,
+              "R": -0.05,
+              "MFE": 1.26,
+              "MAE": -0.05,
+              "reason": "time-to-prove"
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-014",
+          "lb": 10,
+          "volx": 1.2,
+          "liqx": 1.3,
+          "trailR": 2.0,
+          "trail%": 2,
+          "ttp_bars": 12,
+          "lev": 1,
+          "final": 100.75,
+          "ret%": 0.75,
+          "trades": 3,
+          "win%": 33.3,
+          "maxdd%": -0.5,
+          "expectancy_usd": 0.253,
+          "avg_win": 0.81,
+          "avg_loss": 0.03,
+          "log": [
+            {
+              "side": "long",
+              "entry": 112.35,
+              "exit": 116.88,
+              "pnl": 0.81,
+              "R": 1.52,
+              "MFE": 2.36,
+              "MAE": -0.47,
+              "reason": "stop"
+            },
+            {
+              "side": "long",
+              "entry": 116.7,
+              "exit": 116.44,
+              "pnl": -0.04,
+              "R": -0.1,
+              "MFE": 0.29,
+              "MAE": -0.12,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "long",
+              "entry": 120.43,
+              "exit": 120.38,
+              "pnl": -0.01,
+              "R": -0.05,
+              "MFE": 1.26,
+              "MAE": -0.05,
+              "reason": "time-to-prove"
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-004",
+          "lb": 10,
+          "volx": 1.2,
+          "liqx": 1.0,
+          "trailR": 1.5,
+          "trail%": 3,
+          "ttp_bars": 12,
+          "lev": 1,
+          "final": 100.44,
+          "ret%": 0.44,
+          "trades": 3,
+          "win%": 33.3,
+          "maxdd%": -0.82,
+          "expectancy_usd": 0.147,
+          "avg_win": 0.49,
+          "avg_loss": 0.03,
+          "log": [
+            {
+              "side": "long",
+              "entry": 112.35,
+              "exit": 115.13,
+              "pnl": 0.49,
+              "R": 0.93,
+              "MFE": 2.4,
+              "MAE": -0.47,
+              "reason": "stop"
+            },
+            {
+              "side": "long",
+              "entry": 116.7,
+              "exit": 116.44,
+              "pnl": -0.04,
+              "R": -0.1,
+              "MFE": 0.29,
+              "MAE": -0.12,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "long",
+              "entry": 120.43,
+              "exit": 120.38,
+              "pnl": -0.01,
+              "R": -0.05,
+              "MFE": 1.26,
+              "MAE": -0.05,
+              "reason": "time-to-prove"
+            }
+          ]
+        }
+      ],
+      "agents_profitable": 40
+    },
+    "PERPS": {
+      "capital_usd": 100,
+      "agents_tested": 64,
+      "champion": {
+        "agent": "PERP-018",
+        "lb": 10,
+        "volx": 1.5,
+        "liqx": 1.0,
+        "trailR": 1.5,
+        "trail%": 2,
+        "ttp_bars": 12,
+        "lev": 5,
+        "final": 108.35,
+        "ret%": 8.35,
+        "trades": 4,
+        "win%": 100.0,
+        "maxdd%": -2.53,
+        "expectancy_usd": 2.09,
+        "avg_win": 2.09,
+        "avg_loss": 0,
+        "log": [
+          {
+            "side": "long",
+            "entry": 112.35,
+            "exit": 116.88,
+            "pnl": 4.03,
+            "R": 1.52,
+            "MFE": 2.36,
+            "MAE": -0.47,
+            "reason": "trailing-lock"
+          },
+          {
+            "side": "long",
+            "entry": 120.95,
+            "exit": 121.08,
+            "pnl": 0.11,
+            "R": 0.19,
+            "MFE": 1.23,
+            "MAE": 0.0,
+            "reason": "time-to-prove"
+          },
+          {
+            "side": "short",
+            "entry": 108.67,
+            "exit": 105.23,
+            "pnl": 3.17,
+            "R": 1.35,
+            "MFE": 2.29,
+            "MAE": -0.04,
+            "reason": "stop"
+          },
+          {
+            "side": "short",
+            "entry": 104.27,
+            "exit": 103.18,
+            "pnl": 1.05,
+            "R": 0.29,
+            "MFE": 0.29,
+            "MAE": -0.16,
+            "reason": "time-to-prove"
+          }
+        ]
+      },
+      "top5_by_expectancy": [
+        {
+          "agent": "PERP-018",
+          "lb": 10,
+          "volx": 1.5,
+          "liqx": 1.0,
+          "trailR": 1.5,
+          "trail%": 2,
+          "ttp_bars": 12,
+          "lev": 5,
+          "final": 108.35,
+          "ret%": 8.35,
+          "trades": 4,
+          "win%": 100.0,
+          "maxdd%": -2.53,
+          "expectancy_usd": 2.09,
+          "avg_win": 2.09,
+          "avg_loss": 0,
+          "log": [
+            {
+              "side": "long",
+              "entry": 112.35,
+              "exit": 116.88,
+              "pnl": 4.03,
+              "R": 1.52,
+              "MFE": 2.36,
+              "MAE": -0.47,
+              "reason": "trailing-lock"
+            },
+            {
+              "side": "long",
+              "entry": 120.95,
+              "exit": 121.08,
+              "pnl": 0.11,
+              "R": 0.19,
+              "MFE": 1.23,
+              "MAE": 0.0,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "short",
+              "entry": 108.67,
+              "exit": 105.23,
+              "pnl": 3.17,
+              "R": 1.35,
+              "MFE": 2.29,
+              "MAE": -0.04,
+              "reason": "stop"
+            },
+            {
+              "side": "short",
+              "entry": 104.27,
+              "exit": 103.18,
+              "pnl": 1.05,
+              "R": 0.29,
+              "MFE": 0.29,
+              "MAE": -0.16,
+              "reason": "time-to-prove"
+            }
+          ]
+        },
+        {
+          "agent": "PERP-022",
+          "lb": 10,
+          "volx": 1.5,
+          "liqx": 1.0,
+          "trailR": 2.0,
+          "trail%": 2,
+          "ttp_bars": 12,
+          "lev": 5,
+          "final": 108.35,
+          "ret%": 8.35,
+          "trades": 4,
+          "win%": 100.0,
+          "maxdd%": -2.53,
+          "expectancy_usd": 2.09,
+          "avg_win": 2.09,
+          "avg_loss": 0,
+          "log": [
+            {
+              "side": "long",
+              "entry": 112.35,
+              "exit": 116.88,
+              "pnl": 4.03,
+              "R": 1.52,
+              "MFE": 2.36,
+              "MAE": -0.47,
+              "reason": "stop"
+            },
+            {
+              "side": "long",
+              "entry": 120.95,
+              "exit": 121.08,
+              "pnl": 0.11,
+              "R": 0.19,
+              "MFE": 1.23,
+              "MAE": 0.0,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "short",
+              "entry": 108.67,
+              "exit": 105.23,
+              "pnl": 3.17,
+              "R": 1.35,
+              "MFE": 2.29,
+              "MAE": -0.04,
+              "reason": "stop"
+            },
+            {
+              "side": "short",
+              "entry": 104.27,
+              "exit": 103.18,
+              "pnl": 1.05,
+              "R": 0.29,
+              "MFE": 0.29,
+              "MAE": -0.16,
+              "reason": "time-to-prove"
+            }
+          ]
+        },
+        {
+          "agent": "PERP-026",
+          "lb": 10,
+          "volx": 1.5,
+          "liqx": 1.3,
+          "trailR": 1.5,
+          "trail%": 2,
+          "ttp_bars": 12,
+          "lev": 5,
+          "final": 108.35,
+          "ret%": 8.35,
+          "trades": 4,
+          "win%": 100.0,
+          "maxdd%": -2.53,
+          "expectancy_usd": 2.09,
+          "avg_win": 2.09,
+          "avg_loss": 0,
+          "log": [
+            {
+              "side": "long",
+              "entry": 112.35,
+              "exit": 116.88,
+              "pnl": 4.03,
+              "R": 1.52,
+              "MFE": 2.36,
+              "MAE": -0.47,
+              "reason": "trailing-lock"
+            },
+            {
+              "side": "long",
+              "entry": 120.95,
+              "exit": 121.08,
+              "pnl": 0.11,
+              "R": 0.19,
+              "MFE": 1.23,
+              "MAE": 0.0,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "short",
+              "entry": 108.67,
+              "exit": 105.23,
+              "pnl": 3.17,
+              "R": 1.35,
+              "MFE": 2.29,
+              "MAE": -0.04,
+              "reason": "stop"
+            },
+            {
+              "side": "short",
+              "entry": 104.27,
+              "exit": 103.18,
+              "pnl": 1.05,
+              "R": 0.29,
+              "MFE": 0.29,
+              "MAE": -0.16,
+              "reason": "time-to-prove"
+            }
+          ]
+        },
+        {
+          "agent": "PERP-030",
+          "lb": 10,
+          "volx": 1.5,
+          "liqx": 1.3,
+          "trailR": 2.0,
+          "trail%": 2,
+          "ttp_bars": 12,
+          "lev": 5,
+          "final": 108.35,
+          "ret%": 8.35,
+          "trades": 4,
+          "win%": 100.0,
+          "maxdd%": -2.53,
+          "expectancy_usd": 2.09,
+          "avg_win": 2.09,
+          "avg_loss": 0,
+          "log": [
+            {
+              "side": "long",
+              "entry": 112.35,
+              "exit": 116.88,
+              "pnl": 4.03,
+              "R": 1.52,
+              "MFE": 2.36,
+              "MAE": -0.47,
+              "reason": "stop"
+            },
+            {
+              "side": "long",
+              "entry": 120.95,
+              "exit": 121.08,
+              "pnl": 0.11,
+              "R": 0.19,
+              "MFE": 1.23,
+              "MAE": 0.0,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "short",
+              "entry": 108.67,
+              "exit": 105.23,
+              "pnl": 3.17,
+              "R": 1.35,
+              "MFE": 2.29,
+              "MAE": -0.04,
+              "reason": "stop"
+            },
+            {
+              "side": "short",
+              "entry": 104.27,
+              "exit": 103.18,
+              "pnl": 1.05,
+              "R": 0.29,
+              "MFE": 0.29,
+              "MAE": -0.16,
+              "reason": "time-to-prove"
+            }
+          ]
+        },
+        {
+          "agent": "PERP-002",
+          "lb": 10,
+          "volx": 1.2,
+          "liqx": 1.0,
+          "trailR": 1.5,
+          "trail%": 2,
+          "ttp_bars": 12,
+          "lev": 5,
+          "final": 107.98,
+          "ret%": 7.98,
+          "trades": 5,
+          "win%": 60.0,
+          "maxdd%": -2.53,
+          "expectancy_usd": 1.598,
+          "avg_win": 2.75,
+          "avg_loss": 0.13,
+          "log": [
+            {
+              "side": "long",
+              "entry": 112.35,
+              "exit": 116.88,
+              "pnl": 4.03,
+              "R": 1.52,
+              "MFE": 2.36,
+              "MAE": -0.47,
+              "reason": "trailing-lock"
+            },
+            {
+              "side": "long",
+              "entry": 116.7,
+              "exit": 116.44,
+              "pnl": -0.22,
+              "R": -0.1,
+              "MFE": 0.29,
+              "MAE": -0.12,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "long",
+              "entry": 120.43,
+              "exit": 120.38,
+              "pnl": -0.04,
+              "R": -0.05,
+              "MFE": 1.26,
+              "MAE": -0.05,
+              "reason": "time-to-prove"
+            },
+            {
+              "side": "short",
+              "entry": 108.67,
+              "exit": 105.23,
+              "pnl": 3.17,
+              "R": 1.35,
+              "MFE": 2.29,
+              "MAE": -0.04,
+              "reason": "stop"
+            },
+            {
+              "side": "short",
+              "entry": 104.27,
+              "exit": 103.18,
+              "pnl": 1.05,
+              "R": 0.29,
+              "MFE": 0.29,
+              "MAE": -0.16,
+              "reason": "time-to-prove"
+            }
+          ]
+        }
+      ],
+      "agents_profitable": 16
+    }
+  }
+}
