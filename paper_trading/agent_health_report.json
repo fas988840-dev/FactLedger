@@ -1,0 +1,94 @@
+{
+  "generated_at": "2026-10-18T07:07:24.419757+00:00",
+  "agents": [
+    {
+      "agent": "TOKYO-data-integrity",
+      "status": "healthy",
+      "active_source": "kraken",
+      "primary": "kraken",
+      "backup": "factledger-health"
+    },
+    {
+      "agent": "NAIROBI-source-compare",
+      "status": "healthy",
+      "active_source": "kraken-vs-factledger",
+      "primary": "kraken-vs-factledger",
+      "backup": null
+    },
+    {
+      "agent": "WHALE-RADAR",
+      "status": "healthy",
+      "active_source": "factledger-mcp",
+      "primary": "factledger-mcp",
+      "backup": "factledger-demo"
+    },
+    {
+      "agent": "TOKEN-SAFETY",
+      "status": "healthy",
+      "active_source": "factledger-mcp",
+      "primary": "factledger-mcp",
+      "backup": null
+    },
+    {
+      "agent": "LIQUIDITY-ENGINE",
+      "status": "healthy",
+      "active_source": "kraken-volume",
+      "primary": "kraken-volume",
+      "backup": "candle-range-proxy"
+    },
+    {
+      "agent": "MAKER-RADAR",
+      "status": "healthy",
+      "active_source": "wick-volume-scan",
+      "primary": "wick-volume-scan",
+      "backup": "structure-proxy"
+    },
+    {
+      "agent": "REGIME",
+      "status": "healthy",
+      "active_source": "50bar-trend",
+      "primary": "50bar-trend",
+      "backup": "20bar-trend"
+    },
+    {
+      "agent": "SCORE-ENGINE",
+      "status": "healthy",
+      "active_source": "local-rules",
+      "primary": "local-rules",
+      "backup": null
+    },
+    {
+      "agent": "CAPITAL-GUARDIAN",
+      "status": "healthy",
+      "active_source": "local-limits",
+      "primary": "local-limits",
+      "backup": null
+    },
+    {
+      "agent": "VAULT-risk",
+      "status": "healthy",
+      "active_source": "local-limits",
+      "primary": "local-limits",
+      "backup": null
+    },
+    {
+      "agent": "PROSECUTOR",
+      "status": "healthy",
+      "active_source": "gate-vetoes",
+      "primary": "gate-vetoes",
+      "backup": "structure-proxy"
+    },
+    {
+      "agent": "AUDITOR",
+      "status": "healthy",
+      "active_source": "local-log",
+      "primary": "local-log",
+      "backup": null
+    }
+  ],
+  "summary": {
+    "operational": 12,
+    "total": 12,
+    "entry_allowed": true
+  }
+}
