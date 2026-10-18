@@ -118,3 +118,14 @@ https://github.com/fas988840-dev/FactLedger
 * **Glama:** `factledger-mcp` قيد المراجعة (`pending review`) + `/.well-known/glama.json` يعمل حياً ✅
 * **ملف واحد مؤجل:** `.github/workflows/daily-funding-monitor.yml` محفوظ نسخته في `daily-funding-monitor.yml.restore.txt` — يحتاج توكن بصلاحية `workflow` لنشره.
 * **أمان:** يُنصح بحذف توكن `FactLedger-AutoPush` من GitHub بعد انتهاء الاستخدام.
+
+---
+
+## 🔄 تحديث 18 أكتوبر 2026 — 04:45 ص (فحص التبرعات والرعاة والمنح)
+* **التبرعات/المحفظة الرسمية (`5V58...ocmQG`):** `0 SOL | 0 USDC` — لا تبرعات واردة بعد (المحفظة القديمة فيها 0.00089 SOL فقط).
+* **GitHub Sponsors:** زر Sponsor مفعّل في المستودع ✅، لكن صفحة `github.com/sponsors/fas988840-dev` ما زالت `302` (غير منشورة/قيد مراجعة GitHub) — تحتاج نشراً يدوياً من github.com/sponsors/accounts.
+* **GitHub نفسه:** قبل ورفع كل الملفات والإصدارات `v0.1.0/v0.1.1` ✅ (المستودع نجمتان ⭐).
+* **Glama:** ✅✅ **تمت الموافقة رسمياً** على `factledger-mcp` (إيميل 18 أكتوبر 00:45 UTC).
+* **أُرسلت تحديثات بالديمو الشغال** إلى: Superteam (`1a14cafc79bf7ebc`)، Giveth (`1a14cafc72e8b5eb`)، DoraHacks (`1a14cafc76a7e3d4`)، وAcquire/Harold Ecoy لتأكيد `$24,500/$0` (`1a14cafc61936ae1`).
+* **الديمو/API:** `200 OK` — https://factledger-demo.onrender.com/demo.html
+* ملف المراقب اليومي `.github/workflows/daily-funding-monitor.yml` ما زال بانتظار توكن بصلاحية `workflow`.

@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-18T00:29:19.788Z",
-  "checkedAtRiyadh": "2026-10-18 03:29:21 Asia/Riyadh",
+  "checkedAt": "2026-10-18T01:45:23.671Z",
+  "checkedAtRiyadh": "2026-10-18 04:45:27 Asia/Riyadh",
   "wallets": {
     "canonical": {
       "address": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG",
@@ -74,13 +74,13 @@
     "repoSponsorsEnabled": true,
     "sponsorsProfileApproved": false,
     "sponsorsProfileHttpStatus": 302,
-    "remoteWalletUpdatedOnMain": false,
-    "remoteWalletAddressOnMain": "EWEY53t7rXLTQ964EhuAXHAMV9WoEkxn4h4fYB1ZRFNM",
+    "remoteWalletUpdatedOnMain": true,
+    "remoteWalletAddressOnMain": "5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG",
     "pr105": {
       "number": 105,
       "state": "open",
       "merged": false,
-      "mergeableState": "clean"
+      "mergeableState": "unknown"
     },
     "pr106": {
       "number": 106,
