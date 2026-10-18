@@ -1,0 +1,1137 @@
+{
+  "generated_at": "2026-10-18T06:54:34.832199+00:00",
+  "asset": "SOL/USD hourly, last 30 days (CoinGecko)",
+  "paper_only": true,
+  "books": {
+    "SPOT_100USD": {
+      "slots": 5,
+      "slot_usd": 20,
+      "top10": [
+        {
+          "agent": "SPOT-004",
+          "stop%": 3,
+          "trail_act_R": 1.5,
+          "trail_dist%": 3,
+          "final_equity": 99.36,
+          "return_pct": -0.64,
+          "trades": 6,
+          "wins": 2,
+          "win_rate": 33.3,
+          "max_drawdown_pct": -2.99,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 115.13,
+              "pnl_usd": 0.74,
+              "reason": "trailing-stop",
+              "bars": 64
+            },
+            {
+              "entry": 116.29,
+              "exit": 120.7,
+              "pnl_usd": 0.76,
+              "reason": "trailing-stop",
+              "bars": 82
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -0.66,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.23,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-014",
+          "stop%": 3,
+          "trail_act_R": 2.0,
+          "trail_dist%": 3,
+          "final_equity": 99.36,
+          "return_pct": -0.64,
+          "trades": 6,
+          "wins": 2,
+          "win_rate": 33.3,
+          "max_drawdown_pct": -2.99,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 115.13,
+              "pnl_usd": 0.74,
+              "reason": "trailing-stop",
+              "bars": 64
+            },
+            {
+              "entry": 116.29,
+              "exit": 120.7,
+              "pnl_usd": 0.76,
+              "reason": "trailing-stop",
+              "bars": 82
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -0.66,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.23,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-032",
+          "stop%": 4,
+          "trail_act_R": 2.0,
+          "trail_dist%": 2,
+          "final_equity": 99.08,
+          "return_pct": -0.92,
+          "trades": 5,
+          "wins": 1,
+          "win_rate": 20.0,
+          "max_drawdown_pct": -3.58,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 121.68,
+              "pnl_usd": 1.92,
+              "reason": "trailing-stop",
+              "bars": 160
+            },
+            {
+              "entry": 120.11,
+              "exit": 114.9,
+              "pnl_usd": -0.87,
+              "reason": "initial-stop",
+              "bars": 209
+            },
+            {
+              "entry": 111.2,
+              "exit": 106.28,
+              "pnl_usd": -0.88,
+              "reason": "initial-stop",
+              "bars": 83
+            },
+            {
+              "entry": 107.83,
+              "exit": 103.18,
+              "pnl_usd": -0.86,
+              "reason": "initial-stop",
+              "bars": 22
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.23,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-031",
+          "stop%": 4,
+          "trail_act_R": 2.0,
+          "trail_dist%": 2,
+          "final_equity": 98.99,
+          "return_pct": -1.01,
+          "trades": 5,
+          "wins": 1,
+          "win_rate": 20.0,
+          "max_drawdown_pct": -3.7,
+          "log": [
+            {
+              "entry": 111.65,
+              "exit": 121.68,
+              "pnl_usd": 1.8,
+              "reason": "trailing-stop",
+              "bars": 214
+            },
+            {
+              "entry": 119.2,
+              "exit": 114.34,
+              "pnl_usd": -0.82,
+              "reason": "initial-stop",
+              "bars": 220
+            },
+            {
+              "entry": 110.55,
+              "exit": 105.62,
+              "pnl_usd": -0.89,
+              "reason": "initial-stop",
+              "bars": 89
+            },
+            {
+              "entry": 108.49,
+              "exit": 103.76,
+              "pnl_usd": -0.87,
+              "reason": "initial-stop",
+              "bars": 33
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.23,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-003",
+          "stop%": 3,
+          "trail_act_R": 1.5,
+          "trail_dist%": 3,
+          "final_equity": 99.03,
+          "return_pct": -0.97,
+          "trades": 8,
+          "wins": 2,
+          "win_rate": 25.0,
+          "max_drawdown_pct": -3.27,
+          "log": [
+            {
+              "entry": 111.65,
+              "exit": 107.66,
+              "pnl_usd": -0.71,
+              "reason": "initial-stop",
+              "bars": 34
+            },
+            {
+              "entry": 108.78,
+              "exit": 115.13,
+              "pnl_usd": 1.17,
+              "reason": "trailing-stop",
+              "bars": 71
+            },
+            {
+              "entry": 115.29,
+              "exit": 120.7,
+              "pnl_usd": 0.94,
+              "reason": "trailing-stop",
+              "bars": 95
+            },
+            {
+              "entry": 119.2,
+              "exit": 118.11,
+              "pnl_usd": -0.18,
+              "reason": "break-even",
+              "bars": 84
+            },
+            {
+              "entry": 119.63,
+              "exit": 115.83,
+              "pnl_usd": -0.64,
+              "reason": "initial-stop",
+              "bars": 105
+            },
+            {
+              "entry": 110.55,
+              "exit": 107.08,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 87
+            },
+            {
+              "entry": 108.49,
+              "exit": 104.76,
+              "pnl_usd": -0.69,
+              "reason": "initial-stop",
+              "bars": 31
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.23,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-013",
+          "stop%": 3,
+          "trail_act_R": 2.0,
+          "trail_dist%": 3,
+          "final_equity": 99.03,
+          "return_pct": -0.97,
+          "trades": 8,
+          "wins": 2,
+          "win_rate": 25.0,
+          "max_drawdown_pct": -3.27,
+          "log": [
+            {
+              "entry": 111.65,
+              "exit": 107.66,
+              "pnl_usd": -0.71,
+              "reason": "initial-stop",
+              "bars": 34
+            },
+            {
+              "entry": 108.78,
+              "exit": 115.13,
+              "pnl_usd": 1.17,
+              "reason": "trailing-stop",
+              "bars": 71
+            },
+            {
+              "entry": 115.29,
+              "exit": 120.7,
+              "pnl_usd": 0.94,
+              "reason": "trailing-stop",
+              "bars": 95
+            },
+            {
+              "entry": 119.2,
+              "exit": 118.11,
+              "pnl_usd": -0.18,
+              "reason": "break-even",
+              "bars": 84
+            },
+            {
+              "entry": 119.63,
+              "exit": 115.83,
+              "pnl_usd": -0.64,
+              "reason": "initial-stop",
+              "bars": 105
+            },
+            {
+              "entry": 110.55,
+              "exit": 107.08,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 87
+            },
+            {
+              "entry": 108.49,
+              "exit": 104.76,
+              "pnl_usd": -0.69,
+              "reason": "initial-stop",
+              "bars": 31
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.23,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-010",
+          "stop%": 3,
+          "trail_act_R": 1.5,
+          "trail_dist%": 6,
+          "final_equity": 98.92,
+          "return_pct": -1.08,
+          "trades": 5,
+          "wins": 1,
+          "win_rate": 20.0,
+          "max_drawdown_pct": -3.68,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 116.9,
+              "pnl_usd": 1.06,
+              "reason": "trailing-stop",
+              "bars": 196
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -0.66,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.23,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-020",
+          "stop%": 3,
+          "trail_act_R": 2.0,
+          "trail_dist%": 6,
+          "final_equity": 98.92,
+          "return_pct": -1.08,
+          "trades": 5,
+          "wins": 1,
+          "win_rate": 20.0,
+          "max_drawdown_pct": -3.68,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 116.9,
+              "pnl_usd": 1.06,
+              "reason": "trailing-stop",
+              "bars": 196
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -0.66,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.23,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-034",
+          "stop%": 4,
+          "trail_act_R": 2.0,
+          "trail_dist%": 3,
+          "final_equity": 98.91,
+          "return_pct": -1.09,
+          "trades": 5,
+          "wins": 1,
+          "win_rate": 20.0,
+          "max_drawdown_pct": -3.7,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 120.7,
+              "pnl_usd": 1.75,
+              "reason": "trailing-stop",
+              "bars": 171
+            },
+            {
+              "entry": 120.11,
+              "exit": 114.9,
+              "pnl_usd": -0.87,
+              "reason": "initial-stop",
+              "bars": 209
+            },
+            {
+              "entry": 111.2,
+              "exit": 106.28,
+              "pnl_usd": -0.88,
+              "reason": "initial-stop",
+              "bars": 83
+            },
+            {
+              "entry": 107.83,
+              "exit": 103.18,
+              "pnl_usd": -0.86,
+              "reason": "initial-stop",
+              "bars": 22
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.23,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "SPOT-002",
+          "stop%": 3,
+          "trail_act_R": 1.5,
+          "trail_dist%": 2,
+          "final_equity": 99.07,
+          "return_pct": -0.93,
+          "trades": 7,
+          "wins": 2,
+          "win_rate": 28.6,
+          "max_drawdown_pct": -2.92,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 116.88,
+              "pnl_usd": 1.06,
+              "reason": "trailing-stop",
+              "bars": 28
+            },
+            {
+              "entry": 118.46,
+              "exit": 113.88,
+              "pnl_usd": -0.77,
+              "reason": "initial-stop",
+              "bars": 17
+            },
+            {
+              "entry": 116.29,
+              "exit": 121.68,
+              "pnl_usd": 0.93,
+              "reason": "trailing-stop",
+              "bars": 71
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -0.63,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -0.66,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.23,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        }
+      ],
+      "median_return_pct": -2.15
+    },
+    "PERPS_100USD_stage2": {
+      "max_leverage": 10,
+      "margin_per_trade_usd": 20,
+      "top10": [
+        {
+          "agent": "PERP-004",
+          "lev": 2,
+          "stop%": 3,
+          "trail_act_R": 1.5,
+          "trail_dist%": 3,
+          "final_equity": 98.73,
+          "return_pct": -1.27,
+          "trades": 6,
+          "wins": 2,
+          "win_rate": 33.3,
+          "max_drawdown_pct": -5.86,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 115.13,
+              "pnl_usd": 1.49,
+              "reason": "trailing-stop",
+              "bars": 64
+            },
+            {
+              "entry": 116.29,
+              "exit": 120.7,
+              "pnl_usd": 1.52,
+              "reason": "trailing-stop",
+              "bars": 82
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -1.25,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -1.26,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -1.32,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.45,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "PERP-014",
+          "lev": 5,
+          "stop%": 3,
+          "trail_act_R": 2.0,
+          "trail_dist%": 3,
+          "final_equity": 96.82,
+          "return_pct": -3.18,
+          "trades": 6,
+          "wins": 2,
+          "win_rate": 33.3,
+          "max_drawdown_pct": -13.79,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 115.13,
+              "pnl_usd": 3.72,
+              "reason": "trailing-stop",
+              "bars": 64
+            },
+            {
+              "entry": 116.29,
+              "exit": 120.7,
+              "pnl_usd": 3.79,
+              "reason": "trailing-stop",
+              "bars": 82
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -3.13,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -3.14,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -3.3,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -1.13,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "PERP-032",
+          "lev": 2,
+          "stop%": 4,
+          "trail_act_R": 2.0,
+          "trail_dist%": 2,
+          "final_equity": 98.17,
+          "return_pct": -1.83,
+          "trades": 5,
+          "wins": 1,
+          "win_rate": 20.0,
+          "max_drawdown_pct": -6.99,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 121.68,
+              "pnl_usd": 3.85,
+              "reason": "trailing-stop",
+              "bars": 160
+            },
+            {
+              "entry": 120.11,
+              "exit": 114.9,
+              "pnl_usd": -1.74,
+              "reason": "initial-stop",
+              "bars": 209
+            },
+            {
+              "entry": 111.2,
+              "exit": 106.28,
+              "pnl_usd": -1.77,
+              "reason": "initial-stop",
+              "bars": 83
+            },
+            {
+              "entry": 107.83,
+              "exit": 103.18,
+              "pnl_usd": -1.72,
+              "reason": "initial-stop",
+              "bars": 22
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.45,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "PERP-020",
+          "lev": 2,
+          "stop%": 3,
+          "trail_act_R": 2.0,
+          "trail_dist%": 6,
+          "final_equity": 97.85,
+          "return_pct": -2.15,
+          "trades": 5,
+          "wins": 1,
+          "win_rate": 20.0,
+          "max_drawdown_pct": -7.19,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 116.9,
+              "pnl_usd": 2.13,
+              "reason": "trailing-stop",
+              "bars": 196
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -1.25,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -1.26,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -1.32,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.45,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "PERP-012",
+          "lev": 2,
+          "stop%": 3,
+          "trail_act_R": 2.0,
+          "trail_dist%": 2,
+          "final_equity": 98.15,
+          "return_pct": -1.85,
+          "trades": 7,
+          "wins": 2,
+          "win_rate": 28.6,
+          "max_drawdown_pct": -5.73,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 116.88,
+              "pnl_usd": 2.12,
+              "reason": "trailing-stop",
+              "bars": 28
+            },
+            {
+              "entry": 118.46,
+              "exit": 113.88,
+              "pnl_usd": -1.55,
+              "reason": "initial-stop",
+              "bars": 17
+            },
+            {
+              "entry": 116.29,
+              "exit": 121.68,
+              "pnl_usd": 1.85,
+              "reason": "trailing-stop",
+              "bars": 71
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -1.25,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -1.26,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -1.32,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.45,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "PERP-013",
+          "lev": 3,
+          "stop%": 3,
+          "trail_act_R": 2.0,
+          "trail_dist%": 3,
+          "final_equity": 97.1,
+          "return_pct": -2.9,
+          "trades": 8,
+          "wins": 2,
+          "win_rate": 25.0,
+          "max_drawdown_pct": -9.43,
+          "log": [
+            {
+              "entry": 111.65,
+              "exit": 107.66,
+              "pnl_usd": -2.14,
+              "reason": "initial-stop",
+              "bars": 34
+            },
+            {
+              "entry": 108.78,
+              "exit": 115.13,
+              "pnl_usd": 3.5,
+              "reason": "trailing-stop",
+              "bars": 71
+            },
+            {
+              "entry": 115.29,
+              "exit": 120.7,
+              "pnl_usd": 2.82,
+              "reason": "trailing-stop",
+              "bars": 95
+            },
+            {
+              "entry": 119.2,
+              "exit": 118.11,
+              "pnl_usd": -0.55,
+              "reason": "break-even",
+              "bars": 84
+            },
+            {
+              "entry": 119.63,
+              "exit": 115.83,
+              "pnl_usd": -1.91,
+              "reason": "initial-stop",
+              "bars": 105
+            },
+            {
+              "entry": 110.55,
+              "exit": 107.08,
+              "pnl_usd": -1.88,
+              "reason": "initial-stop",
+              "bars": 87
+            },
+            {
+              "entry": 108.49,
+              "exit": 104.76,
+              "pnl_usd": -2.06,
+              "reason": "initial-stop",
+              "bars": 31
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.68,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "PERP-010",
+          "lev": 5,
+          "stop%": 3,
+          "trail_act_R": 1.5,
+          "trail_dist%": 6,
+          "final_equity": 94.62,
+          "return_pct": -5.38,
+          "trades": 5,
+          "wins": 1,
+          "win_rate": 20.0,
+          "max_drawdown_pct": -16.81,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 116.9,
+              "pnl_usd": 5.32,
+              "reason": "trailing-stop",
+              "bars": 196
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -3.13,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -3.14,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -3.3,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -1.13,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "PERP-034",
+          "lev": 5,
+          "stop%": 4,
+          "trail_act_R": 2.0,
+          "trail_dist%": 3,
+          "final_equity": 94.54,
+          "return_pct": -5.46,
+          "trades": 5,
+          "wins": 1,
+          "win_rate": 20.0,
+          "max_drawdown_pct": -16.88,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 120.7,
+              "pnl_usd": 8.74,
+              "reason": "trailing-stop",
+              "bars": 171
+            },
+            {
+              "entry": 120.11,
+              "exit": 114.9,
+              "pnl_usd": -4.34,
+              "reason": "initial-stop",
+              "bars": 209
+            },
+            {
+              "entry": 111.2,
+              "exit": 106.28,
+              "pnl_usd": -4.42,
+              "reason": "initial-stop",
+              "bars": 83
+            },
+            {
+              "entry": 107.83,
+              "exit": 103.18,
+              "pnl_usd": -4.31,
+              "reason": "initial-stop",
+              "bars": 22
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -1.13,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "PERP-033",
+          "lev": 3,
+          "stop%": 4,
+          "trail_act_R": 2.0,
+          "trail_dist%": 3,
+          "final_equity": 96.45,
+          "return_pct": -3.55,
+          "trades": 5,
+          "wins": 1,
+          "win_rate": 20.0,
+          "max_drawdown_pct": -10.62,
+          "log": [
+            {
+              "entry": 111.65,
+              "exit": 120.7,
+              "pnl_usd": 4.86,
+              "reason": "trailing-stop",
+              "bars": 225
+            },
+            {
+              "entry": 119.2,
+              "exit": 114.34,
+              "pnl_usd": -2.45,
+              "reason": "initial-stop",
+              "bars": 220
+            },
+            {
+              "entry": 110.55,
+              "exit": 105.62,
+              "pnl_usd": -2.68,
+              "reason": "initial-stop",
+              "bars": 89
+            },
+            {
+              "entry": 108.49,
+              "exit": 103.76,
+              "pnl_usd": -2.62,
+              "reason": "initial-stop",
+              "bars": 33
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.68,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        },
+        {
+          "agent": "PERP-016",
+          "lev": 2,
+          "stop%": 3,
+          "trail_act_R": 2.0,
+          "trail_dist%": 4,
+          "final_equity": 97.73,
+          "return_pct": -2.27,
+          "trades": 6,
+          "wins": 2,
+          "win_rate": 33.3,
+          "max_drawdown_pct": -6.41,
+          "log": [
+            {
+              "entry": 111.0,
+              "exit": 113.88,
+              "pnl_usd": 1.04,
+              "reason": "trailing-stop",
+              "bars": 65
+            },
+            {
+              "entry": 116.29,
+              "exit": 119.11,
+              "pnl_usd": 0.97,
+              "reason": "trailing-stop",
+              "bars": 86
+            },
+            {
+              "entry": 120.11,
+              "exit": 116.35,
+              "pnl_usd": -1.25,
+              "reason": "initial-stop",
+              "bars": 193
+            },
+            {
+              "entry": 111.2,
+              "exit": 107.71,
+              "pnl_usd": -1.26,
+              "reason": "initial-stop",
+              "bars": 77
+            },
+            {
+              "entry": 107.83,
+              "exit": 104.27,
+              "pnl_usd": -1.32,
+              "reason": "initial-stop",
+              "bars": 10
+            },
+            {
+              "entry": 104.72,
+              "exit": 103.54,
+              "pnl_usd": -0.45,
+              "reason": "open-at-end",
+              "bars": 65
+            }
+          ]
+        }
+      ],
+      "median_return_pct": -5.95
+    }
+  }
+}
