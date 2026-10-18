@@ -5,13 +5,15 @@ FactLedger is an MIT-licensed, read-only Solana wallet intelligence API built an
 Support directly funds verifiable work:
 
 - Reliable Solana RPC capacity and monitoring so the public API stays up.
-- Evidence fixtures and protocol-verification tests (currently 223 tests across 21 files).
+- Evidence fixtures and protocol-verification tests (currently 224 tests across 21 files).
 - Documentation, REST/MCP examples, and reviewer-facing demos.
+
+**Live proof (October 2026):** interactive demo — https://factledger-demo.onrender.com/demo.html · API health — https://factledger-api.onrender.com/api/v1/health · MCP server **approved on Glama** as `factledger-mcp` (2026-10-18).
 
 ## Routes
 
-1. **GitHub Sponsors** — profile submitted 2026-10-13, under review. The Sponsor button on the repository enables it once approved.
-2. **Direct transfer (preferred for crypto)** — USDC on **Solana**. The single canonical record of the public receiving address and its controls is [`FUNDING/RECEIVING_WALLET.md`](RECEIVING_WALLET.md). Copy the address from that file only. It is deliberately not reproduced here: a second copy is a second thing that can drift or be mistyped before a transfer.
+1. **GitHub Sponsors** — profile submitted 2026-10-13, currently **Pending GitHub staff review** (the public sponsors page is therefore not live yet). Prepared tiers: $5/mo (sponsor badge), $10 one-time (shout-out). The Sponsor button on this repository already works today via the custom link below.
+2. **Direct transfer — available NOW, no approval needed (preferred for crypto)** — SOL or USDC on **Solana** to the canonical address in [`FUNDING/RECEIVING_WALLET.md`](RECEIVING_WALLET.md): `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`. This route bypasses the pending Sponsors review entirely. Suggested one-time amounts: $5 · $10 · $25 · any custom amount.
 
 ## Safety rules
 
