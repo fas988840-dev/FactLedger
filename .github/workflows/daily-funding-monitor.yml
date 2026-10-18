@@ -1,0 +1,70 @@
+name: Daily Funding, Sponsors & Health Monitor
+
+# Runs automatically every day at 06:00 UTC (09:00 AM Riyadh time)
+# and on manual workflow_dispatch to:
+#  1. Wake and verify the live Render API & Demo (so grant reviewers never hit a cold start)
+#  2. Check Solana Mainnet receiving wallet balances (SOL & USDC) for incoming donations/grants
+#  3. Check GitHub Sponsors profile approval status and repository Sponsorships flag
+#  4. Publish a full Markdown summary in the GitHub Actions run page
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  daily-monitor:
+    name: Daily Donations, Grants & API Health Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Daily Funding & Health Monitor
+        run: node scripts/daily-funding-email-monitor.mjs
+
+      - name: Run 100-Agent MCP Verification & Demo Telemetry Suite
+        run: node scripts/mcp-100-agents-runner.mjs
+
+      - name: Generate 100 Institutional Audit Reports & $10k/mo Revenue Plan
+        run: node scripts/generate-100-reports-and-revenue-plan.mjs
+
+      - name: Publish Job Summary
+        run: |
+          node -e '
+            const fs = require("fs");
+            const s = JSON.parse(fs.readFileSync("GRANTS/DAILY_MONITOR_STATUS.json", "utf8"));
+            const lines = [
+              "## 🚀 FactLedger — التقرير اليومي للتبرعات والرعاة والمنح والنظام الحي",
+              `- **تاريخ الفحص (بتوقيت الرياض):** \`${s.checkedAtRiyadh}\``,
+              "",
+              "### 💎 1. أرصدة محفظة التبرعات والمنح (Solana Mainnet)",
+              `| المحفظة | العنوان | الرصيد (SOL) | الرصيد (USDC) |`,
+              `|---|---|---|---|`,
+              `| **المحفظة الرسمية المعتمدة** | \`${s.wallets.canonical.address}\` | **${s.wallets.canonical.sol} SOL** | **${s.wallets.canonical.usdc} USDC** |`,
+              `| المحفظة السابقة (للمراقبة) | \`${s.wallets.legacy.address}\` | ${s.wallets.legacy.sol} SOL | ${s.wallets.legacy.usdc} USDC |`,
+              "",
+              "### ❤️ 2. حالة الرعاة والتبرعات على GitHub",
+              `- **زر Sponsor في المستودع:** ${s.github.repoSponsorsEnabled ? "✅ مفعّل (`sponsors: true`)" : "⚠️ غير مفعّل"}`,
+              `- **اعتماد ملف GitHub Sponsors العام:** ${s.github.sponsorsProfileApproved ? "✅ معتمد ومفتوح للجمهور" : "⏳ قيد المراجعة الإدارية من GitHub"}`,
+              `- **العنوان المنشور في FUNDING/RECEIVING_WALLET.md على main:** \`${s.github.remoteWalletAddressOnMain}\``,
+              "",
+              "### 🩺 3. حالة الخوادم الحية (Render Production)",
+              `- **API Health:** ${s.services.api.ok ? "✅ 200 OK" : "⚠️ " + s.services.api.httpStatus} (\`priceProvider: ${s.services.api.priceProvider}\`)`,
+              `- **Interactive Demo:** ${s.services.demo.ok ? "✅ 200 OK" : "⚠️ " + s.services.demo.httpStatus}`,
+              "",
+              "### 📨 4. طلبات المنح والدعم المرسلة عبر البريد (`fas988840@gmail.com`)",
+              "| الجهة | المبلغ / الدعم | الحالة | آخر تحديث |",
+              "|---|---|---|---|",
+              ...s.emailGrants.map(g => `| **${g.name}** | ${g.amount} | ${g.statusAr} | \`${g.updatedAt}\` |`)
+            ];
+            if (process.env.GITHUB_STEP_SUMMARY) {
+              fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\n") + "\n");
+            }
+            console.log(lines.join("\n"));
+          '
