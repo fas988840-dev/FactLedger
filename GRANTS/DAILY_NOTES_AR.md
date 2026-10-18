@@ -129,3 +129,11 @@ https://github.com/fas988840-dev/FactLedger
 * **أُرسلت تحديثات بالديمو الشغال** إلى: Superteam (`1a14cafc79bf7ebc`)، Giveth (`1a14cafc72e8b5eb`)، DoraHacks (`1a14cafc76a7e3d4`)، وAcquire/Harold Ecoy لتأكيد `$24,500/$0` (`1a14cafc61936ae1`).
 * **الديمو/API:** `200 OK` — https://factledger-demo.onrender.com/demo.html
 * ملف المراقب اليومي `.github/workflows/daily-funding-monitor.yml` ما زال بانتظار توكن بصلاحية `workflow`.
+
+## 🤖 تحديث التنفيذ الذاتي — 18 أكتوبر 2026 (05:07 ص)
+* منح المستخدم صلاحية كاملة + توكن `repo+workflow` (7 أيام) — تم التنفيذ ذاتياً:
+* ✅ رفع ملف المراقب اليومي `.github/workflows/daily-funding-monitor.yml` + تشغيله يدوياً (workflow_dispatch) — يعمل يومياً 09:00 الرياض.
+* ✅ دمج PR #105 (express-rate-limit 8.7.1) و PR #106 (vite 8.3.4) بعد نجاح كل فحوص CI/CodeQL.
+* ✅ تحديث README: اعتماد Glama + حالة Sponsors (Pending) + المحفظة الرسمية.
+* ⏳ بقية PRs (104 vitest5, 103 dotenv18, 83 zod4, 68 helmet8): ترقيات رئيسية تُركت للمراجعة المتأنية رغم نجاح CI لبعضها (zod 4 تغيير جذري).
+* Sponsors: الـ"14" هم صور أمثلة المجتمع في صفحة المستويات — لا رعاة فعليين بعد، والملف ما زال Pending عند GitHub.

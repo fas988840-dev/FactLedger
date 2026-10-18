@@ -119,8 +119,9 @@ See [SECURITY.md](SECURITY.md).
 
 FactLedger is built and maintained by one developer with no company, no token, and no paid tier that changes an answer. Funding goes to RPC capacity and monitoring, evidence fixtures, and tests.
 
-- **GitHub Sponsors** — profile under review; the Sponsor button enables it once approved.
-- **Options and rules** — see [FUNDING/DONATE.md](FUNDING/DONATE.md). The only canonical receiving address is recorded in [FUNDING/RECEIVING_WALLET.md](FUNDING/RECEIVING_WALLET.md); FactLedger will never ask for private keys or seed phrases, and never for a transfer to any other address.
+- **GitHub Sponsors** — profile submitted 2026-10-13 and under GitHub staff review (dashboard shows "Pending"); the Sponsor button on this repo is enabled and will go live for payments once approved. Sponsor tiers prepared: $5/mo (sponsor badge) and $10 one-time (shout-out).
+- **MCP Directory** — ✅ **Approved on Glama** as [`factledger-mcp`](https://glama.ai/mcp/servers) on 2026-10-18; Smithery registry submission sent. Live demo: https://factledger-demo.onrender.com/demo.html
+- **Options and rules** — see [FUNDING/DONATE.md](FUNDING/DONATE.md). The only canonical receiving address (`5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`, Solana SOL/USDC) is recorded in [FUNDING/RECEIVING_WALLET.md](FUNDING/RECEIVING_WALLET.md); FactLedger will never ask for private keys or seed phrases, and never for a transfer to any other address.
 
 ## Disclaimers
 
