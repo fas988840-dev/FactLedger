@@ -28,6 +28,9 @@ on:
     workflows: ['Deploy to Fly.io', 'Deploy to Render']
     types: [completed]
 
+permissions:
+  contents: read
+
 jobs:
   live-verify:
     name: Live smoke tests

@@ -12,6 +12,9 @@ on:
     - cron: '0 6 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   daily-monitor:
     name: Daily Donations, Grants & API Health Check

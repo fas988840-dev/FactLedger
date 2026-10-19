@@ -15,6 +15,9 @@ name: Deploy to Fly.io
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   deploy:
     name: Deploy API to Fly.io

@@ -841,7 +841,7 @@ export class APIServer {
       res.status(400).json({
         error: {
           code: 'VALIDATION_ERROR',
-          message: `Unknown intent '${intentParam}'. Valid intents: ${AGENT_INTENTS.join(', ')}.`,
+          message: `Unknown intent. Valid intents: ${AGENT_INTENTS.join(', ')}.`,
         },
       } as ErrorResponse);
       return;
