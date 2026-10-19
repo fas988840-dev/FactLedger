@@ -835,9 +835,11 @@ export class APIServer {
    * Deterministic dispatch only - see src/agents/agent-router.ts.
    */
   private async handleAgentRouter(req: Request, res: Response): Promise<void> {
-    const intentParam = req.params.intent;
+    // Canonicalize against the allow-list so only a known constant is ever
+    // routed or reflected in the response (never raw user input).
+    const intent = AGENT_INTENTS.find((candidate) => candidate === req.params.intent);
 
-    if (!AGENT_INTENTS.includes(intentParam as AgentIntent)) {
+    if (!intent) {
       res.status(400).json({
         error: {
           code: 'VALIDATION_ERROR',
@@ -848,7 +850,7 @@ export class APIServer {
     }
 
     const limitRaw = parseInt(req.query.limit as string);
-    const result = await this.agentRouter.route(intentParam as AgentIntent, {
+    const result = await this.agentRouter.route(intent, {
       address: typeof req.query.address === 'string' ? req.query.address : undefined,
       signature: typeof req.query.signature === 'string' ? req.query.signature : undefined,
       topic: typeof req.query.topic === 'string' ? req.query.topic : undefined,
@@ -856,7 +858,7 @@ export class APIServer {
     });
 
     res.json({
-      intent: intentParam,
+      intent,
       ...result,
       disclaimer: 'Routed deterministically to one agent based on the intent parameter - not a financial advice, and not an AI-guessed interpretation of a free-form question.',
     });
