@@ -16,6 +16,8 @@ FactLedger turns raw Solana activity into behavioral metrics, an intelligence sc
 
 > Most wallet analytics ask you to trust a black box. FactLedger shows its work, so anyone can reproduce a result and check the math.
 
+> **💚 Support & Sponsors status (updated 2026-10-19):** Our GitHub Sponsors profile was submitted on 2026-10-13 and is **still pending GitHub staff publication** (support ticket **#4872016**; we have formally asked GitHub to publish it or name the exact blocker). Until GitHub publishes that page, **direct support is open now** — one-tap USDC/Solana Pay links and sponsorship options are in **[FUNDING/DONATE.md](FUNDING/DONATE.md)** (canonical wallet `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`). Every received amount is recorded publicly; nothing is claimed before it is verifiably received.
+
 ---
 
 ## Why it's different
