@@ -20,7 +20,7 @@ import { ResearchAgent, WalletIntelligenceAgent, AlertAgent, ExplanationAgent } 
 import { EvidenceEngine } from '../agents/evidence-engine.js';
 import { LiveAlertWatcher } from '../services/live-alert-watcher.js';
 import { TokenSecurityVerifier } from '../services/token-security-verifier.js';
-import { AgentRouter, AGENT_INTENTS, AgentIntent } from '../agents/agent-router.js';
+import { AgentRouter, AGENT_INTENTS } from '../agents/agent-router.js';
 
 /**
  * API Error Response
