@@ -19,7 +19,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       # Pin the package manager to the version that generated package-lock.json.
       # npm 10 fails `npm ci` against this lock ("Missing: utf-8-validate@5.0.10
@@ -58,7 +58,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install dashboard dependencies
         run: npm ci --no-audit --no-fund

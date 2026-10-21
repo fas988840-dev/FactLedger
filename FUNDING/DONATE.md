@@ -12,14 +12,16 @@ Support directly funds verifiable work:
 
 ## Routes
 
-1. **GitHub Sponsors** — profile submitted 2026-10-13, currently **Pending GitHub staff review** (the public sponsors page is therefore not live yet). Prepared tiers: $5/mo (sponsor badge), $10 one-time (shout-out). The Sponsor button on this repository already works today via the custom link below.
+1. **GitHub Sponsors** — profile previously submitted; **not publicly available as of 2026-10-19** (the Sponsors URL redirects to the account profile). The exact blocker must be checked in the owner dashboard or support ticket #4872016; a ready W-8 tax form is not publication approval. Prepared tiers: $5/mo (sponsor badge), $10 one-time (shout-out). The Sponsor button on this repository already works today via the custom link below.
 2. **Direct transfer — available NOW, no approval needed (preferred for crypto)** — SOL or USDC on **Solana** to the canonical address in [`FUNDING/RECEIVING_WALLET.md`](RECEIVING_WALLET.md): `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`. This route bypasses the pending Sponsors review entirely.
 
-   **One-tap Solana Pay (USDC):**
+   **Solana Pay links (USDC; requires a compatible wallet/viewer):**
    - [Donate $5 USDC](Solana:5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG?amount=5&spl-token=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&label=FactLedger&message=FactLedger%20donation%20-%20thank%20you)
    - [Donate $10 USDC](Solana:5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG?amount=10&spl-token=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&label=FactLedger&message=FactLedger%20donation%20-%20thank%20you)
    - [Donate $25 USDC](Solana:5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG?amount=25&spl-token=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&label=FactLedger&message=FactLedger%20donation%20-%20thank%20you)
    - [Sponsor $100 USDC](Solana:5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG?amount=100&spl-token=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&label=FactLedger&message=FactLedger%20sponsorship%20-%20thank%20you)
+
+   GitHub may sanitize custom URI schemes in Markdown. If a link does not open, use the verified address above in a compatible Solana wallet and select the correct asset manually. No end-to-end payment was verified in this review.
 
    Suggested one-time amounts: $5 · $10 · $25 · $100 · any custom amount. Always verify the recipient address matches `FUNDING/RECEIVING_WALLET.md` before confirming in your wallet.
 
