@@ -16,7 +16,7 @@ FactLedger turns raw Solana activity into behavioral metrics, an intelligence sc
 
 > Most wallet analytics ask you to trust a black box. FactLedger shows its work, so anyone can reproduce a result and check the math.
 
-> **💚 Support & Sponsors status (updated 2026-10-19):** Our GitHub Sponsors profile was submitted on 2026-10-13 and is **still pending GitHub staff publication** (support ticket **#4872016**; we have formally asked GitHub to publish it or name the exact blocker). Until GitHub publishes that page, **direct support is open now** — one-tap USDC/Solana Pay links and sponsorship options are in **[FUNDING/DONATE.md](FUNDING/DONATE.md)** (canonical wallet `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`). Every received amount is recorded publicly; nothing is claimed before it is verifiably received.
+> **💚 Support status (updated 2026-10-22):** **Direct Solana donations are open now** through one-tap USDC/Solana Pay links in **[FUNDING/DONATE.md](FUNDING/DONATE.md)** (canonical wallet `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`). The repository funding file is ready, but the public GitHub Sponsors payment page is **not live yet**; the account owner must still complete GitHub/Stripe profile, payout, identity, and tax steps. Grants are handled separately through each funder's official application and payment process. Every received amount is recorded publicly; nothing is claimed before it is verifiably received.
 
 ---
 
@@ -121,7 +121,7 @@ See [SECURITY.md](SECURITY.md).
 
 FactLedger is built and maintained by one developer with no company, no token, and no paid tier that changes an answer. Funding goes to RPC capacity and monitoring, evidence fixtures, and tests.
 
-- **GitHub Sponsors** — profile submitted 2026-10-13 and under GitHub staff review (dashboard shows "Pending"); the Sponsor button on this repo is enabled and will go live for payments once approved. Sponsor tiers prepared: $5/mo (sponsor badge) and $10 one-time (shout-out).
+- **GitHub Sponsors** — `.github/FUNDING.yml` is ready and prepared tiers are $5/mo (sponsor badge) and $10 one-time (shout-out). Card/bank Sponsors payments are not active until the account owner completes GitHub/Stripe's owner-only profile, payout, identity, and tax steps. Direct Solana support below is available now.
 - **MCP Directory** — ✅ **Approved on Glama** as [`factledger-mcp`](https://glama.ai/mcp/servers) on 2026-10-18; Smithery registry submission sent. Live demo: https://factledger-demo.onrender.com/demo.html
 - **Options and rules** — see [FUNDING/DONATE.md](FUNDING/DONATE.md). The only canonical receiving address (`5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`, Solana SOL/USDC) is recorded in [FUNDING/RECEIVING_WALLET.md](FUNDING/RECEIVING_WALLET.md); FactLedger will never ask for private keys or seed phrases, and never for a transfer to any other address.
 

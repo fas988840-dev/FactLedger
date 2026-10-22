@@ -5,9 +5,9 @@ Read-only web UI over the FactLedger REST API (`../src`). This app has
 just calls the existing API and renders whatever it returns, including
 its `UNKNOWN`/error states honestly.
 
-Verified on Next.js 16.3.4 and React 19.2.8 with a clean `npm ci`, ESLint,
-TypeScript check, production build, and `npm audit` (0 findings) on
-2026-09-03.
+Verified on Next.js 16.4.2 and React 19.2.8 with a clean `npm ci`, ESLint,
+TypeScript check, production build, and `npm audit` (0 high/critical findings) on
+2026-10-22.
 
 ## Run it
 

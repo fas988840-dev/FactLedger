@@ -1,7 +1,7 @@
 # GitHub Sponsors profile — ready-to-paste copy
 
 ## Short bio (250 characters)
-Building FactLedger: open-source, read-only Solana wallet intelligence with reproducible scores and cited on-chain evidence. MIT, 224 tests, live API + MCP server.
+Building FactLedger: open-source, read-only Solana wallet intelligence with reproducible scores and cited on-chain evidence. MIT, 226 tests, live API + MCP server.
 
 ## Introduction
 I am Abdullah Al-Anzi, a solo developer in Saudi Arabia building **FactLedger** in the open.
@@ -12,7 +12,7 @@ FactLedger turns raw Solana activity into behavioral metrics, an intelligence sc
 - Interactive demo: https://factledger-demo.onrender.com/demo.html
 - API health: https://factledger-api.onrender.com/api/v1/health
 - MCP server approved on Glama (factledger-mcp)
-- 224 tests across 21 files, MIT license
+- 226 tests across 22 files, MIT license
 
 Your sponsorship keeps the public API reliable, funds Solana RPC capacity and monitoring, and supports documentation and MCP tooling that other builders can reuse. Sponsorships and their use are recorded publicly in this repository; nothing is claimed before it is verifiably received.
 

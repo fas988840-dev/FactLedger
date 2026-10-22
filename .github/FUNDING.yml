@@ -1,5 +1,6 @@
-# Enables the GitHub "Sponsor" button and surfaces the funding routes for FactLedger.
-# GitHub Sponsors profile is submitted and under review; the custom link carries the
-# full set of options (including the public USDC/Solana address) with transparency notes.
+# GitHub funding links for FactLedger.
+# The GitHub Sponsors username must be a plain account name (no URL or Markdown).
+# Custom funding links must be clean URLs only (no Markdown link syntax).
 github: [fas988840-dev]
-custom: ['https://github.com/fas988840-dev/FactLedger/blob/main/FUNDING/DONATE.md']
+custom:
+  - "https://github.com/fas988840-dev/FactLedger/blob/main/FUNDING/DONATE.md"
