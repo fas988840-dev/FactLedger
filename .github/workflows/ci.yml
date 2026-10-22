@@ -30,10 +30,30 @@ jobs:
       - run: npm ci --no-audit --no-fund
 
       - name: Audit dependencies (high and critical)
-        run: timeout 120s npm audit --audit-level=high
+        run: |
+          timeout 180s npm audit --audit-level=high || {
+            code=$?
+            if [ $code -eq 124 ]; then
+              echo "::warning::npm audit timed out after 180s, retrying once..."
+              sleep 5
+              timeout 180s npm audit --audit-level=high
+            else
+              exit $code
+            fi
+          }
 
       - name: Audit production dependencies (high and critical)
-        run: timeout 120s npm audit --omit=dev --audit-level=high
+        run: |
+          timeout 180s npm audit --omit=dev --audit-level=high || {
+            code=$?
+            if [ $code -eq 124 ]; then
+              echo "::warning::npm audit timed out after 180s, retrying once..."
+              sleep 5
+              timeout 180s npm audit --omit=dev --audit-level=high
+            else
+              exit $code
+            fi
+          }
 
       - name: Lint
         run: npm run lint
