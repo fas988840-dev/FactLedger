@@ -5,21 +5,16 @@ FactLedger is an MIT-licensed, read-only Solana wallet intelligence API built an
 Support directly funds verifiable work:
 
 - Reliable Solana RPC capacity and monitoring so the public API stays up.
-- Evidence fixtures and protocol-verification tests (currently 224 tests across 21 files).
+- Evidence fixtures and protocol-verification tests (currently 226 tests across 22 files).
 - Documentation, REST/MCP examples, and reviewer-facing demos.
 
 **Live proof (October 2026):** interactive demo — https://factledger-demo.onrender.com/demo.html · API health — https://factledger-api.onrender.com/api/v1/health · MCP server **approved on Glama** as `factledger-mcp` (2026-10-18).
 
 ## Routes
 
-<<<<<<< HEAD
 1. **Direct Solana donation — available now, no GitHub approval required.** Send SOL or USDC on the **Solana network only** to the canonical address in [`FUNDING/RECEIVING_WALLET.md`](RECEIVING_WALLET.md): `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`, or use a one-tap Solana Pay link below.
-2. **GitHub Sponsors — repository funding file is ready; public payment page is not live yet.** `.github/FUNDING.yml` connects the repository Sponsor button to `fas988840-dev` and to this donation page. GitHub Sponsors card/bank payments become available only after the account owner completes GitHub's Sponsors profile, payout, identity, and tax steps inside GitHub/Stripe. Do not treat the funding file alone as proof that Sponsors payments are active.
+2. **GitHub Sponsors — repository funding file is ready; public payment page is not live yet.** Profile previously submitted; as of 2026-10-19 the public URL redirects (302) to the account profile, not a Sponsors page. The exact blocker must be checked in the owner dashboard or support ticket #4872016; a ready W-8 tax form alone is not publication approval. Prepared tiers: $5/mo (sponsor badge), $10 one-time (shout-out). `.github/FUNDING.yml` connects the repository Sponsor button to `fas988840-dev` and to this donation page. Do not treat the funding file alone as proof that Sponsors payments are active.
 3. **Grants and institutional sponsorships — application/portal based.** A grant is not received merely by publishing a wallet address. The project owner must apply through the funder's official program, accept its terms, and complete any contract, KYC/KYB, tax, banking, or wallet instructions in that program's official portal. When a program permits Solana payment, the canonical receiving address above may be supplied after verifying the program's instructions.
-=======
-1. **GitHub Sponsors** — profile previously submitted; **not publicly available as of 2026-10-19** (the Sponsors URL redirects to the account profile). The exact blocker must be checked in the owner dashboard or support ticket #4872016; a ready W-8 tax form is not publication approval. Prepared tiers: $5/mo (sponsor badge), $10 one-time (shout-out). The Sponsor button on this repository already works today via the custom link below.
-2. **Direct transfer — available NOW, no approval needed (preferred for crypto)** — SOL or USDC on **Solana** to the canonical address in [`FUNDING/RECEIVING_WALLET.md`](RECEIVING_WALLET.md): `5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG`. This route bypasses the pending Sponsors review entirely.
->>>>>>> origin/main
 
    **Solana Pay links (USDC; requires a compatible wallet/viewer):**
    - [Donate $5 USDC](Solana:5V58c59zzfx5AjfjDwiQSMqK1FoQ8xvtbRnCjmHocmQG?amount=5&spl-token=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&label=FactLedger&message=FactLedger%20donation%20-%20thank%20you)
