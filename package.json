@@ -39,13 +39,12 @@
     "@types/supertest": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
-    "@vitest/ui": "^5.0.4",
     "eslint": "^8.56.0",
     "supertest": "^6.3.4",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "vite": "^8.3.4",
-    "vitest": "^5.0.4"
+    "vitest": "^5.0.5"
   },
   "engines": {
     "node": ">=22.12.0"
