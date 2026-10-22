@@ -1,6 +1,8 @@
 # FactLedger — Current Action Items
 
-Updated: 2026-09-16
+Latest review: 2026-10-19 — see [current review](GRANTS/STATUS-2026-10-19.md).
+
+Historical checklist updated: 2026-09-16
 
 This file replaces the older pre-deployment checklist. It reflects the canonical repository and current production-readiness work.
 

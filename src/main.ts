@@ -31,7 +31,8 @@ async function main(): Promise<void> {
   const rpcUrl = process.env.SOLANA_RPC_URL || 'https://api.mainnet-beta.solana.com';
 
   logger.info('Initializing FactLedger...');
-  logger.info(`RPC URL: ${rpcUrl}`);
+  // RPC URLs can contain provider API keys in query strings or path segments.
+  logger.info('Solana RPC endpoint configured (URL omitted to protect credentials).');
   logger.info(`Port: ${port}`);
 
   const solanaConfig: SolanaConfig = {

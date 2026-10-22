@@ -3,18 +3,18 @@
 # build this image from the repo root and run it, no extra config needed
 # beyond the environment variables in .env.example.
 
-FROM node:20-slim AS build
+FROM node:22-slim AS build
 WORKDIR /app
 COPY package*.json ./
 # Pin npm to the version that generated package-lock.json. npm 10, bundled with
-# node:20-slim, rejects that lockfile ("Missing: utf-8-validate@5.0.10 from lock
+# older Node images, rejects that lockfile ("Missing: utf-8-validate@5.0.10 from lock
 # file") and fails the build. The same pin is used in .github/workflows/ci.yml.
 RUN npm install -g npm@11 --no-audit --no-fund && npm ci --no-audit --no-fund
 COPY tsconfig.json ./
 COPY src ./src
 RUN npm run build
 
-FROM node:20-slim AS runtime
+FROM node:22-slim AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
 COPY package*.json ./
