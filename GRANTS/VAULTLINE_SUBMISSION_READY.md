@@ -15,7 +15,7 @@ Deadline: **31 Oct 2026** · Winners: 2 Nov 2026
 | Colosseum hackathon participation | ⚠️ NOT VERIFIED — eligibility inquiry sent to support@vaultline.co on 2026-10-18 (msg `1a14cd7d014fcabf`), awaiting reply |
 | Solana programs (Anchor/native) in scope | ⚠️ We have NO on-chain program — honest scope below; do not misrepresent |
 | Public repo access for auditors | ✅ Public: https://github.com/fas988840-dev/FactLedger |
-| Codebase size disclosed | ✅ 5,352 LOC production TypeScript in `src/` (+21 test files, 224 tests) |
+| Codebase size disclosed | ✅ 5,352 LOC production TypeScript in `src/` (+22 test files, 226 tests) |
 | Working product / live deployment | ✅ Demo https://factledger-demo.onrender.com/demo.html · API `/api/v1/health` 200 |
 | Contactable team | ✅ Abdullah Al-Anzi, fas988840@gmail.com, Riyadh |
 
@@ -36,7 +36,7 @@ handled anywhere (read-only by design — see SECURITY.md threat model).
   8-tool MCP server for AI agents). Deterministic and evidence-based; unknown values are returned
   as `null`/`UNKNOWN`, never fabricated. Approved on Glama as `factledger-mcp` (2026-10-18).
 - **Repository:** https://github.com/fas988840-dev/FactLedger (MIT)
-- **Lines of code:** ~5,352 production TypeScript LOC in `src/` (8,939 incl. tests), 224 tests passing.
+- **Lines of code:** ~5,352 production TypeScript LOC in `src/` (8,939 incl. tests), 226 tests passing.
 - **Stage:** Live mainnet-facing read-only service on Render; demo + API health links above.
 - **Why audit now:** Our token-security verdicts are consumed by AI agents and reviewers as
   evidence; independent review of the verifier + evidence pipeline validates exactly those claims.
