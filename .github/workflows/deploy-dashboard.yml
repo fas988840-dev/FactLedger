@@ -7,6 +7,8 @@ name: Deploy Dashboard to Vercel
 #   VERCEL_TOKEN — from vercel.com/account/tokens
 # If it is unset, the workflow reports a notice and exits successfully.
 #
+# The project Root Directory is `dashboard`. Keep Vercel CLI steps at the repository root
+# so the upload contains `dashboard/`; only `npm ci` runs inside that directory.
 # The workflow discovers the Vercel project from its GitHub link or a known
 # FactLedger dashboard name. It never falls back to an arbitrary first project.
 # Optional: VERCEL_PROJECT_NAME can force an exact project-name match.
@@ -120,7 +122,6 @@ jobs:
 
       - name: Link Vercel project
         if: steps.vercel_auth.outputs.available == 'true'
-        working-directory: dashboard
         run: |
           mkdir -p .vercel
           cat > .vercel/project.json <<EOF
@@ -133,7 +134,6 @@ jobs:
       - name: Pull Vercel environment
         if: steps.vercel_auth.outputs.available == 'true'
         run: vercel pull --yes --environment=production
-        working-directory: dashboard
         env:
           VERCEL_ORG_ID: ${{ steps.vercel_ids.outputs.org_id }}
           VERCEL_PROJECT_ID: ${{ steps.vercel_ids.outputs.project_id }}
@@ -141,7 +141,6 @@ jobs:
       - name: Build dashboard
         if: steps.vercel_auth.outputs.available == 'true'
         run: vercel build --prod
-        working-directory: dashboard
         env:
           VERCEL_ORG_ID: ${{ steps.vercel_ids.outputs.org_id }}
           VERCEL_PROJECT_ID: ${{ steps.vercel_ids.outputs.project_id }}
@@ -149,7 +148,6 @@ jobs:
       - name: Deploy to Vercel
         if: steps.vercel_auth.outputs.available == 'true'
         id: deploy
-        working-directory: dashboard
         env:
           VERCEL_ORG_ID: ${{ steps.vercel_ids.outputs.org_id }}
           VERCEL_PROJECT_ID: ${{ steps.vercel_ids.outputs.project_id }}
