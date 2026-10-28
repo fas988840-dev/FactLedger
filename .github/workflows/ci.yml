@@ -29,18 +29,18 @@ jobs:
 
       - run: npm ci --no-audit --no-fund
 
-      - name: Audit dependencies (high and critical)
+      - name: Audit dependencies (moderate and higher)
         run: |
-          timeout 120s npm audit --audit-level=high || {
+          timeout 120s npm audit --audit-level=moderate || {
             code=$?
             if [ $code -eq 124 ]; then
               echo "::warning::npm audit timed out (registry slow) — treating as pass, not a code defect; retrying once to confirm no high/critical advisories..."
               sleep 3
-              timeout 120s npm audit --audit-level=high || {
+              timeout 120s npm audit --audit-level=moderate || {
                 c2=$?
                 if [ $c2 -eq 124 ]; then
-                  echo "::warning::npm audit second timeout — skipping audit gate (local audit is 0 vulnerabilities; registry transient)"
-                  exit 0
+                  echo "::error::npm audit timed out twice; dependency security could not be verified."
+                  exit 1
                 else
                   exit $c2
                 fi
@@ -50,17 +50,17 @@ jobs:
             fi
           }
 
-      - name: Audit production dependencies (high and critical)
+      - name: Audit production dependencies (moderate and higher)
         run: |
-          timeout 120s npm audit --omit=dev --audit-level=high || {
+          timeout 120s npm audit --omit=dev --audit-level=moderate || {
             code=$?
             if [ $code -eq 124 ]; then
               echo "::warning::npm audit (prod) timed out (registry slow) — treating as pass, not a code defect; retrying once to confirm no high/critical advisories..."
               sleep 3
-              timeout 120s npm audit --omit=dev --audit-level=high || {
+              timeout 120s npm audit --omit=dev --audit-level=moderate || {
                 c2=$?
                 if [ $c2 -eq 124 ]; then
-                  echo "::warning::npm audit (prod) second timeout — skipping audit gate (local audit is 0 vulnerabilities; registry transient)"
+                  echo "::error::production npm audit timed out twice; dependency security could not be verified."
                   exit 0
                 else
                   exit $c2
@@ -98,6 +98,9 @@ jobs:
 
       - name: Install dashboard dependencies
         run: npm ci --no-audit --no-fund
+
+      - name: Audit dashboard dependencies (moderate and higher)
+        run: timeout 120s npm audit --audit-level=moderate
 
       - name: Lint dashboard
         run: npm run lint
