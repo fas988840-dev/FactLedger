@@ -50,11 +50,6 @@
     "node": ">=22.12.0"
   },
   "overrides": {
-    "@modelcontextprotocol/sdk": {
-      "express": {
-        "body-parser": "2.4.0"
-      }
-    },
     "@solana/web3.js": {
       "jayson": "5.0.0"
     },
