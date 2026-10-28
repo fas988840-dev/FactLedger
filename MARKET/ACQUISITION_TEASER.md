@@ -1,3 +1,5 @@
+> **Superseded for the active sale process (2026-10-27):** See [current sale listing](SALE_LISTING_2026-10-27.md), asking US$8,900 negotiable. The text below is a historical strategic framework, not evidence of customers, revenue, proprietary datasets or verified production readiness.
+
 # FactLedger — Strategic Acquisition Teaser
 
 > Confidentiality-safe draft. Use only verified claims. Do not disclose secrets, customer-confidential information, or unsupported metrics.
