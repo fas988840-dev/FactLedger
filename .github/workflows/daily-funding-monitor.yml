@@ -62,6 +62,8 @@ jobs:
               `- **Interactive Demo:** ${s.services.demo.ok ? "✅ 200 OK" : "⚠️ " + s.services.demo.httpStatus}`,
               "",
               "### 📨 4. طلبات المنح والدعم المرسلة عبر البريد (`fas988840@gmail.com`)",
+              `> ⚠️ **تحذير:** هذا الجدول ثابت مكتوب بالكود، وليس قراءة حيّة للبريد. لا يوجد فحص فعلي لصندوق البريد في هذه المهمة.`, 
+              `> آخر تحديث يدوي: \`${s.emailGrantsSource?.lastManualUpdate ?? "unknown"}\` — أي رد وصل بعد هذا التاريخ غير مرئي هنا.`,
               "| الجهة | المبلغ / الدعم | الحالة | آخر تحديث |",
               "|---|---|---|---|",
               ...s.emailGrants.map(g => `| **${g.name}** | ${g.amount} | ${g.statusAr} | \`${g.updatedAt}\` |`)

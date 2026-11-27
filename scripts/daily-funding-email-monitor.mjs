@@ -25,6 +25,22 @@ export const API_HEALTH_URL = 'https://factledger-api.onrender.com/api/v1/health
 export const DEMO_URL = 'https://factledger-demo.onrender.com/demo.html';
 export const REPO_SLUG = 'fas988840-dev/FactLedger';
 
+/**
+ * WARNING — this list is NOT read from the mailbox.
+ *
+ * These entries are hand-maintained constants recording what was last *sent*
+ * to each programme, plus the outcome as of the date in `updatedAt`.
+ * Nothing here is fetched from Gmail/IMAP, so a reply that arrived after
+ * `updatedAt` is invisible to this file. `status: 'sent_no_verified_reply'`
+ * therefore means "we sent it and we have not verified the mailbox since
+ * updatedAt" — never "still under review".
+ */
+export const EMAIL_GRANTS_SOURCE = {
+  liveRead: false,
+  lastManualUpdate: '2026-10-17',
+  note: 'Hard-coded tracker. A green daily run does NOT mean the inbox was checked.',
+};
+
 export const EMAIL_GRANT_THREADS = [
   {
     id: 'superteam',
@@ -34,8 +50,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a146ff855227340',
     threadId: '1a146ff855227340',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم الإرسال والتسليم بنجاح — بانتظار رد لجنة المنح',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل ووصل — لا يوجد دليل على رد حتى 2026-10-17 (غير مُتحقَّق من البريد)',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -46,8 +62,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a134b43d9062606',
     threadId: '1a073ac5e31a169c',
     updatedAt: '2026-10-13',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم تحديث الروابط والمحفظة الجديدة — بانتظار المراجعة',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل تحديث الروابط والمحفظة — لا يوجد دليل على رد حتى 2026-10-13',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -58,8 +74,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a146f56dcebd225',
     threadId: '1a0742806e78667a',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم تصحيح رابط GitHub وإرسال المحفظة الجديدة — بانتظار المراجعة',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل تصحيح رابط GitHub والمحفظة — لا يوجد دليل على رد حتى 2026-10-17',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -70,8 +86,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a146f5858712b3d',
     threadId: '1a074284d0dddea5',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم تصحيح رابط GitHub وإرسال المحفظة الجديدة — بانتظار المراجعة',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل تصحيح رابط GitHub والمحفظة — لا يوجد دليل على رد حتى 2026-10-17',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -82,8 +98,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a14701e7741027a',
     threadId: '1a08a87b96492b8b',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم إرسال الروابط الحية وطلب Builder Tier والمحفظة الجديدة',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسلت الروابط الحية وطلب Builder Tier — لا يوجد دليل على رد حتى 2026-10-17',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -94,8 +110,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a14701cbab68962',
     threadId: '1a073852700ec0f7',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم تصحيح رابط المستودع وإرسال العرض التفاعلي والمحفظة الجديدة',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل تصحيح رابط المستودع والعرض التفاعلي — لا يوجد دليل على رد حتى 2026-10-17',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -106,8 +122,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a1472f01401a1a5',
     threadId: '1a1472f01401a1a5',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم إرسال طلب تفعيل Pyth Core وخطة منحة 5,000$ والمحفظة الجديدة',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل طلب تفعيل Pyth Core وخطة المنحة — لا يوجد دليل على رد حتى 2026-10-17',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -118,8 +134,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a1472f1f82bb35e',
     threadId: '1a08e83c125471fb',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم إرسال الروابط المحدثة و100 وكيل MCP والمحفظة الجديدة لفريق Helius',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسلت الروابط المحدثة و100 وكيل MCP — لا يوجد دليل على رد حتى 2026-10-17',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -130,8 +146,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a1472f8b19a606d',
     threadId: '1a0e476663f723dc',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم إرسال تحديث أكتوبر بإطلاق الخادم الحي والديمو و224 اختباراً والمحفظة الجديدة',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل تحديث أكتوبر (خادم حي + ديمو + 224 اختباراً) — لا يوجد دليل على رد حتى 2026-10-17',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -142,8 +158,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a1470238561d737',
     threadId: '1a0f62dbf142cf62',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_kyc_docs',
-    statusAr: 'تم إرسال بيانات النشاط والروابط الحية — بانتظار رد وليد عطية/إرفاق وثيقة العمل الحر والآيبان',
+    status: 'sent_kyc_docs_requested_no_verified_reply',
+    statusAr: 'أُرسلت البيانات والروابط — مطلوب وثيقة العمل الحر والآيبان ولا يوجد دليل على رد حتى 2026-10-17',
     walletUsed: 'IBAN / SAR',
   },
   {
@@ -154,8 +170,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a14769a4518776d',
     threadId: '1a132547af2d4f4b',
     updatedAt: '2026-10-17',
-    status: 'delivered_pnl_and_screenshot_attached',
-    statusAr: 'تم الرد على هارولد إيكوي وإرفاق جدول الأرباح والخسائر والتقييم المالي (FactLedger_PnL_and_Valuation_2026.xlsx) وتحديد سعر البيع الكاش ($35k–$75k)',
+    status: 'sent_pnl_attached_no_verified_reply',
+    statusAr: 'أُرسل الرد وجدول الأرباح والخسائر (FactLedger_PnL_and_Valuation_2026.xlsx) — السعر المذكور هنا ($35k–$75k) ملغى، انظر MARKET/ASSET_SALE_TRUTH.md',
     walletUsed: 'Escrow.com / Wire / USDC',
   },
   {
@@ -166,8 +182,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a14799325a0eab5',
     threadId: '1a14799325a0eab5',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم إرسال طلب إدراج المشروع للبيع الكاش السريع ($49,000) مع الروابط الحية و224 اختباراً',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل طلب إدراج بسعر ($49,000) — هذا السعر ملغى، انظر MARKET/ASSET_SALE_TRUTH.md',
     walletUsed: 'Escrow / USDC',
   },
   {
@@ -178,8 +194,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a147994c2e6cb3f',
     threadId: '1a095b7be0bbc661',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم إرسال العرض المحدّث بالروابط الحية: ترخيص API شهري ($499–$1,500) أو استحواذ كاش ($35k–$75k)',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل عرض ترخيص API ($499–$1,500/شهر) أو استحواذ كاش ($35k–$75k) — الأسعار ملغاة، انظر MARKET/ASSET_SALE_TRUTH.md',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -190,8 +206,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a147996ba4b30c1',
     threadId: '1a095b7c220db0d7',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم إرسال العرض المحدّث بالروابط الحية: ترخيص API شهري ($499–$1,500) أو استحواذ كاش ($35k–$75k)',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل عرض ترخيص API ($499–$1,500/شهر) أو استحواذ كاش ($35k–$75k) — الأسعار ملغاة، انظر MARKET/ASSET_SALE_TRUTH.md',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -202,8 +218,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a147999ef92fe48',
     threadId: '1a0d70afcb3ff404',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم إرسال العرض المحدّث بالروابط الحية: ترخيص API شهري ($499–$1,500) أو استحواذ كاش ($35k–$75k)',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل عرض ترخيص API ($499–$1,500/شهر) أو استحواذ كاش ($35k–$75k) — الأسعار ملغاة، انظر MARKET/ASSET_SALE_TRUTH.md',
     walletUsed: CANONICAL_WALLET,
   },
   {
@@ -214,8 +230,8 @@ export const EMAIL_GRANT_THREADS = [
     messageId: '1a14799b6c32006c',
     threadId: '1a095b7b44f8d084',
     updatedAt: '2026-10-17',
-    status: 'delivered_awaiting_reply',
-    statusAr: 'تم إرسال العرض المحدّث بالروابط الحية: ترخيص API شهري ($499–$1,500) أو استحواذ كاش ($35k–$75k)',
+    status: 'sent_no_verified_reply',
+    statusAr: 'أُرسل عرض ترخيص API ($499–$1,500/شهر) أو استحواذ كاش ($35k–$75k) — الأسعار ملغاة، انظر MARKET/ASSET_SALE_TRUTH.md',
     walletUsed: CANONICAL_WALLET,
   },
 ];
@@ -359,6 +375,7 @@ export async function runFullDailyCheck() {
       openIssues: pureIssues,
     },
     emailGrants: EMAIL_GRANT_THREADS,
+    emailGrantsSource: EMAIL_GRANTS_SOURCE,
   };
 
   const outJsonPath = path.join(ROOT_DIR, 'GRANTS', 'DAILY_MONITOR_STATUS.json');
