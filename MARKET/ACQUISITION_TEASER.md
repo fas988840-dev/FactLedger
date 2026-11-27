@@ -77,3 +77,20 @@ A headline price without these terms is not a comparable offer.
 ## Process rule
 
 Do not run a broad sale process before FactLedger has credible proof unless an inbound strategic offer is unusually strong. Maintain buyer readiness early so inbound interest can be evaluated quickly without signaling urgency.
+
+---
+
+## ⚠️ PRICING — SUPERSEDED (2026-11-27)
+
+This teaser is a **strategic narrative for large buyers**, not a price sheet.
+It deliberately carries no number, and that is now enforced.
+
+Four different asking prices were previously sent to different buyers for the
+same asset ($24,500 / $8,900 / $35k–$75k / $49,000). Any buyer cross-checking
+the repository sees a spread of up to 8×.
+
+**The only authorised price is in [`ASSET_SALE_TRUTH.md`](ASSET_SALE_TRUTH.md):**
+**$2,900**, floor $1,800.
+
+Do not quote a figure from this file, from `GRANTS/ACQUIRE_ACTIVATION_PACK.md`,
+or from any Issue/PR text. Those are historical.
